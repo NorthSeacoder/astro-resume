@@ -2,7 +2,7 @@
     "preload": [
         {
             "type": "style",
-            "path": "/assets/css/main"
+            "path": "/assets/css/index"
         },
         {
             "type": "script",
@@ -10,18 +10,29 @@
         },
         {
             "type": "script",
-            "path": "/assets/js/ui-vendor"
+            "path": "/assets/js/router-vendor"
         },
         {
-            "type": "font",
-            "path": "/assets/fonts/",
-            "crossorigin": "anonymous"
+            "type": "script",
+            "path": "/assets/js/ui-core-vendor"
         }
     ],
     "prefetch": [
         {
             "type": "script",
+            "path": "/assets/js/ui-interaction-vendor"
+        },
+        {
+            "type": "script",
+            "path": "/assets/js/animation-vendor"
+        },
+        {
+            "type": "script",
             "path": "/assets/js/utils-vendor"
+        },
+        {
+            "type": "script",
+            "path": "/assets/js/icons-vendor"
         }
     ]
-} 
+}

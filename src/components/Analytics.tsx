@@ -14,7 +14,6 @@ const Analytics = ({
         defer
         data-website-id={websiteId}
         src={scriptSrc}
-        data-domains="mengpeng.tech"  // 替换为您的域名
         data-cache="true"
       />
     </>

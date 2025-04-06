@@ -5,6 +5,7 @@ import {componentTagger} from 'lovable-tagger';
 import viteImagemin from 'vite-plugin-imagemin';
 import {Plugin} from 'vite';
 import {visualizer} from 'rollup-plugin-visualizer';
+import preloadConfigPlugin from './plugins/vite-plugin-preload-config'
 // 创建自定义预加载插件
 function createPreloadPlugin(): Plugin {
     return {
@@ -81,7 +82,8 @@ export default defineConfig(({mode}) => ({
                 ]
             }
         }),
-        createPreloadPlugin()
+        createPreloadPlugin(),
+        preloadConfigPlugin()
     ].filter(Boolean),
     resolve: {
         alias: {
