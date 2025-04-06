@@ -1,0 +1,328 @@
+{
+  "translations": {
+    "nav": {
+      "about": "关于我",
+      "experience": "工作经验",
+      "education": "教育背景",
+      "skills": "技能专长",
+      "projects": "项目展示",
+      "contact": "联系方式"
+    },
+    "common": {
+      "viewMore": "查看更多",
+      "download": "下载",
+      "submit": "提交",
+      "connect": "联系"
+    },
+    "about": {
+      "title": "关于我",
+      "subtitle": "个人简介",
+      "bio": "拥有X年以上专业领域经验的资深人士。热衷于解决复杂问题并提供高质量的解决方案。",
+      "contact": {
+        "title": "联系我",
+        "info": "联系信息"
+      },
+      "stats": {
+        "yearsExperience": "年工作经验",
+        "projectsCompleted": "完成项目",
+        "happyClients": "满意客户"
+      }
+    },
+    "skills": {
+      "title": "技能与专长",
+      "levels": {
+        "expert": "专家",
+        "advanced": "高级",
+        "proficient": "熟练",
+        "intermediate": "中级",
+        "beginner": "初级"
+      },
+      "map": {
+        "title": "技能关系图谱",
+        "description": "我的技术能力之间的关系交互可视化图"
+      },
+      "categories": {
+        "frontend": "前端",
+        "backend": "后端",
+        "database": "数据库",
+        "devops": "运维",
+        "mobile": "移动端",
+        "other": "其他"
+      }
+    },
+    "experience": {
+      "title": "工作经历",
+      "projects": "项目经验",
+      "background": "项目简介",
+      "star": {
+        "situation": "背景情境",
+        "task": "任务目标",
+        "action": "采取行动",
+        "result": "成果结果"
+      }
+    },
+    "education": {
+      "title": "教育背景",
+      "achievements": "主要成就"
+    },
+    "projects": {
+      "title": "项目展示",
+      "technologies": "技术栈",
+      "actions": {
+        "view": "查看项目",
+        "code": "查看代码"
+      },
+      "featured": "精选项目",
+      "evolution": "技术演进",
+      "related": "相关项目",
+      "description": "项目的全面描述，解释其功能、解决的问题以及您在其开发中的角色。",
+      "items": {
+        "1": {
+          "title": "项目一",
+          "description": "这是一个使用React、Node.js、MongoDB和Express构建的全栈应用项目。"
+        },
+        "2": {
+          "title": "项目二",
+          "description": "这是一个使用Vue.js、Firebase和Tailwind CSS构建的现代化Web应用。"
+        },
+        "3": {
+          "title": "项目三",
+          "description": "这是一个使用Angular、TypeScript、Sass和Django构建的企业级应用。"
+        }
+      }
+    },
+    "performance": {
+      "title": "性能指标",
+      "toggle": "切换性能指标显示",
+      "metrics": {
+        "fcp": "首次内容绘制",
+        "lcp": "最大内容绘制",
+        "fid": "首次输入延迟",
+        "cls": "累积布局偏移",
+        "fps": "每秒帧数",
+        "memory": "内存占用",
+        "ttfb": "首字节时间"
+      },
+      "description": "实时网站性能分析",
+      "disclaimer": "注意：这些指标是近似值，可能会因设备和网络条件而有所不同。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "form": {
+        "name": "您的姓名",
+        "email": "电子邮箱",
+        "message": "欢迎联系我进行项目合作或者友好交流。我始终愿意讨论新项目、创意想法或有机会成为您愿景的一部分。"
+      }
+    },
+    "footer": {
+      "rights": "版权所有",
+      "designed": "使用React和TailwindCSS设计 ❤️",
+      "quickLinks": "快速链接"
+    },
+    "accessibility": {
+      "skipContent": "跳转到主要内容",
+      "highContrast": "高对比度模式",
+      "reduceMotion": "减少动画效果",
+      "fontSize": {
+        "increase": "增大字体",
+        "decrease": "减小字体"
+      }
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "技术技能",
+        "icon": "Code",
+        "skills": [
+          { 
+            "name": "JavaScript/TypeScript", 
+            "level": "Expert",
+            "description": "精通现代JavaScript和TypeScript网页开发",
+            "percentage": 95,
+            "keywords": ["ES6+", "Node.js", "TypeScript"]
+          },
+          { 
+            "name": "React.js", 
+            "level": "Expert",
+            "description": "使用React构建高性能、可维护的基于组件的用户界面",
+            "percentage": 90,
+            "keywords": ["Hooks", "Context", "Redux"]
+          },
+          { 
+            "name": "Node.js", 
+            "level": "Advanced",
+            "description": "使用Node.js进行服务器端JavaScript后端开发",
+            "percentage": 85,
+            "keywords": ["Express", "API", "REST"]
+          },
+          { 
+            "name": "HTML5/CSS3", 
+            "level": "Expert",
+            "description": "语义化标记和现代样式技术",
+            "percentage": 95,
+            "keywords": ["SASS", "Flexbox", "Grid"]
+          },
+          { 
+            "name": "TailwindCSS", 
+            "level": "Advanced",
+            "description": "实用优先的CSS框架，用于快速UI开发",
+            "percentage": 85,
+            "keywords": ["UI", "响应式", "设计"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "人工智能与机器学习",
+        "icon": "BrainCircuit",
+        "skills": [
+          { 
+            "name": "机器学习", 
+            "level": "Intermediate",
+            "description": "构建和训练机器学习模型",
+            "percentage": 65,
+            "keywords": ["监督学习", "无监督学习", "分类"]
+          },
+          { 
+            "name": "自然语言处理", 
+            "level": "Intermediate",
+            "description": "文本处理和语言理解技术",
+            "percentage": 60,
+            "keywords": ["NLP", "文本挖掘", "情感分析"]
+          },
+          { 
+            "name": "Python数据科学", 
+            "level": "Proficient",
+            "description": "使用Python库进行数据分析和可视化",
+            "percentage": 75,
+            "keywords": ["NumPy", "Pandas", "Scikit-learn"]
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "company": "当前公司",
+      "position": "高级职位",
+      "location": "城市, 国家",
+      "period": "2021年1月 - 至今",
+      "description": "领导跨职能团队交付高影响力项目。实施创新解决方案提高效率。与利益相关者合作确保与业务目标保持一致。",
+      "projects": [
+        {
+          "id": 101,
+          "name": "项目Alpha",
+          "period": "2022年1月 - 至今",
+          "background": "重新设计核心产品功能并改善用户体验的战略举措。",
+          "star": {
+            "situation": "公司核心产品出现性能问题，用户界面过时，导致客户投诉和用户参与度指标下降。",
+            "task": "领导跨职能团队重新设计用户界面并优化后端性能，同时确保对现有用户的干扰最小化。",
+            "action": "创建了分阶段实施的详细项目计划，进行了全面的用户研究，实施了新的设计系统，重构了关键代码路径，并与QA协调进行全面测试。",
+            "result": "成功提前交付主要功能集，通过流程改进降低运营成本25%，并在推出后三个月内将用户满意度提高35%。"
+          }
+        },
+        {
+          "id": 102,
+          "name": "项目Beta",
+          "period": "2021年1月 - 2021年12月",
+          "background": "跨平台迁移项目，现代化遗留系统。",
+          "star": {
+            "situation": "公司依赖过时的遗留系统，难以维护且运营成本高，造成技术债务并限制业务灵活性。",
+            "task": "将三个关键业务系统迁移到现代技术栈，同时确保整个过渡期间的数据完整性和系统可用性。",
+            "action": "制定了全面的迁移策略，创建了数据转换工具，实施了CI/CD流程，进行了并行测试，并培训系统管理员了解新架构。",
+            "result": "零停机时间迁移了3个关键系统，将部署时间减少70%，并在提高系统可靠性的同时每年降低运营成本40%。"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "上一家公司",
+      "position": "中级职位",
+      "location": "城市, 国家",
+      "period": "2018年6月 - 2020年12月",
+      "description": "开发和维护关键业务应用程序。与产品经理合作定义需求并交付解决方案。",
+      "projects": [
+        {
+          "id": 201,
+          "name": "客户门户重新设计",
+          "period": "2019年3月 - 2020年12月",
+          "background": "全面改造客户门户，提高易用性并添加新功能。",
+          "star": {
+            "situation": "客户门户的可用性指标较差，跳出率高，功能采用率低，影响客户满意度和收入生成。",
+            "task": "重新设计客户门户以改善用户体验，提高功能采用率，并支持新的业务需求，同时保持与现有系统的兼容性。",
+            "action": "进行了广泛的用户访谈，创建了详细的线框图和原型，实施了响应式设计原则，并开发了具有实时数据可视化的新仪表板组件。",
+            "result": "实施的新仪表板使用户参与度提高40%，支持工单减少30%，并因出色工作获得\"季度最佳员工\"奖。"
+          }
+        },
+        {
+          "id": 202,
+          "name": "内部工具套件",
+          "period": "2018年6月 - 2019年2月",
+          "background": "开发内部工具以简化运营和报告。",
+          "star": {
+            "situation": "团队使用手动流程进行报告和运营任务，浪费宝贵时间并在关键业务数据中引入错误。",
+            "task": "创建一套内部工具，以自动化日常任务，标准化报告，并提高各部门的数据准确性。",
+            "action": "分析了工作流效率低下问题，设计了模块化工具架构，开发了五个核心应用程序，并与现有业务系统创建了API集成。",
+            "result": "构建了5个生产力工具，供200多名员工每天使用，自动生成报告每周节省15小时的手动工作，并将数据准确性提高95%。"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "第一家公司",
+      "position": "初级职位",
+      "location": "城市, 国家",
+      "period": "2016年8月 - 2018年5月",
+      "description": "协助开发和维护Web应用程序。与高级开发人员合作实现功能并修复错误。",
+      "projects": [
+        {
+          "id": 301,
+          "name": "移动应用开发",
+          "period": "2017年1月 - 2018年5月",
+          "background": "公司首个针对iOS和Android平台的移动应用程序。",
+          "star": {
+            "situation": "公司需要将其数字业务扩展到移动平台，以满足不断变化的客户期望并在市场中保持竞争力。",
+            "task": "协助使用React Native开发公司首个适用于iOS和Android平台的移动应用程序。",
+            "action": "参与前端组件开发，实现响应式UI元素，与API团队合作集成后端服务，并参与代码审查以提高质量。",
+            "result": "帮助推出公司首个移动应用，首月下载量超过10,000次，修复20多个关键错误提高了系统稳定性，并建立了移动开发最佳实践。"
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "硕士学位",
+      "field": "计算机科学",
+      "institution": "大学名称",
+      "location": "城市, 国家",
+      "period": "2014 - 2016",
+      "description": "以优异成绩毕业。专攻人工智能和机器学习。完成了关于神经网络架构优化的论文。",
+      "achievements": [
+        "获得3.9 GPA",
+        "在IEEE会议上发表研究论文",
+        "因学术优异获得奖学金"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "学士学位",
+      "field": "计算机工程",
+      "institution": "大学名称",
+      "location": "城市, 国家",
+      "period": "2010 - 2014",
+      "description": "全面学习计算机架构、算法和软件开发课程。参加编程竞赛和黑客马拉松。",
+      "achievements": [
+        "以优异成绩毕业",
+        "完成分布式系统毕业设计",
+        "计算机科学学生协会活跃成员"
+      ]
+    }
+  ]
+} 

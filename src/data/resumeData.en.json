@@ -1,0 +1,328 @@
+{
+  "translations": {
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "common": {
+      "viewMore": "View More",
+      "download": "Download",
+      "submit": "Submit",
+      "connect": "Connect"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Personal Profile",
+      "bio": "Experienced professional with over X years of expertise in your field. Passionate about solving complex problems and delivering high-quality results.",
+      "contact": {
+        "title": "Contact Me",
+        "info": "Contact Information"
+      },
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "projectsCompleted": "Projects Completed",
+        "happyClients": "Happy Clients"
+      }
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "levels": {
+        "expert": "Expert",
+        "advanced": "Advanced",
+        "proficient": "Proficient",
+        "intermediate": "Intermediate",
+        "beginner": "Beginner"
+      },
+      "map": {
+        "title": "Skills Relationship Map",
+        "description": "Interactive visualization of relationships between my technical skills"
+      },
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "devops": "DevOps",
+        "mobile": "Mobile",
+        "other": "Other"
+      }
+    },
+    "experience": {
+      "title": "Work Experience",
+      "projects": "Project Experience",
+      "background": "Project Introduction",
+      "star": {
+        "situation": "Background Situation",
+        "task": "Task Objectives",
+        "action": "Actions Taken",
+        "result": "Results Achieved"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "achievements": "Key Achievements"
+    },
+    "projects": {
+      "title": "Projects",
+      "technologies": "Technologies",
+      "actions": {
+        "view": "View Project",
+        "code": "View Code"
+      },
+      "featured": "Featured",
+      "evolution": "Tech Evolution",
+      "related": "Related Projects",
+      "description": "A comprehensive description of the project, explaining what it does, the problems it solves, and your role in its development.",
+      "items": {
+        "1": {
+          "title": "Project One",
+          "description": "A full-stack application built with React, Node.js, MongoDB, and Express."
+        },
+        "2": {
+          "title": "Project Two",
+          "description": "A modern web application built with Vue.js, Firebase, and Tailwind CSS."
+        },
+        "3": {
+          "title": "Project Three",
+          "description": "An enterprise-level application built with Angular, TypeScript, Sass, and Django."
+        }
+      }
+    },
+    "performance": {
+      "title": "Performance Metrics",
+      "toggle": "Toggle performance metrics",
+      "metrics": {
+        "fcp": "First Contentful Paint",
+        "lcp": "Largest Contentful Paint",
+        "fid": "First Input Delay",
+        "cls": "Cumulative Layout Shift",
+        "fps": "Frames Per Second",
+        "memory": "Memory Usage",
+        "ttfb": "Time To First Byte"
+      },
+      "description": "Realtime website performance analytics",
+      "disclaimer": "Note: These metrics are approximate and may vary based on your device and network conditions."
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "message": "Feel free to reach out for collaborations or just a friendly chat. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision."
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "designed": "Designed with React & TailwindCSS ❤️",
+      "quickLinks": "Quick Links"
+    },
+    "accessibility": {
+      "skipContent": "Skip to content",
+      "highContrast": "High contrast mode",
+      "reduceMotion": "Reduce motion",
+      "fontSize": {
+        "increase": "Increase text size",
+        "decrease": "Decrease text size"
+      }
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "Technical Skills",
+        "icon": "Code",
+        "skills": [
+          { 
+            "name": "JavaScript/TypeScript", 
+            "level": "Expert",
+            "description": "Deep expertise in modern JavaScript and TypeScript for web development",
+            "percentage": 95,
+            "keywords": ["ES6+", "Node.js", "TypeScript"]
+          },
+          { 
+            "name": "React.js", 
+            "level": "Expert",
+            "description": "Building performant and maintainable component-based UIs with React",
+            "percentage": 90,
+            "keywords": ["Hooks", "Context", "Redux"]
+          },
+          { 
+            "name": "Node.js", 
+            "level": "Advanced",
+            "description": "Server-side JavaScript with Node.js for backend development",
+            "percentage": 85,
+            "keywords": ["Express", "API", "REST"]
+          },
+          { 
+            "name": "HTML5/CSS3", 
+            "level": "Expert",
+            "description": "Semantic markup and modern styling techniques",
+            "percentage": 95,
+            "keywords": ["SASS", "Flexbox", "Grid"]
+          },
+          { 
+            "name": "TailwindCSS", 
+            "level": "Advanced",
+            "description": "Utility-first CSS framework for rapid UI development",
+            "percentage": 85,
+            "keywords": ["UI", "Responsive", "Design"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "AI & Machine Learning",
+        "icon": "BrainCircuit",
+        "skills": [
+          { 
+            "name": "Machine Learning", 
+            "level": "Intermediate",
+            "description": "Building and training machine learning models",
+            "percentage": 65,
+            "keywords": ["Supervised", "Unsupervised", "Classification"]
+          },
+          { 
+            "name": "Natural Language Processing", 
+            "level": "Intermediate",
+            "description": "Text processing and language understanding techniques",
+            "percentage": 60,
+            "keywords": ["NLP", "Text Mining", "Sentiment Analysis"]
+          },
+          { 
+            "name": "Python for Data Science", 
+            "level": "Proficient",
+            "description": "Data analysis and visualization with Python libraries",
+            "percentage": 75,
+            "keywords": ["NumPy", "Pandas", "Scikit-learn"]
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "company": "Current Company",
+      "position": "Senior Position",
+      "location": "City, Country",
+      "period": "Jan 2021 - Present",
+      "description": "Led cross-functional teams to deliver high-impact projects. Implemented innovative solutions that improved efficiency. Collaborated with stakeholders to ensure alignment with business objectives.",
+      "projects": [
+        {
+          "id": 101,
+          "name": "Project Alpha",
+          "period": "Jan 2022 - Present",
+          "background": "Strategic initiative to revamp core product functionality and improve user experience.",
+          "star": {
+            "situation": "The company's core product was experiencing performance issues and the user interface was outdated, leading to customer complaints and declining user engagement metrics.",
+            "task": "Lead a cross-functional team to redesign the user interface and optimize backend performance while ensuring minimal disruption to existing users.",
+            "action": "Created a detailed project plan with phased implementation, conducted thorough user research, implemented new design system, refactored critical code paths, and coordinated with QA for comprehensive testing.",
+            "result": "Successfully delivered major feature sets ahead of schedule, reduced operational costs by 25% through process improvements, and improved user satisfaction scores by 35% within three months of launch."
+          }
+        },
+        {
+          "id": 102,
+          "name": "Project Beta",
+          "period": "Jan 2021 - Dec 2021",
+          "background": "Cross-platform migration project to modernize legacy systems.",
+          "star": {
+            "situation": "The company relied on outdated legacy systems that were difficult to maintain and expensive to operate, creating technical debt and limiting business agility.",
+            "task": "Migrate three critical business systems to a modern technology stack while ensuring data integrity and system availability throughout the transition.",
+            "action": "Developed a comprehensive migration strategy, created data transformation tools, implemented CI/CD pipeline, conducted parallel testing, and trained system administrators on the new architecture.",
+            "result": "Migrated 3 critical systems with zero downtime, reduced deployment time by 70%, and decreased operational costs by 40% annually while improving system reliability."
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Previous Company",
+      "position": "Mid-level Position",
+      "location": "City, Country",
+      "period": "Jun 2018 - Dec 2020",
+      "description": "Developed and maintained critical business applications. Collaborated with product managers to define requirements and deliver solutions.",
+      "projects": [
+        {
+          "id": 201,
+          "name": "Client Portal Redesign",
+          "period": "Mar 2019 - Dec 2020",
+          "background": "Complete overhaul of client-facing portal to improve usability and add new features.",
+          "star": {
+            "situation": "Client portal had poor usability metrics with high bounce rates and low feature adoption, affecting client satisfaction and revenue generation.",
+            "task": "Redesign the client portal to improve user experience, increase feature adoption, and support new business requirements while maintaining compatibility with existing systems.",
+            "action": "Conducted extensive user interviews, created detailed wireframes and prototypes, implemented responsive design principles, and developed new dashboard components with real-time data visualization.",
+            "result": "Implemented new dashboard that increased user engagement by 40%, reduced support tickets by 30%, and received 'Employee of the Quarter' award for exceptional work."
+          }
+        },
+        {
+          "id": 202,
+          "name": "Internal Tools Suite",
+          "period": "Jun 2018 - Feb 2019",
+          "background": "Development of internal tools to streamline operations and reporting.",
+          "star": {
+            "situation": "Teams were using manual processes for reporting and operational tasks, wasting valuable time and introducing errors in critical business data.",
+            "task": "Create a suite of internal tools to automate routine tasks, standardize reporting, and improve data accuracy across departments.",
+            "action": "Analyzed workflow inefficiencies, designed modular tool architecture, developed five core applications, and created API integrations with existing business systems.",
+            "result": "Built 5 productivity tools used by 200+ employees daily, automated report generation saving 15 hours of manual work weekly, and improved data accuracy by 95%."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "First Company",
+      "position": "Junior Position",
+      "location": "City, Country",
+      "period": "Aug 2016 - May 2018",
+      "description": "Assisted in the development and maintenance of web applications. Collaborated with senior developers to implement features and fix bugs.",
+      "projects": [
+        {
+          "id": 301,
+          "name": "Mobile App Development",
+          "period": "Jan 2017 - May 2018",
+          "background": "Company's first mobile application for both iOS and Android platforms.",
+          "star": {
+            "situation": "The company needed to expand its digital presence to mobile platforms to meet changing customer expectations and stay competitive in the market.",
+            "task": "Assist in developing the company's first mobile application for both iOS and Android platforms using React Native.",
+            "action": "Contributed to frontend component development, implemented responsive UI elements, collaborated with API team to integrate backend services, and participated in code reviews to improve quality.",
+            "result": "Helped launch the company's first mobile app with 10,000+ downloads in the first month, fixed 20+ critical bugs improving system stability, and established mobile development best practices."
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Master's Degree",
+      "field": "Computer Science",
+      "institution": "University Name",
+      "location": "City, Country",
+      "period": "2014 - 2016",
+      "description": "Graduated with honors. Specialized in artificial intelligence and machine learning. Completed thesis on neural network architecture optimization.",
+      "achievements": [
+        "Achieved 3.9 GPA",
+        "Published research paper in IEEE Conference",
+        "Received scholarship for academic excellence"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor's Degree",
+      "field": "Computer Engineering",
+      "institution": "University Name",
+      "location": "City, Country",
+      "period": "2010 - 2014",
+      "description": "Comprehensive coursework in computer architecture, algorithms, and software development. Participated in programming competitions and hackathons.",
+      "achievements": [
+        "Graduated with honors",
+        "Completed capstone project on distributed systems",
+        "Active member of Computer Science Student Association"
+      ]
+    }
+  ]
+} 

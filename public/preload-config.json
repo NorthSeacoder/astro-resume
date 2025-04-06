@@ -1,0 +1,27 @@
+{
+    "preload": [
+        {
+            "type": "style",
+            "path": "/assets/css/main"
+        },
+        {
+            "type": "script",
+            "path": "/assets/js/preact-vendor"
+        },
+        {
+            "type": "script",
+            "path": "/assets/js/ui-vendor"
+        },
+        {
+            "type": "font",
+            "path": "/assets/fonts/",
+            "crossorigin": "anonymous"
+        }
+    ],
+    "prefetch": [
+        {
+            "type": "script",
+            "path": "/assets/js/utils-vendor"
+        }
+    ]
+} 
