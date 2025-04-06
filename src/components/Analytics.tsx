@@ -5,7 +5,7 @@ interface AnalyticsProps {
 
 const Analytics = ({ 
   websiteId,
-  scriptSrc = 'https://analytics.umami.is/script.js'  // umami 默认脚本地址
+  scriptSrc = 'https://umami.mengpeng.tech/script.js'  // umami 默认脚本地址
 }: AnalyticsProps) => {
   return (
     <>
@@ -14,7 +14,7 @@ const Analytics = ({
         defer
         data-website-id={websiteId}
         src={scriptSrc}
-        data-domains="your-domain.com"  // 替换为您的域名
+        data-domains="mengpeng.tech"  // 替换为您的域名
         data-cache="true"
       />
     </>
