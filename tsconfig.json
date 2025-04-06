@@ -1,5 +1,11 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }

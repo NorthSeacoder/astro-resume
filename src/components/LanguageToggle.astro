@@ -1,0 +1,43 @@
+---
+import {resumeData} from '../data/resumeData';
+---
+
+<div class='flex justify-end py-4'>
+    <select
+        id='language-toggle'
+        class='bg-accent text-white px-3 py-1 rounded hover:scale-105 transition-all duration-300'>
+        {resumeData.languages.map((lang) => <option value={lang}>{lang.toUpperCase()}</option>)}
+    </select>
+</div>
+
+<script>
+    const toggle = document.getElementById('language-toggle') as HTMLSelectElement;
+    if (!toggle) {
+        console.error("Language toggle not found");
+        return;
+    }
+    
+    const defaultLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+    const savedLang = localStorage.getItem('lang') || defaultLang;
+    toggle.value = savedLang;
+    
+    // 不立即刷新页面，让其他脚本有机会处理
+    updateLang(savedLang, false);
+
+    toggle.addEventListener('change', (e) => {
+        const target = e.target as HTMLSelectElement;
+        const lang = target.value;
+        localStorage.setItem('lang', lang);
+        updateLang(lang, true);
+    });
+
+    function updateLang(lang: string, reload: boolean = false) {
+        document.querySelectorAll('[data-lang]').forEach((el) => {
+            el.setAttribute('data-lang', lang);
+        });
+        
+        if (reload) {
+            window.location.reload();
+        }
+    }
+</script>

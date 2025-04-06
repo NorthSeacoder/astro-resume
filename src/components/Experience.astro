@@ -1,0 +1,54 @@
+---
+import {resumeData} from '../data/resumeData';
+import type { ResumeData, ResumeExperience, ResumeProject } from '../types/resume.d';
+
+const lang = Astro.props.lang || 'en';
+const experience = resumeData.content[lang as keyof ResumeData['content']].experience;
+---
+
+<section class='py-6 animate-slide-up'>
+    <h2 class='text-2xl font-semibold mb-4'>{lang === 'en' ? 'Experience' : '工作经历'}</h2>
+    <div class='space-y-8'>
+        {
+            experience.map((exp: ResumeExperience, index: number) => (
+                <div class='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg hover:border-accent transition-all duration-300' style={`animation-delay: ${index * 0.15}s`}>
+                    <div class='flex flex-col md:flex-row justify-between md:items-start mb-4'>
+                        <div>
+                            <h3 class='text-xl font-semibold'>{exp.company}</h3>
+                            <p class='text-accent text-sm hover:text-accentLight transition-colors duration-200'>{exp.role}</p>
+                        </div>
+                        <p class='text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0'>{exp.period}</p>
+                    </div>
+                    <div class='space-y-6'>
+                        {exp.projects.map((project: ResumeProject, projectIndex: number) => (
+                            <div class='border-l-4 border-accent pl-4 hover:border-accentLight transition-colors duration-200' style={`animation-delay: ${(index * 0.15) + (projectIndex * 0.1)}s`}>
+                                <h4 class='text-lg font-semibold'>{project.name}</h4>
+                                <p class='text-sm text-gray-500 dark:text-gray-400'>{project.period}</p>
+                                <p class='mt-2'>
+                                    <span class='font-semibold'>{lang === 'en' ? 'Tech Stack: ' : '技术栈：'}</span>
+                                    {project.techStack.join(', ')}
+                                </p>
+                                <p class='mt-2'>
+                                    <span class='font-semibold'>{lang === 'en' ? 'Background: ' : '项目背景：'}</span>
+                                    {project.background}
+                                </p>
+                                <div class='mt-2'>
+                                    <span class='font-semibold'>{lang === 'en' ? 'Achievements: ' : '项目成果：'}</span>
+                                    <ul class='list-disc list-inside mt-1 space-y-1'>
+                                        {project.achievements.map((achievement: string) => (
+                                            <li>{achievement}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <p class='mt-2'>
+                                    <span class='font-semibold'>{lang === 'en' ? 'Role: ' : '角色：'}</span>
+                                    {project.role}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Contact from '../components/Contact.astro';
+import Summary from '../components/Summary.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+import LanguageToggle from '../components/LanguageToggle.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// 默认语言设置
+const defaultLang = 'en';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Resume">
+  <div class="container mx-auto px-4 py-6 max-w-5xl" data-lang={defaultLang}>
+    <LanguageToggle />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="col-span-1 md:col-span-1">
+        <Header />
+        <Contact />
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <Summary />
+        <Experience />
+        <Education />
+        <Skills />
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<script>
+  // 检测用户语言并设置默认语言
+  const detectLanguage = () => {
+    try {
+      const defaultLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+      const savedLang = localStorage.getItem('lang') || defaultLang;
+      
+      // 设置语言到所有需要的元素
+      document.querySelectorAll('[data-lang]').forEach((el) => {
+        el.setAttribute('data-lang', savedLang);
+      });
+      
+      // 确保语言切换器具有正确的值
+      const toggle = document.getElementById('language-toggle') as HTMLSelectElement;
+      if (toggle) {
+        toggle.value = savedLang;
+      }
+    } catch (error) {
+      console.error('语言设置出错:', error);
+    }
+  };
+  
+  // 页面加载时执行
+  document.addEventListener('DOMContentLoaded', detectLanguage);
+</script>

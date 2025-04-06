@@ -1,0 +1,27 @@
+---
+import {resumeData} from '../data/resumeData';
+import type {ResumeData} from '../types/resume.d';
+const lang = Astro.props.lang || 'en';
+const {overview, professional} = resumeData.content[lang as keyof ResumeData['content']].skills;
+---
+
+<section class='py-6 animate-fade-in'>
+    <h2 class='text-2xl font-semibold mb-4'>{lang === 'en' ? 'Skills' : '个人能力'}</h2>
+
+    <h3 class='text-lg font-semibold mt-4'>{lang === 'en' ? 'Professional Overview' : '职业概括'}</h3>
+    <ul class='list-disc list-inside mt-2 space-y-2'>
+        {overview.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <h3 class='text-lg font-semibold mt-6'>{lang === 'en' ? 'Professional Skills' : '专业技能'}</h3>
+    <ul class='list-disc list-inside mt-2 space-y-2'>
+        {
+            professional.map((skill) => (
+                <li>
+                    <span class='font-bold'>{skill.category}：</span>
+                    {skill.details}
+                </li>
+            ))
+        }
+    </ul>
+</section>

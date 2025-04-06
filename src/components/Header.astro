@@ -1,0 +1,12 @@
+---
+import { resumeData } from '../data/resumeData';
+import type { ResumeData } from '../types/resume.d';
+
+const lang = Astro.props.lang || 'en';
+const { name, title, location } = resumeData.content[lang as keyof ResumeData['content']].header;
+---
+<header class="py-8 animate-slide-up">
+  <h1 class="text-5xl font-bold">{name}</h1>
+  <p class="text-accent text-lg mt-2 hover:text-accentLight transition-colors duration-300">{title}</p>
+  <p class="text-sm mt-1"><i class="fa-solid fa-location-dot mr-2"></i>{location}</p>
+</header>
