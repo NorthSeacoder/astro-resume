@@ -13,7 +13,7 @@ jobs:
             # 添加环境变量检查
             - name: Check env
               run: |
-                echo "Checking environment variables..."
+                echo "Checking environment variables...${{ vars.PUBLIC_UMAMI }}"
                 # 列出所有环境变量（注意不要打印敏感信息）
                 env | grep -v -i "secret" | grep -v -i "token"
             
