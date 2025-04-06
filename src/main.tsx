@@ -13,7 +13,7 @@ const preloadCriticalAssets = () => {
   const assets = [
     // 预加载关键图像和字体
     { href: '/images/hero-bg.webp', as: 'image', type: 'image/webp' },
-    { href: '/fonts/main-font.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+    // { href: '/fonts/main-font.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
   ];
   
   assets.forEach(asset => {
@@ -22,7 +22,7 @@ const preloadCriticalAssets = () => {
     link.href = asset.href;
     link.as = asset.as;
     if (asset.type) link.type = asset.type;
-    if (asset.crossorigin) link.crossOrigin = asset.crossorigin;
+    // if (asset.crossorigin) link.crossOrigin = asset.crossorigin;
     document.head.appendChild(link);
   });
 };

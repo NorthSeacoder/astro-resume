@@ -57,7 +57,7 @@ export default function preloadConfigPlugin(): Plugin {
                     if (matchedFile) {
                         return {
                             ...item,
-                            path: `/assets/${matchedFile}` // 假设资源都在 assets 目录下
+                            path: matchedFile 
                         }
                     }
                     return item
