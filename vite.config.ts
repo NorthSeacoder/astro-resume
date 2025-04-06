@@ -137,7 +137,7 @@ export default defineConfig(({mode}) => ({
                 },
                 assetFileNames: (assetInfo: {name?: string}) => {
                     if (assetInfo.name?.endsWith('.css')) {
-                        return 'assets/css/[name]-[hash][extname]';
+                        return 'assets/css/[name]-vendor-[hash][extname]';
                     }
                     return 'assets/[name]-[hash][extname]';
                 },

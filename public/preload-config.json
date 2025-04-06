@@ -2,7 +2,7 @@
     "preload": [
         {
             "type": "style",
-            "path": "/assets/css/index"
+            "path": "/assets/css/index-vendor"
         },
         {
             "type": "script",

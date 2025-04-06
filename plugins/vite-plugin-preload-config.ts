@@ -43,17 +43,15 @@ export default function preloadConfigPlugin(): Plugin {
                 if (chunk.type === 'chunk' || chunk.type === 'asset') {
                     const baseName = path.basename(fileName)
                     // 移除 hash 和扩展名，用作键名
-                    const key = baseName.replace(/-[a-zA-Z0-9]+\.(js|css)$/, '')
+                    const key = baseName.replace(/-.{8}\.(js|css)$/, '')
                     assetMap.set(key, fileName)
                 }
             }
-
             // 更新配置中的路径
             const updatePaths = (items: PreloadItem[]) => {
                 return items.map(item => {
                     const pathWithoutExt = path.basename(item.path)
                     const matchedFile = assetMap.get(pathWithoutExt)
-                    
                     if (matchedFile) {
                         return {
                             ...item,
