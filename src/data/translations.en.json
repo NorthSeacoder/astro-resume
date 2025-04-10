@@ -1,0 +1,117 @@
+{
+  "translations": {
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "common": {
+      "viewMore": "View More",
+      "download": "Download",
+      "submit": "Submit",
+      "connect": "Connect"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Personal Profile",
+      "contact": {
+        "title": "Contact Me",
+        "info": "Contact Information"
+      },
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "projectsCompleted": "Projects Completed",
+        "happyClients": "Happy Clients"
+      }
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "levels": {
+        "expert": "Expert",
+        "advanced": "Advanced",
+        "proficient": "Proficient",
+        "intermediate": "Intermediate",
+        "beginner": "Beginner"
+      },
+      "map": {
+        "title": "Skills Relationship Map",
+        "description": "Interactive visualization of relationships between my technical skills"
+      },
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "devops": "DevOps",
+        "mobile": "Mobile",
+        "other": "Other"
+      }
+    },
+    "experience": {
+      "title": "Work Experience",
+      "projects": "Project Experience",
+      "background": "Project Introduction",
+      "star": {
+        "situation": "Background Situation",
+        "task": "Task Objectives",
+        "action": "Actions Taken",
+        "result": "Results Achieved"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "achievements": "Key Achievements"
+    },
+    "projects": {
+      "title": "Projects",
+      "technologies": "Technologies",
+      "actions": {
+        "view": "View Project",
+        "code": "View Code"
+      },
+      "featured": "Featured",
+      "evolution": "Tech Evolution",
+      "related": "Related Projects",
+      "description": "A comprehensive description of the project, explaining what it does, the problems it solves, and your role in its development."
+    },
+    "performance": {
+      "title": "Performance Metrics",
+      "toggle": "Toggle performance metrics",
+      "metrics": {
+        "fcp": "First Contentful Paint",
+        "lcp": "Largest Contentful Paint",
+        "fid": "First Input Delay",
+        "cls": "Cumulative Layout Shift",
+        "fps": "Frames Per Second",
+        "memory": "Memory Usage",
+        "ttfb": "Time To First Byte"
+      },
+      "description": "Realtime website performance analytics",
+      "disclaimer": "Note: These metrics are approximate and may vary based on your device and network conditions."
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "message": "Feel free to reach out for collaborations or just a friendly chat. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision."
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "designed": "Designed with React & TailwindCSS ❤️",
+      "quickLinks": "Quick Links"
+    },
+    "accessibility": {
+      "skipContent": "Skip to content",
+      "highContrast": "High contrast mode",
+      "reduceMotion": "Reduce motion",
+      "fontSize": {
+        "increase": "Increase text size",
+        "decrease": "Decrease text size"
+      }
+    }
+  }
+} 

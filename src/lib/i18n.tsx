@@ -1,6 +1,9 @@
 import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
-import resumeDataEn from '@/data/resumeData.en.json';
-import resumeDataZh from '@/data/resumeData.zh.json';
+import translationsEn from '@/data/translations.en.json';
+import translationsZh from '@/data/translations.zh.json';
+import resumeEn from '@/data/resume/en.json';
+import resumeZh from '@/data/resume/zh.json';
+import type { ResumeData } from '@/types/resume';
 
 // 定义语言类型
 export type Language = 'en' | 'zh';
@@ -10,7 +13,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
-  getResumeData: () => any;
+  getResumeData: () => ResumeData;
 }
 
 // 定义技能类型
@@ -76,18 +79,6 @@ export interface PortfolioProject {
   evolution?: string[];
 }
 
-export interface ResumeData {
-  translations: {
-    [key: string]: any;
-  };
-  skills: {
-    categories: SkillCategory[];
-  };
-  experiences: Experience[];
-  education: Education[];
-  portfolioProjects?: PortfolioProject[];
-}
-
 // 创建语言上下文
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -120,10 +111,16 @@ export const getInitialLanguage = (): Language => {
   }
 };
 
+// 翻译数据映射
+const translations = {
+  en: translationsEn.translations,
+  zh: translationsZh.translations
+};
+
 // 简历数据映射
 const resumeData = {
-  en: resumeDataEn as ResumeData,
-  zh: resumeDataZh as ResumeData
+  en: resumeEn,
+  zh: resumeZh
 };
 
 // 获取嵌套对象的值
@@ -149,8 +146,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
   // 翻译函数
   const t = (key: string): string => {
-    const currentData = resumeData[language] || resumeData.en;
-    const translatedValue = getNestedValue(currentData.translations, key);
+    const currentTranslations = translations[language] || translations.en;
+    const translatedValue = getNestedValue(currentTranslations, key);
     return translatedValue || key;
   };
 

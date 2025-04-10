@@ -1,132 +1,10 @@
 {
-  "translations": {
-    "nav": {
-      "about": "关于我",
-      "experience": "工作经验",
-      "education": "教育背景",
-      "skills": "技能专长",
-      "projects": "项目展示",
-      "contact": "联系方式"
-    },
-    "common": {
-      "viewMore": "查看更多",
-      "download": "下载",
-      "submit": "提交",
-      "connect": "联系"
-    },
-    "about": {
-      "title": "关于我",
-      "subtitle": "个人简介",
-      "bio": "拥有X年以上专业领域经验的资深人士。热衷于解决复杂问题并提供高质量的解决方案。",
-      "contact": {
-        "title": "联系我",
-        "info": "联系信息"
-      },
-      "stats": {
-        "yearsExperience": "年工作经验",
-        "projectsCompleted": "完成项目",
-        "happyClients": "满意客户"
-      }
-    },
-    "skills": {
-      "title": "技能与专长",
-      "levels": {
-        "expert": "专家",
-        "advanced": "高级",
-        "proficient": "熟练",
-        "intermediate": "中级",
-        "beginner": "初级"
-      },
-      "map": {
-        "title": "技能关系图谱",
-        "description": "我的技术能力之间的关系交互可视化图"
-      },
-      "categories": {
-        "frontend": "前端",
-        "backend": "后端",
-        "database": "数据库",
-        "devops": "运维",
-        "mobile": "移动端",
-        "other": "其他"
-      }
-    },
-    "experience": {
-      "title": "工作经历",
-      "projects": "项目经验",
-      "background": "项目简介",
-      "star": {
-        "situation": "背景情境",
-        "task": "任务目标",
-        "action": "采取行动",
-        "result": "成果结果"
-      }
-    },
-    "education": {
-      "title": "教育背景",
-      "achievements": "主要成就"
-    },
-    "projects": {
-      "title": "项目展示",
-      "technologies": "技术栈",
-      "actions": {
-        "view": "查看项目",
-        "code": "查看代码"
-      },
-      "featured": "精选项目",
-      "evolution": "技术演进",
-      "related": "相关项目",
-      "description": "项目的全面描述，解释其功能、解决的问题以及您在其开发中的角色。",
-      "items": {
-        "1": {
-          "title": "项目一",
-          "description": "这是一个使用React、Node.js、MongoDB和Express构建的全栈应用项目。"
-        },
-        "2": {
-          "title": "项目二",
-          "description": "这是一个使用Vue.js、Firebase和Tailwind CSS构建的现代化Web应用。"
-        },
-        "3": {
-          "title": "项目三",
-          "description": "这是一个使用Angular、TypeScript、Sass和Django构建的企业级应用。"
-        }
-      }
-    },
-    "performance": {
-      "title": "性能指标",
-      "toggle": "切换性能指标显示",
-      "metrics": {
-        "fcp": "首次内容绘制",
-        "lcp": "最大内容绘制",
-        "fid": "首次输入延迟",
-        "cls": "累积布局偏移",
-        "fps": "每秒帧数",
-        "memory": "内存占用",
-        "ttfb": "首字节时间"
-      },
-      "description": "实时网站性能分析",
-      "disclaimer": "注意：这些指标是近似值，可能会因设备和网络条件而有所不同。"
-    },
-    "contact": {
-      "title": "联系我们",
-      "form": {
-        "name": "您的姓名",
-        "email": "电子邮箱",
-        "message": "欢迎联系我进行项目合作或者友好交流。我始终愿意讨论新项目、创意想法或有机会成为您愿景的一部分。"
-      }
-    },
-    "footer": {
-      "rights": "版权所有",
-      "designed": "使用React和TailwindCSS设计 ❤️",
-      "quickLinks": "快速链接"
-    },
-    "accessibility": {
-      "skipContent": "跳转到主要内容",
-      "highContrast": "高对比度模式",
-      "reduceMotion": "减少动画效果",
-      "fontSize": {
-        "increase": "增大字体",
-        "decrease": "减小字体"
-      }
+  "about": {
+    "bio": "拥有X年以上专业领域经验的资深人士。热衷于解决复杂问题并提供高质量的解决方案。",
+    "stats": {
+      "yearsExperience": 5,
+      "projectsCompleted": 20,
+      "happyClients": 15
     }
   },
   "skills": {
@@ -323,6 +201,42 @@
         "完成分布式系统毕业设计",
         "计算机科学学生协会活跃成员"
       ]
+    }
+  ],
+  "portfolioProjects": [
+    {
+      "id": 1,
+      "title": "全栈电商平台",
+      "description": "基于React和Node.js构建的完整电子商务解决方案，具有响应式设计和高级支付集成功能。",
+      "image": "/placeholder.svg",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "techIds": ["react", "nodejs", "mongodb", "express"],
+      "liveLink": "https://example.com/project1",
+      "repoLink": "https://github.com/yourusername/project1",
+      "featured": true,
+      "evolution": ["jQuery", "React类组件", "React Hooks"]
+    },
+    {
+      "id": 2,
+      "title": "智能个人助手应用",
+      "description": "使用Vue.js和Firebase构建的个人任务管理应用，集成AI推荐和云端同步功能。",
+      "image": "/placeholder.svg",
+      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"],
+      "techIds": ["vue", "firebase", "tailwind"],
+      "liveLink": "https://example.com/project2",
+      "repoLink": "https://github.com/yourusername/project2",
+      "evolution": ["Vue 2", "Vue 3", "组合式API"]
+    },
+    {
+      "id": 3,
+      "title": "企业资源管理系统",
+      "description": "面向中小企业的全功能资源管理系统，包括人力资源、财务和库存管理模块。",
+      "image": "/placeholder.svg",
+      "technologies": ["Angular", "TypeScript", "Sass", "Django"],
+      "techIds": ["angular", "typescript", "sass", "django"],
+      "liveLink": "https://example.com/project3",
+      "repoLink": "https://github.com/yourusername/project3",
+      "evolution": ["Angular.js", "Angular 2+", "Angular Material"]
     }
   ]
 } 
