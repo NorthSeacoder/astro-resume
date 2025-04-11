@@ -12,19 +12,38 @@
       "viewMore": "查看更多",
       "download": "下载",
       "submit": "提交",
-      "connect": "联系"
+      "connect": "联系",
+      "downloadSuccess": "简历下载成功！",
+      "fileNotFound": "找不到简历文件，请联系管理员。",
+      "downloadError": "下载过程中发生错误，请重试。",
+      "profile": "个人照片",
+      "yourName": "您的姓名"
     },
     "about": {
       "title": "关于我",
       "subtitle": "个人简介",
+      "summary": "概述",
+      "bio": "经验丰富且充满激情的专业人士，在相关领域拥有扎实的背景。致力于提供高质量的成果并不断提升技能。",
+      "keyPoints": {
+        "first": "关于你自己的第一个要点",
+        "second": "关于你经验的第二个要点",
+        "third": "关于你技能或成就的第三个要点"
+      },
       "contact": {
         "title": "联系我",
-        "info": "联系信息"
+        "info": "联系信息",
+        "email": "your.email@example.com",
+        "phone": "+1 (234) 567-890",
+        "location": "城市, 国家",
+        "linkedin": "linkedin.com/in/yourprofile"
       },
       "stats": {
         "yearsExperience": "年工作经验",
         "projectsCompleted": "完成项目",
-        "happyClients": "满意客户"
+        "happyClients": "满意客户",
+        "years": "5+",
+        "projects": "20+",
+        "clients": "10+"
       }
     },
     "skills": {

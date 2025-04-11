@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from 'react';
 import {Menu, X, Moon, Sun, Globe} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -47,7 +46,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({behavior: 'smooth'});
-            setActiveSection(sectionId);
+            // setActiveSection(sectionId);
             setIsMenuOpen(false);
         }
     };
@@ -69,7 +68,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                     href='#'
                     className='text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform'
                     aria-label='首页'>
-                    YOUR NAME
+                    {t('common.yourName')}
                 </a>
 
                 {/* Mobile menu button */}

@@ -12,19 +12,38 @@
       "viewMore": "View More",
       "download": "Download",
       "submit": "Submit",
-      "connect": "Connect"
+      "connect": "Connect",
+      "downloadSuccess": "Resume downloaded successfully!",
+      "fileNotFound": "Resume file not found. Please contact the administrator.",
+      "downloadError": "An error occurred during download. Please try again.",
+      "profile": "Profile",
+      "yourName": "YOUR NAME"
     },
     "about": {
       "title": "About Me",
       "subtitle": "Personal Profile",
+      "summary": "Summary",
+      "bio": "Experienced and passionate professional with a strong background in relevant field. Dedicated to delivering high-quality results and continuously improving skills.",
+      "keyPoints": {
+        "first": "First key point about yourself",
+        "second": "Second key point about your experience",
+        "third": "Third key point about your skills or achievements"
+      },
       "contact": {
         "title": "Contact Me",
-        "info": "Contact Information"
+        "info": "Contact Information",
+        "email": "your.email@example.com",
+        "phone": "+1 (234) 567-890",
+        "location": "City, Country",
+        "linkedin": "linkedin.com/in/yourprofile"
       },
       "stats": {
         "yearsExperience": "Years Experience",
         "projectsCompleted": "Projects Completed",
-        "happyClients": "Happy Clients"
+        "happyClients": "Happy Clients",
+        "years": "5+",
+        "projects": "20+",
+        "clients": "10+"
       }
     },
     "skills": {

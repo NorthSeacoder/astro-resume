@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
-import { X } from "lucide-react"
+import { X, Check, AlertCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -114,9 +114,55 @@ type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>
 
 type ToastActionElement = React.ReactElement<typeof ToastAction>
 
+// 自定义Toast组件
+interface CustomToastProps {
+  message: string
+  title: string
+}
+
+const SuccessToast = ({ message, title }: CustomToastProps) => (
+  <div className="flex flex-col gap-1">
+    <div className="flex items-center gap-2">
+      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
+        <Check className="h-3.5 w-3.5 text-green-600 dark:text-green-400" />
+      </div>
+      <span className="font-semibold">{title}</span>
+    </div>
+    <p className="text-slate-700 dark:text-slate-300 pl-8">{message}</p>
+  </div>
+);
+
+const ErrorToast = ({ message, title }: CustomToastProps) => (
+  <div className="flex flex-col gap-1">
+    <div className="flex items-center gap-2">
+      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
+        <AlertCircle className="h-3.5 w-3.5 text-red-600 dark:text-red-400" />
+      </div>
+      <span className="font-semibold">{title}</span>
+    </div>
+    <p className="text-slate-700 dark:text-slate-300 pl-8">{message}</p>
+  </div>
+);
+
+// 辅助函数，创建成功、错误和其他类型的toast
+const createToast = {
+  success: (props: { title: string; message: string; duration?: number }) => ({
+    description: <SuccessToast title={props.title} message={props.message} />,
+    duration: props.duration || 3000,
+    className: "enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90 shadow-lg border-slate-200 dark:border-slate-700",
+  }),
+  
+  error: (props: { title: string; message: string; duration?: number }) => ({
+    description: <ErrorToast title={props.title} message={props.message} />,
+    duration: props.duration || 3000,
+    className: "enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90 shadow-lg border-slate-200 dark:border-slate-700",
+  }),
+};
+
 export {
   type ToastProps,
   type ToastActionElement,
+  type CustomToastProps,
   ToastProvider,
   ToastViewport,
   Toast,
@@ -124,4 +170,7 @@ export {
   ToastDescription,
   ToastClose,
   ToastAction,
+  SuccessToast,
+  ErrorToast,
+  createToast,
 }
