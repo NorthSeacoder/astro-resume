@@ -1,4 +1,3 @@
-
 import { GraduationCap, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -65,16 +64,23 @@ const Education = () => {
       <div className="space-y-8">
         {educations.map((edu) => (
           <div key={edu.id} className="fade-right opacity-0">
-            <Card className="p-6 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce">
+            <Card className="p-5 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce">
               <div className="flex flex-col space-y-5">
                 {/* Education header */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mr-4 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 rotate-hover shadow-md group">
+                  <div className="flex flex-grow items-start sm:items-center">
+                    {/* 桌面端显示的图标 */}
+                    <div className="hidden sm:flex w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/40 items-center justify-center mr-4 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 rotate-hover shadow-md group">
                       <GraduationCap className="text-blue-600 dark:text-blue-400 transition-transform duration-300 group-hover:scale-110" size={22} />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{edu.degree} in {edu.field}</h3>
+                    
+                    <div className="relative flex-grow">
+                      {/* 移动端显示的图标（右上角） */}
+                      <div className="absolute -top-1 right-0 sm:hidden w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 shadow-md group">
+                        <GraduationCap className="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" size={18} />
+                      </div>
+                      
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white pr-12 sm:pr-0">{edu.degree} in {edu.field}</h3>
                       <div className="flex flex-wrap items-center gap-2 mt-1">
                         <span className="text-blue-600 dark:text-blue-400 font-medium">{edu.institution}</span>
                         <span className="text-slate-400">•</span>
@@ -82,23 +88,23 @@ const Education = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center text-slate-500 dark:text-slate-300 sm:mt-0 ml-14 sm:ml-0 bg-slate-100 dark:bg-slate-700/30 px-3 py-1.5 rounded-full transition-all duration-300 hover:bg-slate-200 dark:hover:bg-slate-700/50">
-                    <Calendar className="mr-2 flex-shrink-0" size={16} />
-                    <span>{edu.period}</span>
+                  <div className="flex items-center text-slate-500 dark:text-slate-300 sm:mt-0 ml-0 sm:ml-auto mt-3 sm:mt-0 bg-slate-100 dark:bg-slate-700/30 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-300 hover:bg-slate-200 dark:hover:bg-slate-700/50">
+                    <Calendar className="mr-1 sm:mr-2 flex-shrink-0" size={14} />
+                    <span className="text-sm">{edu.period}</span>
                   </div>
                 </div>
                 
                 {/* Education description */}
-                <div className="ml-0 sm:ml-14">
-                  <p className="text-slate-700 dark:text-slate-300 mb-5 leading-relaxed">{edu.description}</p>
+                <div className="mt-2 sm:ml-14">
+                  <p className="text-slate-700 dark:text-slate-300 mb-5 leading-relaxed text-sm sm:text-base">{edu.description}</p>
                 
-                  <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
+                  <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-4 sm:p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
                     <h4 className="font-semibold text-slate-800 dark:text-white mb-3 whitespace-nowrap">{t('education.achievements')}:</h4>
                     <ul className="list-inside text-slate-700 dark:text-slate-300 space-y-2.5">
                       {edu.achievements.map((achievement, i) => (
                         <li key={i} className="animate-child fade-left opacity-0 flex items-start">
-                          <span className="inline-block w-4 h-4 mt-1 mr-2 flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 rounded-full"></span>
-                          <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">{achievement}</span>
+                          <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 mt-1 mr-2 flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 rounded-full"></span>
+                          <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 text-sm sm:text-base">{achievement}</span>
                         </li>
                       ))}
                     </ul>
