@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from 'react';
 import {Menu, X, Moon, Sun, Globe} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -27,9 +28,8 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
         {id: 'contact', label: t('nav.contact')}
     ];
 
-    // Language mappings
     const languageLabels = {
-        en: 'English',
+        en: 'En',
         zh: '中文'
     };
 
@@ -80,7 +80,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                         size='icon'
                         onClick={toggleTheme}
                         aria-label='Toggle theme'
-                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full'>
+                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full shadow-sm hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-0 hover:border-transparent'>
                         {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                     </Button>
 
@@ -90,7 +90,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                         size='icon'
                         onClick={toggleLanguage}
                         aria-label='Toggle language'
-                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full flex items-center justify-center'>
+                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full shadow-sm hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-0 hover:border-transparent flex items-center justify-center'>
                         <span className='text-xs font-medium'>{languageLabels[language]}</span>
                     </Button>
 
@@ -99,7 +99,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                         size='icon'
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label='Toggle menu'
-                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'>
+                        className='text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full shadow-sm hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-0 hover:border-transparent'>
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </Button>
                 </div>
@@ -129,7 +129,7 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className={`header-nav-link ${
+                                className={`header-nav-link focus:outline-none focus:ring-0 ${
                                     activeSection === item.id ? 'active' : 'text-slate-700 dark:text-slate-300'
                                 }`}>
                                 {item.label}
@@ -138,28 +138,24 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
                     </nav>
 
                     {/* Language Toggle Button */}
-                    <div className='hover-lift'>
                         <Button
                             variant='ghost'
                             size='icon'
                             onClick={toggleLanguage}
                             aria-label='Toggle language'
-                            className='rounded-full w-9 h-9 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center'>
+                            className='rounded-full w-9 h-9 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-0 hover:border-transparent'>
                             <span className='text-xs font-medium'>{languageLabels[language]}</span>
                         </Button>
-                    </div>
 
                     {/* Theme Toggle */}
-                    <div className='hover-lift'>
                         <Button
                             variant='ghost'
                             size='icon'
                             onClick={toggleTheme}
                             aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-                            className='rounded-full w-9 h-9 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'>
+                            className='rounded-full w-9 h-9 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 shadow-sm hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-0 hover:border-transparent'>
                             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                         </Button>
-                    </div>
                 </div>
             </div>
         </header>
@@ -167,3 +163,4 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
 };
 
 export default Header;
+

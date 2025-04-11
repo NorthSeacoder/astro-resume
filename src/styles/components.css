@@ -1,3 +1,4 @@
+
 /* 组件样式文件 - 采用CSS代码分割策略 */
 
 /* Header 组件样式 */
@@ -19,6 +20,15 @@
 
 .header-mobile-link.active {
   @apply text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20;
+}
+
+/* Collapsible components */
+.collapsible-trigger {
+  @apply flex items-center justify-between w-full rounded-lg p-3 transition-all focus:outline-none;
+}
+
+.collapsible-content {
+  @apply overflow-hidden transition-all duration-300;
 }
 
 /* 性能监控组件样式 */

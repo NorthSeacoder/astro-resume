@@ -57,16 +57,16 @@ const Education = () => {
 
   return (
     <div ref={sectionRef} className="content-spacing">
-      <div className="flex items-center mb-10">
+      <div className="flex items-center mb-8">
         <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">{t('education.title')}</h2>
         <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
       
-      <div className="space-y-10">
+      <div className="space-y-8">
         {educations.map((edu) => (
           <div key={edu.id} className="fade-right opacity-0">
-            <Card className="p-7 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce">
-              <div className="flex flex-col space-y-6">
+            <Card className="p-6 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce">
+              <div className="flex flex-col space-y-5">
                 {/* Education header */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex items-center">
@@ -89,16 +89,16 @@ const Education = () => {
                 </div>
                 
                 {/* Education description */}
-                <div className="ml-14">
+                <div className="ml-0 sm:ml-14">
                   <p className="text-slate-700 dark:text-slate-300 mb-5 leading-relaxed">{edu.description}</p>
                 
                   <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
                     <h4 className="font-semibold text-slate-800 dark:text-white mb-3 whitespace-nowrap">{t('education.achievements')}:</h4>
-                    <ul className="list-disc list-inside text-slate-700 dark:text-slate-300 space-y-2.5">
+                    <ul className="list-inside text-slate-700 dark:text-slate-300 space-y-2.5">
                       {edu.achievements.map((achievement, i) => (
-                        <li key={i} className="animate-child fade-left opacity-0 pl-2 hover:pl-3 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400">
-                          <span className="absolute -ml-5 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                          {achievement}
+                        <li key={i} className="animate-child fade-left opacity-0 flex items-start">
+                          <span className="inline-block w-4 h-4 mt-1 mr-2 flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 rounded-full"></span>
+                          <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">{achievement}</span>
                         </li>
                       ))}
                     </ul>

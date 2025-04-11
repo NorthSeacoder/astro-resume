@@ -12,7 +12,8 @@ import {getInitialTheme, saveTheme} from '@/lib/theme-utils';
 import SEO from '@/components/SEO';
 import Analytics from '@/components/Analytics';
 import { useLanguage } from '@/lib/i18n';
-import { h, VNode } from 'preact';
+// Remove the h and VNode imports, as they cause type conflicts
+import React from 'react';
 
 // 组件懒加载包装器
 const LazyComponentLoader = ({children}: {children: React.ReactNode}) => (
@@ -30,7 +31,8 @@ const LazyComponentLoader = ({children}: {children: React.ReactNode}) => (
     </Suspense>
 );
 
-const Index = (): VNode => {
+// Change the return type from VNode to ReactNode for better compatibility
+const Index = () => {
     const [activeSection, setActiveSection] = useState('about');
     const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme());
     const sectionsRef = useRef<HTMLElement[]>([]);
@@ -159,36 +161,36 @@ const Index = (): VNode => {
                     toggleTheme={toggleTheme}
                 />
 
-                <main className='container mx-auto px-4 py-8 sm:px-6 lg:px-8 relative z-10 pt-20'>
-                    <section id='about' className='py-16 md:py-20 scroll-mt-20 min-h-[200px]'>
+                <main className='container mx-auto px-4 py-6 sm:px-6 lg:px-8 relative z-10 pt-20'>
+                    <section id='about' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
                         <Hero />
                     </section>
 
-                    <section id='experience' className='py-16 md:py-20 scroll-mt-20 min-h-[300px]'>
+                    <section id='experience' className='py-12 md:py-16 scroll-mt-20 min-h-[300px]'>
                         <LazyComponentLoader>
                             <Experience />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='education' className='py-16 md:py-20 scroll-mt-20 min-h-[200px]'>
+                    <section id='education' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
                         <LazyComponentLoader>
                             <Education />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='skills' className='py-16 md:py-20 scroll-mt-20 min-h-[200px]'>
+                    <section id='skills' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
                         <LazyComponentLoader>
                             <Skills />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='projects' className='py-16 md:py-20 scroll-mt-20 min-h-[300px]'>
+                    <section id='projects' className='py-12 md:py-16 scroll-mt-20 min-h-[300px]'>
                         <LazyComponentLoader>
                             <Projects />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='contact' className='py-16 md:py-20 scroll-mt-20 min-h-[200px]'>
+                    <section id='contact' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
                         <LazyComponentLoader>
                             <Contact />
                         </LazyComponentLoader>
@@ -199,7 +201,7 @@ const Index = (): VNode => {
             </div>
             
             {/* Umami Analytics */}
-            <Analytics websiteId={import.meta.env.PUBLIC_UMAMI} />
+            <Analytics websiteId={import.meta.env.VITE_UMAMI_WEBSITE_ID} />
         </>
     );
 };
