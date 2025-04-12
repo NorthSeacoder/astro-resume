@@ -1,12 +1,17 @@
-import { User, Mail, Phone, MapPin, Download } from "lucide-react";
+import { User, Mail, Phone, MapPin, Download, GraduationCap, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/lib/i18n";
 import { toast } from "@/hooks/use-toast";
 import { createToast } from "@/components/ui/toast";
 
 const Hero = () => {
-  const { t, language } = useLanguage();
+  const { t, language, getResumeData } = useLanguage();
+  
+  // 获取教育信息
+  const resumeData = getResumeData();
+  const education = resumeData.education[0]; // 只获取第一个学历
   
   const handleDownload = () => {
     const pdfFile = `/resume/resume_${language}.pdf`;
@@ -92,6 +97,14 @@ const Hero = () => {
               </div>
               <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('about.contact.linkedin')}</a>
             </div>
+            
+            {/* 添加教育信息 */}
+            <div className="flex items-center group">
+              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
+                <GraduationCap className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
+              </div>
+              <span className="text-slate-700 dark:text-slate-300">{education.degree} in {education.field}</span>
+            </div>
           </div>
           
           <div className="mt-6">
@@ -131,6 +144,39 @@ const Hero = () => {
               <span className="text-slate-700 dark:text-slate-300">{t('about.keyPoints.third')}</span>
             </li>
           </ul>
+        </div>
+        
+        {/* 添加教育信息卡片 */}
+        <div className="bg-white dark:bg-slate-800/80 rounded-xl shadow-md p-6 mb-6 dark:border dark:border-slate-700 transition-all duration-300 hover:shadow-lg enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90">
+          <div className="flex items-center mb-3">
+            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mr-3 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 shadow-md">
+              <GraduationCap className="text-blue-600 dark:text-blue-400" size={18} />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{t('education.title')}</h3>
+          </div>
+          
+          <div className="flex flex-col md:flex-row md:items-center justify-between mt-3 mb-3">
+            <div>
+              <p className="text-blue-600 dark:text-blue-400 font-medium">{education.institution}</p>
+              <p className="text-slate-600 dark:text-slate-300 text-sm">{education.degree} in {education.field}</p>
+            </div>
+            <div className="flex items-center text-slate-500 dark:text-slate-300 mt-2 md:mt-0 text-sm bg-slate-100 dark:bg-slate-700/30 py-1 px-3 rounded-full">
+              <Calendar className="mr-2 flex-shrink-0" size={14} />
+              <span>{education.period}</span>
+            </div>
+          </div>
+          
+          {education.achievements && education.achievements.length > 0 && (
+            <div className="mt-3">
+              <div className="flex flex-wrap gap-2">
+                {education.achievements.map((achievement, i) => (
+                  <Badge key={i} className="bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800/30">
+                    {achievement}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

@@ -21,10 +21,8 @@ const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderPro
     const navItems = [
         {id: 'about', label: t('nav.about')},
         {id: 'experience', label: t('nav.experience')},
-        {id: 'education', label: t('nav.education')},
         {id: 'skills', label: t('nav.skills')},
-        {id: 'projects', label: t('nav.projects')},
-        {id: 'contact', label: t('nav.contact')}
+        {id: 'projects', label: t('nav.projects')}
     ];
 
     const languageLabels = {

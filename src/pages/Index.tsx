@@ -3,10 +3,10 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 // 懒加载复杂组件
 const Experience = lazy(() => import('@/components/Experience'));
-const Education = lazy(() => import('@/components/Education'));
+// 移除Education组件导入
 const Skills = lazy(() => import('@/components/Skills'));
 const Projects = lazy(() => import('@/components/Projects'));
-const Contact = lazy(() => import('@/components/Contact'));
+// 移除 Contact 组件导入
 import Footer from '@/components/Footer';
 import {getInitialTheme, saveTheme} from '@/lib/theme-utils';
 import SEO from '@/components/SEO';
@@ -56,47 +56,47 @@ const Index = () => {
         updateSectionRefs();
         
         // 滚动处理函数：处理导航高亮和动画
-        const handleScroll = (e) => {
+        const handleScroll = () => {
           // 如果sectionsRef为空，重新获取
           if (sectionsRef.current.length === 0) {
             updateSectionRefs();
             if (sectionsRef.current.length === 0) return; // 如果还是空，直接返回
           }
           
-          const scrollY = e.target.scrollTop;
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
           const scrollPosition = scrollY + 100; // 用于导航高亮的偏移量
+          
           // 1. 处理导航高亮
           
             // 特殊处理回到顶部的情况
             if (scrollY < 300) {
                 setActiveSection("about");
             } 
-            // 特殊处理 experience 部分
+            // 检查所有部分
             else {
-                const experienceSection = document.getElementById("experience");
-                let foundActive = false;
+                let currentActive = "";
+                let minDistance = Infinity;
                 
-                if (experienceSection) {
-                    const expTop = experienceSection.offsetTop - 100;
-                    const expBottom = expTop + experienceSection.offsetHeight + 100;
+                // 查找最接近当前滚动位置的区域
+                for (const section of sectionsRef.current) {
+                    const sectionTop = section.offsetTop - 100;
+                    const distance = Math.abs(scrollPosition - sectionTop);
                     
-                    if (scrollPosition >= expTop && scrollPosition < expBottom) {
-                        setActiveSection("experience");
-                        foundActive = true;
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        currentActive = section.id;
+                    }
+                    
+                    // 如果当前位置在区域内，直接使用这个区域
+                    if (scrollPosition >= sectionTop && 
+                        scrollPosition < (sectionTop + section.offsetHeight)) {
+                        currentActive = section.id;
+                        break;
                     }
                 }
                 
-                // 如果不是experience部分，检查其他部分
-                if (!foundActive) {
-                    for (const section of sectionsRef.current) {
-                        const sectionTop = section.offsetTop - 50;
-                        const sectionBottom = sectionTop + section.offsetHeight;
-                        
-                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                            setActiveSection(section.id);
-                            break;
-                        }
-                    }
+                if (currentActive && currentActive !== activeSection) {
+                    setActiveSection(currentActive);
                 }
             }
             
@@ -110,19 +110,21 @@ const Index = () => {
             });
         };
 
-        // 注册滚动事件监听器
-        document.body.addEventListener('scroll', handleScroll, {passive: true});
+        // 注册滚动事件监听器 - 改为监听window
+        window.addEventListener('scroll', handleScroll, {passive: true});
         
         // 初始检查 - 确保DOM已完全加载，特别是对于懒加载组件
         const initialCheckTimeout = setTimeout(() => {
             // 再次更新sections引用
             updateSectionRefs();
+            // 初始执行一次滚动处理
+            handleScroll();
         }, 500);
         
         // 清理函数
         return () => {
-          document.body.removeEventListener('scroll', handleScroll);
-            clearTimeout(initialCheckTimeout);
+          window.removeEventListener('scroll', handleScroll);
+          clearTimeout(initialCheckTimeout);
         };
     }, []); // 仅在组件挂载时运行一次
 
@@ -172,12 +174,6 @@ const Index = () => {
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='education' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
-                        <LazyComponentLoader>
-                            <Education />
-                        </LazyComponentLoader>
-                    </section>
-
                     <section id='skills' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
                         <LazyComponentLoader>
                             <Skills />
@@ -187,12 +183,6 @@ const Index = () => {
                     <section id='projects' className='py-12 md:py-16 scroll-mt-20 min-h-[300px]'>
                         <LazyComponentLoader>
                             <Projects />
-                        </LazyComponentLoader>
-                    </section>
-
-                    <section id='contact' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
-                        <LazyComponentLoader>
-                            <Contact />
                         </LazyComponentLoader>
                     </section>
                 </main>

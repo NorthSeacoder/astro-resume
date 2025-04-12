@@ -11,7 +11,7 @@ const Education = () => {
   
   // 获取当前语言的resume数据
   const resumeData = getResumeData();
-  const educations = resumeData.education;
+  const education = resumeData.education[0]; // 只获取第一个学历
 
   useEffect(() => {
     // 创建IntersectionObserver来监视元素何时进入视口
@@ -61,59 +61,49 @@ const Education = () => {
         <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
       
-      <div className="space-y-8">
-        {educations.map((edu) => (
-          <div key={edu.id} className="fade-right opacity-0">
-            <Card className="p-5 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce">
-              <div className="flex flex-col space-y-5">
-                {/* Education header */}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div className="flex flex-grow items-start sm:items-center">
-                    {/* 桌面端显示的图标 */}
-                    <div className="hidden sm:flex w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/40 items-center justify-center mr-4 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 rotate-hover shadow-md group">
-                      <GraduationCap className="text-blue-600 dark:text-blue-400 transition-transform duration-300 group-hover:scale-110" size={22} />
-                    </div>
-                    
-                    <div className="relative flex-grow">
-                      {/* 移动端显示的图标（右上角） */}
-                      <div className="absolute -top-1 right-0 sm:hidden w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 shadow-md group">
-                        <GraduationCap className="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" size={18} />
-                      </div>
-                      
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white pr-12 sm:pr-0">{edu.degree} in {edu.field}</h3>
-                      <div className="flex flex-wrap items-center gap-2 mt-1">
-                        <span className="text-blue-600 dark:text-blue-400 font-medium">{edu.institution}</span>
-                        <span className="text-slate-400">•</span>
-                        <span className="text-slate-600 dark:text-slate-300">{edu.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-slate-500 dark:text-slate-300 sm:mt-0 ml-0 sm:ml-auto mt-3 sm:mt-0 bg-slate-100 dark:bg-slate-700/30 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-300 hover:bg-slate-200 dark:hover:bg-slate-700/50">
-                    <Calendar className="mr-1 sm:mr-2 flex-shrink-0" size={14} />
-                    <span className="text-sm">{edu.period}</span>
-                  </div>
-                </div>
-                
-                {/* Education description */}
-                <div className="mt-2 sm:ml-14">
-                  <p className="text-slate-700 dark:text-slate-300 mb-5 leading-relaxed text-sm sm:text-base">{edu.description}</p>
-                
-                  <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-4 sm:p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
-                    <h4 className="font-semibold text-slate-800 dark:text-white mb-3 whitespace-nowrap">{t('education.achievements')}:</h4>
-                    <ul className="list-inside text-slate-700 dark:text-slate-300 space-y-2.5">
-                      {edu.achievements.map((achievement, i) => (
-                        <li key={i} className="animate-child fade-left opacity-0 flex items-start">
-                          <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 mt-1 mr-2 flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 rounded-full"></span>
-                          <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 text-sm sm:text-base">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+      <div className="max-w-2xl mx-auto">
+        <div className="fade-right opacity-0">
+          <Card className="p-8 overflow-hidden dark:bg-slate-800/80 dark:border-slate-700 enhanced-card transition-bounce hover:shadow-md text-center">
+            <div className="flex flex-col items-center mb-6">
+              <div className="w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mb-4 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 shadow-md">
+                <GraduationCap className="text-blue-600 dark:text-blue-400" size={32} />
               </div>
-            </Card>
-          </div>
-        ))}
+              <h3 className="text-2xl font-semibold text-slate-800 dark:text-white">{education.degree}</h3>
+              <p className="text-blue-600 dark:text-blue-400 font-medium text-xl mt-2">{education.institution}</p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-center justify-center bg-slate-100 dark:bg-slate-700/30 py-3 px-6 rounded-full w-fit mx-auto">
+                <Calendar className="mr-2 flex-shrink-0 text-blue-500 dark:text-blue-400" size={18} />
+                <span className="text-slate-700 dark:text-slate-300">{education.period}</span>
+              </div>
+              
+              <div className="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-5 shadow-inner">
+                <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{education.field}</p>
+                <p className="text-slate-600 dark:text-slate-400 mt-3">{education.description}</p>
+              </div>
+              
+              {education.achievements && education.achievements.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="font-semibold text-slate-800 dark:text-white mb-4">{t('education.achievements')}</h4>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {education.achievements.map((achievement, i) => (
+                      <Badge key={i} className="bg-blue-100 dark:bg-blue-900/20 hover:bg-blue-200 text-blue-800 dark:text-blue-400 py-1.5 px-3 border border-blue-200 dark:border-blue-800/30 text-sm">
+                        {achievement}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              <div className="pt-4">
+                <Badge variant="outline" className="bg-blue-50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/50 text-blue-700 dark:text-blue-400 py-2 px-4">
+                  {education.location}
+                </Badge>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

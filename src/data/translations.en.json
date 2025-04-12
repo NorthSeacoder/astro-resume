@@ -113,7 +113,8 @@
       "disclaimer": "Note: These metrics are approximate and may vary based on your device and network conditions."
     },
     "contact": {
-      "title": "Get In Touch",
+      "title": "Contact Me",
+      "connectWithMe": "Connect With Me",
       "form": {
         "name": "Your Name",
         "email": "Email Address",
@@ -123,7 +124,15 @@
     "footer": {
       "rights": "All rights reserved",
       "designed": "Designed with React & TailwindCSS ❤️",
-      "quickLinks": "Quick Links"
+      "quickLinks": "Quick Links",
+      "contactInfo": "Contact Info",
+      "connectText": "Let's connect through these channels:",
+      "about": "About Me",
+      "yourName": "YOUR NAME",
+      "backToTop": "Back to Top"
+    },
+    "hero": {
+      "aboutMe": "About Me"
     },
     "accessibility": {
       "skipContent": "Skip to content",
