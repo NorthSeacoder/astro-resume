@@ -21,6 +21,11 @@
       "expand": "展开",
       "collapse": "收起"
     },
+    "seo": {
+      "title": "个人简历 | 前端开发工程师",
+      "description": "资深前端工程师个人简历网站，专注于React、TypeScript和现代Web开发技术",
+      "keywords": "前端开发,React,TypeScript,Web开发,前端工程师,简历"
+    },
     "about": {
       "title": "关于我",
       "subtitle": "个人简介",

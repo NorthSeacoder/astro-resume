@@ -21,6 +21,11 @@
       "expand": "Expand",
       "collapse": "Collapse"
     },
+    "seo": {
+      "title": "Portfolio | Frontend Developer",
+      "description": "Professional portfolio of a senior frontend developer specialized in React, TypeScript and modern web development",
+      "keywords": "frontend development,React,TypeScript,web development,frontend engineer,portfolio"
+    },
     "about": {
       "title": "About Me",
       "subtitle": "Personal Profile",

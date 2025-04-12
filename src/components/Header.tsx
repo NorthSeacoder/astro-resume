@@ -8,12 +8,11 @@ import {AnimatePresence, motion} from 'framer-motion';
 
 interface HeaderProps {
     activeSection: string;
-    setActiveSection: (section: string) => void;
     theme: 'light' | 'dark';
     toggleTheme: () => void;
 }
 
-const Header = ({activeSection, setActiveSection, theme, toggleTheme}: HeaderProps) => {
+const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const {language, setLanguage, t} = useLanguage();
