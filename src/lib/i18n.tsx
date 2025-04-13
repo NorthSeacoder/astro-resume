@@ -3,10 +3,10 @@ import translationsEn from '@/data/translations.en.json';
 import translationsZh from '@/data/translations.zh.json';
 import resumeEn from '@/data/resume/en.json';
 import resumeZh from '@/data/resume/zh.json';
-import type { ResumeData } from '@/types/resume';
+import type { ResumeData, Language as LangType, Skill, SkillCategory, Star, SubProject, Project, Module, Experience, Education, PortfolioProject } from '@/types/resume';
 
 // 定义语言类型
-export type Language = 'en' | 'zh';
+export type Language = LangType;
 
 // 语言上下文接口
 interface LanguageContextType {
@@ -14,69 +14,6 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
   getResumeData: () => ResumeData;
-}
-
-// 定义技能类型
-export interface Skill {
-  name: string;
-  level?: string;
-  description: string;
-  percentage: number;
-  keywords: string[];
-}
-
-export interface SkillCategory {
-  id: number;
-  name: string;
-  icon: string;
-  skills: Skill[];
-}
-
-export interface ExperienceProject {
-  id: number;
-  name: string;
-  period: string;
-  background: string;
-  star: {
-    situation: string;
-    task: string;
-    action: string;
-    result: string;
-  };
-}
-
-export interface Experience {
-  id: number;
-  company: string;
-  position: string;
-  location: string;
-  period: string;
-  description: string;
-  projects: ExperienceProject[];
-}
-
-export interface Education {
-  id: number;
-  degree: string;
-  field: string;
-  institution: string;
-  location: string;
-  period: string;
-  description: string;
-  achievements: string[];
-}
-
-export interface PortfolioProject {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  techIds: string[];
-  liveLink?: string;
-  repoLink?: string;
-  featured?: boolean;
-  evolution?: string[];
 }
 
 // 创建语言上下文
@@ -119,8 +56,8 @@ const translations = {
 
 // 简历数据映射
 const resumeData = {
-  en: resumeEn,
-  zh: resumeZh
+  en: resumeEn as ResumeData,
+  zh: resumeZh as ResumeData
 };
 
 // 获取嵌套对象的值

@@ -1,4 +1,4 @@
-import { User, Mail, Phone, MapPin, Download, GraduationCap, Calendar } from "lucide-react";
+import { User, Mail, Phone, MapPin, Download, GraduationCap, Calendar, Award, Briefcase, BarChart, CheckCircle2, Layers, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,9 +9,10 @@ import { createToast } from "@/components/ui/toast";
 const Hero = () => {
   const { t, language, getResumeData } = useLanguage();
   
-  // 获取教育信息
+  // 获取简历数据
   const resumeData = getResumeData();
   const education = resumeData.education[0]; // 只获取第一个学历
+  const keyPoints = resumeData.about.keyPoints; // 从JSON中获取关键点
   
   const handleDownload = () => {
     const pdfFile = `/resume/resume_${language}.pdf`;
@@ -59,6 +60,31 @@ const Hero = () => {
       });
   };
   
+  // 统计数据卡片的详细信息
+  const statsCards = [
+    {
+      id: 'years',
+      icon: <Award size={20} />,
+      value: t('about.stats.years'),
+      label: t('about.stats.yearsExperience'),
+      description: t('about.stats.yearsDescription')
+    },
+    {
+      id: 'projects',
+      icon: <Layers size={20} />,
+      value: t('about.stats.projects'),
+      label: t('about.stats.projectsCompleted'),
+      description: t('about.stats.projectsDescription')
+    },
+    {
+      id: 'clients',
+      icon: <Users size={20} />,
+      value: t('about.stats.clients'),
+      label: t('about.stats.happyClients'),
+      description: t('about.stats.clientsDescription')
+    }
+  ];
+  
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
       <div className="lg:col-span-4 flex flex-col items-center lg:items-start">
@@ -98,12 +124,12 @@ const Hero = () => {
               <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('about.contact.linkedin')}</a>
             </div>
             
-            {/* 添加教育信息 */}
+            {/* 弱化教育信息展示方式 */}
             <div className="flex items-center group">
               <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
                 <GraduationCap className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
               </div>
-              <span className="text-slate-700 dark:text-slate-300">{education.degree} in {education.field}</span>
+              <span className="text-slate-700 dark:text-slate-300">{education.degree}, {education.institution}</span>
             </div>
           </div>
           
@@ -120,78 +146,64 @@ const Hero = () => {
       </div>
       
       <div className="lg:col-span-8">
-        <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-3">{t('about.title')}</h1>
-        <h2 className="text-2xl sm:text-3xl font-semibold gradient-text mb-6">{t('about.subtitle')}</h2>
-        
         <div className="bg-white dark:bg-slate-800/80 rounded-xl shadow-md p-6 mb-6 dark:border dark:border-slate-700 transition-all duration-300 hover:shadow-lg enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90">
-          <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">{t('about.summary')}</h3>
-          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-            {t('about.bio')}
-          </p>
+          <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-white flex items-center">
+            <Briefcase className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
+            {t('about.summary')}
+          </h3>
           
-          {/* Bulleted list for 3 key points */}
-          <ul className="mt-4 space-y-2">
-            <li className="flex items-start">
-              <span className="inline-block w-3 h-3 mt-1.5 mr-2 flex-shrink-0 bg-blue-500 dark:bg-blue-600 rounded-full"></span>
-              <span className="text-slate-700 dark:text-slate-300">{t('about.keyPoints.first')}</span>
-            </li>
-            <li className="flex items-start">
-              <span className="inline-block w-3 h-3 mt-1.5 mr-2 flex-shrink-0 bg-blue-500 dark:bg-blue-600 rounded-full"></span>
-              <span className="text-slate-700 dark:text-slate-300">{t('about.keyPoints.second')}</span>
-            </li>
-            <li className="flex items-start">
-              <span className="inline-block w-3 h-3 mt-1.5 mr-2 flex-shrink-0 bg-blue-500 dark:bg-blue-600 rounded-full"></span>
-              <span className="text-slate-700 dark:text-slate-300">{t('about.keyPoints.third')}</span>
-            </li>
-          </ul>
+          {/* 更精致的关键点设计 */}
+          <div className="space-y-5">
+            {keyPoints.map((point, index) => (
+              <div 
+                key={index} 
+                className="relative pl-10 pr-4 py-4 rounded-lg border border-blue-100 dark:border-blue-800/40 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 dark:from-blue-900/10 dark:to-indigo-900/10 hover:shadow-md transition-all duration-300"
+              >
+                <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-l-lg"></div>
+                <div className="absolute left-4 top-4 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-blue-100 dark:border-blue-800/40">
+                  <CheckCircle2 className="text-blue-600 dark:text-blue-400" size={20} />
+                </div>
+                <p className="text-slate-700 dark:text-slate-300 ml-6">{point}</p>
+              </div>
+            ))}
+          </div>
         </div>
         
-        {/* 添加教育信息卡片 */}
-        <div className="bg-white dark:bg-slate-800/80 rounded-xl shadow-md p-6 mb-6 dark:border dark:border-slate-700 transition-all duration-300 hover:shadow-lg enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90">
-          <div className="flex items-center mb-3">
-            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mr-3 flex-shrink-0 border-2 border-blue-300 dark:border-blue-600 shadow-md">
-              <GraduationCap className="text-blue-600 dark:text-blue-400" size={18} />
+        {/* 简化教育信息与统计数据 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {/* 教育信息卡片 */}
+          <div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm p-4 hover:shadow-md transition-all duration-300">
+            <div className="flex items-center mb-3">
+              <div className="w-8 h-8 rounded-md bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-2">
+                <GraduationCap className="text-blue-600 dark:text-blue-400" size={18} />
+              </div>
+              <h3 className="text-base font-medium text-slate-800 dark:text-white">{t('education.title')}</h3>
             </div>
-            <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{t('education.title')}</h3>
-          </div>
-          
-          <div className="flex flex-col md:flex-row md:items-center justify-between mt-3 mb-3">
-            <div>
-              <p className="text-blue-600 dark:text-blue-400 font-medium">{education.institution}</p>
-              <p className="text-slate-600 dark:text-slate-300 text-sm">{education.degree} in {education.field}</p>
-            </div>
-            <div className="flex items-center text-slate-500 dark:text-slate-300 mt-2 md:mt-0 text-sm bg-slate-100 dark:bg-slate-700/30 py-1 px-3 rounded-full">
-              <Calendar className="mr-2 flex-shrink-0" size={14} />
+            <p className="text-blue-600 dark:text-blue-400 font-medium">{education.institution}</p>
+            <p className="text-slate-600 dark:text-slate-300 text-sm my-1">{education.degree}</p>
+            <div className="flex items-center mt-2 text-slate-500 dark:text-slate-400 text-xs">
+              <Calendar className="mr-1" size={12} />
               <span>{education.period}</span>
             </div>
           </div>
           
-          {education.achievements && education.achievements.length > 0 && (
-            <div className="mt-3">
-              <div className="flex flex-wrap gap-2">
-                {education.achievements.map((achievement, i) => (
-                  <Badge key={i} className="bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800/30">
-                    {achievement}
-                  </Badge>
-                ))}
+          {/* 统计数据卡片 - 简化版 */}
+          {statsCards.map(card => (
+            <div key={card.id} className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm p-4 hover:shadow-md transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <div className="w-8 h-8 rounded-md bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-2">
+                  <span className="text-blue-600 dark:text-blue-400">{card.icon}</span>
+                </div>
+                <h3 className="text-base font-medium text-slate-800 dark:text-white">{card.label}</h3>
+              </div>
+              <div className="flex justify-between items-end">
+                <div>
+                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{card.value}</p>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">{card.description}</p>
+                </div>
               </div>
             </div>
-          )}
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="enhanced-card p-4 hover-lift">
-            <div className="text-3xl font-bold gradient-text mb-2">{t('about.stats.years')}</div>
-            <div className="text-slate-700 dark:text-slate-300 font-medium">{t('about.stats.yearsExperience')}</div>
-          </div>
-          <div className="enhanced-card p-4 hover-lift">
-            <div className="text-3xl font-bold gradient-text mb-2">{t('about.stats.projects')}</div>
-            <div className="text-slate-700 dark:text-slate-300 font-medium">{t('about.stats.projectsCompleted')}</div>
-          </div>
-          <div className="enhanced-card p-4 hover-lift">
-            <div className="text-3xl font-bold gradient-text mb-2">{t('about.stats.clients')}</div>
-            <div className="text-slate-700 dark:text-slate-300 font-medium">{t('about.stats.happyClients')}</div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

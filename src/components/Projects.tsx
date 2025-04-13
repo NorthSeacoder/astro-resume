@@ -6,33 +6,30 @@ import { Button } from "@/components/ui/button";
 import { motion, useMotionValue, useTransform, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useLanguage } from "@/lib/i18n";
+import { Project as BaseProject, PortfolioProject as BasePortfolioProject } from "@/types/resume";
 
 // 技术关联图
 interface TechNode {
   id: string;
   name: string;
-  category: "frontend" | "backend" | "devops" | "database" | "mobile" | "other";
-  level: number; // 1-5 技术熟练度
+  icon?: string;
+  color?: string;
 }
 
 interface TechEdge {
   source: string;
   target: string;
-  strength: number; // 1-3 关联强度
+  label?: string;
 }
 
-// 项目接口
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  techIds: string[]; // 用于关联技术图谱
-  liveLink?: string;
-  repoLink?: string;
-  featured?: boolean;
-  evolution?: string[]; // 技术栈演进历史
+// 扩展PortfolioProject接口以添加所需的其他属性
+interface Project extends BasePortfolioProject {
+  related?: string[];
+  imageUrl?: string;
+  techEvolution?: {
+    nodes: TechNode[];
+    edges: TechEdge[];
+  };
 }
 
 // 代码装饰元素

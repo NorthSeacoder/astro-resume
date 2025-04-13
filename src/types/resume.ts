@@ -1,3 +1,5 @@
+export type Language = 'en' | 'zh';
+
 export interface Skill {
   name: string;
   level: string;
@@ -17,17 +19,43 @@ export interface Skills {
   categories: SkillCategory[];
 }
 
+export interface Star {
+  id?: string;
+  title?: string;
+  situation: string;
+  task: string;
+  action: string;
+  result: string;
+}
+
+// 定义子项目类型
+export interface SubProject {
+  id: string;
+  name: string;
+  type: string;
+  background?: string;
+  position?: string;
+  stars?: Star[];
+}
+
+// 定义项目类型
 export interface Project {
-  id: number;
+  id: string | number;
   name: string;
   period: string;
-  background: string;
-  star: {
-    situation: string;
-    task: string;
-    action: string;
-    result: string;
-  };
+  position?: string;
+  type?: string;
+  background?: string;
+  stars?: Star[];
+  children?: (SubProject | any)[];
+}
+
+// 定义模块类型
+export interface Module {
+  id: string;
+  title: string;
+  type: string;
+  children: Project[];
 }
 
 export interface Experience {
@@ -37,7 +65,8 @@ export interface Experience {
   location: string;
   period: string;
   description: string;
-  projects: Project[];
+  projects?: any[];
+  modules?: Module[];
 }
 
 export interface Education {
@@ -57,7 +86,12 @@ export interface About {
     yearsExperience: number;
     projectsCompleted: number;
     happyClients: number;
+    yearsDescription?: string;
+    projectsDescription?: string;
+    clientsDescription?: string;
   };
+  keyPoints?: string[];
+  summary?: string;
 }
 
 export interface PortfolioProject {

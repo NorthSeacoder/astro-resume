@@ -1,0 +1,386 @@
+{
+  "about": {
+    "bio": "拥有8年前端开发经验与4年团队管理经验，专注于中后台系统架构设计与工程化建设，主导10余个大型中后台系统的开发与重构。带领3-5人前端团队，负责技术方案选型、代码质量管控与团队技术培养，提升团队人均开发效率40%。推动前端技术栈升级与标准化，擅长构建高复用性组件库与工具链，确保项目交付的高效性与可维护性。",
+    "stats": {
+      "yearsExperience": 8,
+      "projectsCompleted": 20,
+      "happyClients": 15
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "前端开发技能",
+        "icon": "Code",
+        "skills": [
+          { 
+            "name": "JavaScript/TypeScript", 
+            "level": "Expert",
+            "description": "精通JavaScript (ES6+)、CSS3和HTML5，熟悉TypeScript以提升代码质量和可维护性",
+            "percentage": 95,
+            "keywords": ["ES6+", "TypeScript", "HTML5", "CSS3"]
+          },
+          { 
+            "name": "React & Vue", 
+            "level": "Expert",
+            "description": "熟练掌握React（包括Hooks）、Vue.js（2.x和3.x），并能运用Ant Design实现高效界面设计",
+            "percentage": 90,
+            "keywords": ["React", "Vue", "Hooks", "Ant Design"]
+          },
+          { 
+            "name": "构建工具", 
+            "level": "Advanced",
+            "description": "精通Webpack、Vite、Rollup、esbuild和Tsup，具备丰富的模块化和打包优化经验",
+            "percentage": 85,
+            "keywords": ["Webpack", "Vite", "Rollup", "esbuild", "Tsup"]
+          },
+          { 
+            "name": "工程化生态", 
+            "level": "Expert",
+            "description": "熟悉UMI、Dumi和Father构建工具链，精通ESLint规范代码质量，熟练使用Vitest进行单元测试",
+            "percentage": 90,
+            "keywords": ["UMI", "Dumi", "Father", "ESLint", "Vitest"]
+          },
+          { 
+            "name": "数据可视化", 
+            "level": "Advanced",
+            "description": "熟悉ECharts和Pixi.js进行复杂数据可视化",
+            "percentage": 85,
+            "keywords": ["ECharts", "Pixi.js", "数据可视化"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "现代开发技术",
+        "icon": "BrainCircuit",
+        "skills": [
+          { 
+            "name": "性能与网络", 
+            "level": "Advanced",
+            "description": "深入理解HTTP/2、浏览器渲染机制、V8引擎优化及网络安全，擅长应用多种性能优化技术",
+            "percentage": 85,
+            "keywords": ["HTTP/2", "浏览器渲染", "V8引擎", "网络安全"]
+          },
+          { 
+            "name": "服务端渲染", 
+            "level": "Advanced",
+            "description": "熟悉Next.js服务端渲染和静态站点生成",
+            "percentage": 80,
+            "keywords": ["Next.js", "SSR", "静态站点生成"]
+          },
+          { 
+            "name": "UI样式管理", 
+            "level": "Expert",
+            "description": "掌握Tailwind CSS实现高效样式管理",
+            "percentage": 90,
+            "keywords": ["Tailwind CSS", "响应式设计"]
+          },
+          { 
+            "name": "大型项目管理", 
+            "level": "Advanced",
+            "description": "精通Monorepo模式支持大型项目开发",
+            "percentage": 85,
+            "keywords": ["Monorepo", "pnpm", "turborepo"]
+          },
+          { 
+            "name": "扩展与插件开发", 
+            "level": "Proficient",
+            "description": "具备VSCode插件、Figma扩展和浏览器扩展的开发能力",
+            "percentage": 75,
+            "keywords": ["VSCode插件", "Figma扩展", "浏览器扩展"]
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "company": "北京瓴岳科技",
+      "position": "架构师",
+      "location": "北京",
+      "period": "2019年3月 - 至今",
+      "description": "负责基于React和Vue技术栈的复杂系统前端架构设计与性能优化，带领前端团队推动技术升级与规范化，设计开发高复用性组件库与工具链以提升开发效率。",
+      "items": [
+        {
+          "id": "item-101",
+          "title": "OA系统及衍生产品线",
+          "period": "2020年3月 - 至今",
+          "type": "业务系统开发",
+          "summary": "基于React和Vue技术栈开发的高性能OA系统，包括国内版、印尼版、企业微信版",
+          "achievements": [
+            {
+              "id": "achieve-101",
+              "title": "表单性能优化",
+              "situation": "系统核心模块存在大型表单（超过1000行），初始渲染时间严重（约3秒），影响用户操作效率。",
+              "task": "将表单渲染时间控制在1秒内。",
+              "action": "调研并选型虚拟列表和图片/组件懒加载技术；使用React Profiler精准定位渲染瓶颈；重构表单组件实现按需渲染；使用react-lazy-with-preload代替原生React.lazy实现路由组件预加载，解决首次访问页面加载缓慢问题。",
+              "result": "大型表单平均渲染时间从3秒降至800毫秒，性能提升73%；组件路由切换时间降低40%，用户反馈操作流畅度显著提高。"
+            },
+            {
+              "id": "achieve-102",
+              "title": "多语言支持方案",
+              "situation": "业务拓展需要支持多语言环境，现有架构缺乏国际化支持能力。",
+              "task": "设计并实现稳健、易扩展的多语言解决方案。",
+              "action": "引入i18next库，构建基于JSON的动态语言包按需加载机制；配置fallback机制确保在特定语言翻译缺失时自动显示默认语言文本，避免界面出现空白；对日期、货币等格式进行本地化处理，同时实时监控代码中fallback触发情况，保证翻译覆盖率。",
+              "result": "成功支持4种语言，因翻译缺失导致的界面显示错误减少95%；监控系统准确率达99%，提前发现并修复200+潜在翻译问题，保障全球用户基础使用体验。"
+            },
+            {
+              "id": "achieve-103",
+              "title": "工位图配置流程优化",
+              "situation": "原有工位图配置流程繁琐（行政人员提供平面图和Excel表格 -> UI设计 -> 前端开发），每次配置耗时达4人日（设计2天+前端2天）。",
+              "task": "分步骤优化工位图配置流程，提高配置效率，降低技术门槛。",
+              "action": "第一阶段：开发Figma插件替代Excel表格手工计算坐标，设计师直接在设计稿中标记工位点，插件自动提取坐标生成配置，节省前端开发时间；第二阶段：构建完整可视化配置工具，使行政人员能直接在平台上绘制和配置工位图，不再依赖设计和开发。",
+              "result": "工位图配置流程从\"行政（平面图+Excel表格0.5人日）+ 设计（2人日）+ 前端（2人日）\"先降至\"行政（0.5人日）+ 设计（2人日）+ 前端（0.5人日）\"，再降至\"行政人员可视化配置（0.5人日）\"，项目总耗时从4.5人日降至0.5人日，配置错误率显著下降。"
+            }
+          ]
+        },
+        {
+          "id": "item-102",
+          "title": "企业微信移动应用",
+          "period": "2021年5月 - 至今",
+          "type": "业务系统开发",
+          "summary": "同时支持PC Web与企业微信移动端的跨平台应用设计开发",
+          "achievements": [
+            {
+              "id": "achieve-104",
+              "title": "跨平台技术架构设计",
+              "situation": "公司需要开发同时支持PC Web和企业微信移动端的应用系统。",
+              "task": "从零设计构建高复用性的跨平台技术架构。",
+              "action": "采用pnpm实现Monorepo架构进行多包项目管理；基于React、UMI、Tailwind CSS、react-query、Zustand构建技术栈；从项目一开始就建立严格的跨平台组件设计规范和ESLint规则强制执行；提取并规范化30+跨平台业务Hooks和10+响应式公共UI组件，发布至内部npm。",
+              "result": "成功实现PC与移动端之间70%核心业务逻辑和UI组件代码复用，新功能平均开发周期缩短30%，达到高度代码复用，减少40%开发工作量，提高代码一致性和可维护性。"
+            },
+            {
+              "id": "achieve-105",
+              "title": "移动端性能优化",
+              "situation": "部分页面（尤其在移动弱网环境下）首次加载白屏时间长。",
+              "task": "优化页面加载性能，减少白屏时间。",
+              "action": "利用react-query的缓存和后台更新机制实现数据预加载和状态保持；优化代码分割策略，按需加载非关键资源；合理利用HTTP缓存（Cache-Control、ETag）。",
+              "result": "关键页面平均白屏时间降低50%，Grafana监控显示数据加载P95时间降低35%。"
+            }
+          ]
+        },
+        {
+          "id": "item-103",
+          "title": "印尼版本OA系统",
+          "period": "2022年1月 - 2022年8月",
+          "type": "业务系统开发",
+          "summary": "基于Vue技术栈快速开发针对印尼市场的本地化OA系统",
+          "achievements": [
+            {
+              "id": "achieve-106",
+              "title": "快速本地化开发",
+              "situation": "需要在短时间内为印尼市场推出OA系统，功能上与国内版相似但需要进行本地化适配。",
+              "task": "基于国内React版经验，使用Vue技术栈快速完成印尼版的开发和本地化工作。",
+              "action": "采用Vue 2、Webpack、Ant Design Vue(antdv)技术栈；复用国内版的设计和架构思路；重点开发符合印尼用户习惯的日期和数字格式化组件；基于tiptap封装antdv富文本编辑器组件满足业务需求。",
+              "result": "在2个月内成功上线印尼版OA系统，富文本编辑模块开发效率相比直接使用原生tiptap提升65%。"
+            },
+            {
+              "id": "achieve-107",
+              "title": "印尼网络环境优化",
+              "situation": "印尼当地网络基础设施相对薄弱，导致访问速度慢。",
+              "task": "针对印尼网络环境进行专项性能优化。",
+              "action": "实施全面网络传输优化：启用HTTP/2协议；内联关键CSS，异步加载非首屏CSS；采用响应式图片(srcset)和WebP格式；配置CDN全球加速和边缘缓存。",
+              "result": "印尼用户访问系统的首次有效绘制（FMP）时间从平均3.5秒降至1.2秒，性能提升60%；通过BrowserStack测试确保在当地主流浏览器（Chrome、Firefox、UC Browser）上99%兼容性。"
+            }
+          ]
+        },
+        {
+          "id": "item-104",
+          "title": "WP系列项目",
+          "period": "2022年1月 - 至今",
+          "type": "业务系统开发",
+          "summary": "基于React、UMI、Tailwind CSS开发的复杂图形显示与编辑功能",
+          "achievements": [
+            {
+              "id": "achieve-120",
+              "title": "高性能图形渲染",
+              "situation": "项目需要开发停车位地图、仓位图等复杂图形配置界面，要求高性能渲染和交互。",
+              "task": "实现高性能、可配置的图形显示和编辑功能。",
+              "action": "基于React、UMI、Tailwind CSS开发；复用并扩展OA项目中基于Pixi.js的图形渲染引擎经验，优化大数据量下的渲染性能。",
+              "result": "成功交付停车位地图和仓位图配置功能，支持1000+图形元素的流畅显示和交互。"
+            },
+            {
+              "id": "achieve-121",
+              "title": "复杂交互优化",
+              "situation": "图形编辑界面需要支持框选和拖拽大规模元素等复杂交互，性能要求高。",
+              "task": "实现高性能框选和多元素操作功能。",
+              "action": "优化框选算法，使用requestAnimationFrame节流重绘操作；对大规模元素操作进行批处理和异步化，避免阻塞UI线程。",
+              "result": "实现流畅的框选体验，支持同时操作1000+元素，用户操作效率提升50%，Grafana监控显示交互响应时间P95稳定在200毫秒内。"
+            }
+          ]
+        },
+        {
+          "id": "item-105",
+          "title": "Slimfit组件库",
+          "period": "2023年4月 - 至今",
+          "type": "基础设施建设",
+          "summary": "设计实现公司新一代标准React组件库",
+          "achievements": [
+            {
+              "id": "achieve-140",
+              "title": "统一设计规范",
+              "situation": "公司多个B端产品UI风格不一致，组件重复开发，维护成本高。",
+              "task": "主导构建公司新一代标准React组件库Slimfit，统一设计规范。",
+              "action": "使用father 4（基于Rollup）进行组件打包，使用dumi 2构建组件文档和示例网站；基于Ant Design(antd)二次封装和自研，产出40+高质量UI组件。",
+              "result": "Slimfit成为公司B端产品线标准组件库，有效统一产品视觉风格，提升品牌一致性。"
+            },
+            {
+              "id": "achieve-141",
+              "title": "组件质量保障",
+              "situation": "需要保证组件库的质量和性能。",
+              "task": "建立全面的组件质量保障体系。",
+              "action": "集成Vitest进行单元测试和快照测试；配置Grafana监控实际项目中组件渲染性能（如首次渲染时间、更新时间）。",
+              "result": "核心组件单元测试覆盖率达70%以上，性能监控发现并优化了3个组件的渲染瓶颈，平均渲染性能P95时间降低40%。"
+            }
+          ]
+        },
+        {
+          "id": "item-106",
+          "title": "开发工具链",
+          "period": "2021年3月 - 至今",
+          "type": "工程效率提升",
+          "summary": "开发多个提升团队开发效率的工具和插件",
+          "achievements": [
+            {
+              "id": "achieve-180",
+              "title": "内部CLI工具开发",
+              "situation": "项目初始化配置繁琐，本地开发环境启动慢，Webpack构建配置复杂。",
+              "task": "提高前端工程效率和开发者体验。",
+              "action": "开发内部CLI工具（Franky CLI），提供标准化项目模板（React/Vue/Node）；深度优化Webpack构建配置（缓存、DllPlugin等）；引入并推广Vite、esbuild等新一代构建工具。",
+              "result": "新项目初始化时间从30分钟降至5分钟；本地开发服务器启动时间平均降低70%；开发者对工程工具链满意度提升50%。"
+            },
+            {
+              "id": "achieve-181",
+              "title": "VS Code插件开发",
+              "situation": "日常开发中存在大量重复操作和信息查询需求。",
+              "task": "开发VS Code插件提高开发效率和便利性。",
+              "action": "开发Franky（VS Code插件）：内置20+常用业务代码片段和页面模板，支持Tailwind CSS类名智能提示和转换，自动生成文件头部注释；开发WebBar（VS Code插件）：在状态栏添加自定义按钮，一键跳转常用内部系统或文档；开发CodeTransformer（VS Code插件）：集成Babel插件能力，支持在编辑器内快速重构和转换代码，支持项目依赖图可视化分析。",
+              "result": "开发者日常编码效率平均提升45%，特定代码重构任务速度提升50%。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "前公司",
+      "position": "高级前端开发",
+      "location": "北京",
+      "period": "2016年6月 - 2019年2月",
+      "description": "负责前端架构设计与技术选型，主导多个业务系统开发，参与组件库建设与工程优化。",
+      "items": [
+        {
+          "id": "item-201",
+          "title": "内部工具开发",
+          "period": "2017年3月 - 2018年12月",
+          "summary": "开发工具链提升团队开发效率",
+          "achievements": [
+            {
+              "id": "achieve-201",
+              "title": "前端工程效率提升",
+              "situation": "开发流程中存在大量重复工作，项目初始化配置繁琐，本地开发环境启动慢。",
+              "task": "提高前端工程效率和开发者体验。",
+              "action": "开发内部CLI工具，提供标准化项目模板；深度优化Webpack构建配置；开发VSCode插件，内置常用业务代码片段和页面模板，支持智能提示和转换。",
+              "result": "新项目初始化时间从30分钟降至5分钟；本地开发服务器启动时间平均降低70%；开发者日常编码效率平均提升45%。"
+            }
+          ]
+        },
+        {
+          "id": "item-202",
+          "title": "组件库开发",
+          "period": "2016年8月 - 2018年5月",
+          "summary": "参与设计开发公司基础UI组件库",
+          "achievements": [
+            {
+              "id": "achieve-202",
+              "title": "高性能组件实现",
+              "situation": "早期项目缺乏高质量、高性能的图表、选择器等基础组件。",
+              "task": "参与公司UI组件库建设，提供高性能组件。",
+              "action": "负责表格行/列冻结功能开发；使用虚拟列表技术优化Select、TreeSelect等组件在处理大量数据时的性能；将打包工具从Webpack切换为Rollup，利用其对ES Module的良好支持和更好的tree-shaking效果。",
+              "result": "成功封装50+UI组件，在公司内部项目中组件复用率达60%；Select等组件支持10000+记录流畅渲染，性能提升200%；组件库整体打包体积减少15%。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "学士学位",
+      "field": "农业资源与环境",
+      "institution": "吉林大学",
+      "location": "吉林",
+      "period": "2010年9月 - 2014年7月",
+      "description": "系统学习农业资源与环境相关专业知识，并自学编程技术，为后续转型前端开发奠定基础。",
+      "achievements": [
+        "以优异成绩毕业",
+        "在校期间自学前端开发技术",
+        "参与学生科技创新项目"
+      ]
+    }
+  ],
+  "portfolioProjects": [
+    {
+      "id": 1,
+      "title": "OA系统及衍生产品线",
+      "description": "基于React和Vue技术栈的高性能办公自动化系统，支持多语言、工位图配置、实时消息推送等功能。",
+      "image": "/placeholder.svg",
+      "technologies": ["React", "Vue", "WebSocket", "Ant Design", "Webpack", "Vite"],
+      "techIds": ["react", "vue", "websocket", "antd", "webpack", "vite"],
+      "liveLink": "https://example.com/oa-system",
+      "repoLink": "https://github.com/yourusername/oa-system",
+      "featured": true,
+      "evolution": ["React类组件", "React Hooks", "Vue2/3"]
+    },
+    {
+      "id": 2,
+      "title": "Slimfit组件库",
+      "description": "公司标准React组件库，基于Ant Design进行二次封装和自研，提供40余个高质量UI组件。",
+      "image": "/placeholder.svg",
+      "technologies": ["React", "TypeScript", "father", "dumi", "Vitest"],
+      "techIds": ["react", "typescript", "father", "dumi", "vitest"],
+      "liveLink": "https://example.com/slimfit",
+      "repoLink": "https://github.com/yourusername/slimfit",
+      "featured": true,
+      "evolution": ["基础组件", "业务组件", "设计系统"]
+    },
+    {
+      "id": 3,
+      "title": "前端开发工具链",
+      "description": "内部CLI工具、VSCode插件、Figma扩展等提升开发效率的工具集。",
+      "image": "/placeholder.svg",
+      "technologies": ["TypeScript", "Node.js", "VSCode API", "Figma API", "Babel"],
+      "techIds": ["typescript", "nodejs", "vscode", "figma", "babel"],
+      "liveLink": "https://example.com/dev-tools",
+      "repoLink": "https://github.com/yourusername/dev-tools",
+      "evolution": ["CLI工具", "编辑器插件", "设计工具集成"]
+    },
+    {
+      "id": 4,
+      "title": "WP系列图形化配置",
+      "description": "基于React和Pixi.js的高性能图形化配置系统，支持车位图、仓位图等复杂场景的可视化编辑。",
+      "image": "/placeholder.svg",
+      "technologies": ["React", "UMI", "Pixi.js", "Tailwind CSS"],
+      "techIds": ["react", "umi", "pixijs", "tailwind"],
+      "liveLink": "https://example.com/wp-system",
+      "repoLink": "https://github.com/yourusername/wp-system",
+      "featured": true,
+      "evolution": ["简单图形", "复杂交互", "性能优化"]
+    },
+    {
+      "id": 5,
+      "title": "资金财务风控系统",
+      "description": "基于Vue的企业级金融管理系统，满足高安全性和高可靠性要求。",
+      "image": "/placeholder.svg",
+      "technologies": ["Vue", "Base-UI", "AST", "安全防护"],
+      "techIds": ["vue", "base-ui", "ast", "security"],
+      "liveLink": "https://example.com/finance-system",
+      "repoLink": "https://github.com/yourusername/finance-system",
+      "evolution": ["基础功能", "安全加固", "组件迁移"]
+    }
+  ]
+} 

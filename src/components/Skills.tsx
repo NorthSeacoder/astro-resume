@@ -4,25 +4,16 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { motion, useMotionValue, useTransform, useInView } from "framer-motion";
-import { useLanguage, SkillCategory as SkillCategoryType } from "@/lib/i18n";
+import { useLanguage } from "@/lib/i18n";
 import { Code, BrainCircuit, Zap } from "lucide-react";
+import { Skill, SkillCategory as BaseSkillCategory } from "@/types/resume";
 
-// Skill proficiency levels
+// 定义技能水平类型 
 type ProficiencyLevel = "Expert" | "Advanced" | "Proficient" | "Intermediate" | "Beginner";
 
-interface Skill {
-  name: string;
-  level?: ProficiencyLevel;
-  description?: string;
-  percentage?: number;
-  keywords?: string[];
-}
-
-interface SkillCategory {
-  id: number;
-  name: string;
+// 扩展SkillCategory接口以使用React.ReactNode作为icon类型
+interface SkillCategory extends Omit<BaseSkillCategory, 'icon'> {
   icon: React.ReactNode;
-  skills: Skill[];
 }
 
 // Map proficiency levels to percentages
@@ -47,7 +38,7 @@ const SkillCard = ({
   const { t } = useLanguage();
   
   // Translate proficiency level using i18n
-  const getLocalizedLevel = (level?: ProficiencyLevel) => {
+  const getLocalizedLevel = (level?: string) => {
     if (!level) return "";
     return t(`skills.levels.${level.toLowerCase()}`);
   };
