@@ -139,6 +139,13 @@
             "description": "Implemented offline caching, push notifications, and other PWA features to enhance web application usability and user experience",
             "percentage": 75,
             "keywords": ["Service Worker", "Cache Strategies", "Push Notifications", "Installation Experience"]
+          },
+          { 
+            "name": "WeChat Work App Development", 
+            "level": "Advanced",
+            "description": "Deep understanding of WeChat Work application development ecosystem, including JSSDK, Mini Programs, and H5 applications, proficient in handling complex scenarios such as authentication, offline storage, and native interactions",
+            "percentage": 85,
+            "keywords": ["WeChat Work JSSDK", "Mini Programs", "H5 Apps", "Native Integration"]
           }
         ]
       }
