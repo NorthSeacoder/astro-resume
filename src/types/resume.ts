@@ -105,6 +105,7 @@ export interface PortfolioProject {
   repoLink?: string;
   featured?: boolean;
   evolution?: string[];
+  related?: number[];
 }
 
 export interface ResumeData {

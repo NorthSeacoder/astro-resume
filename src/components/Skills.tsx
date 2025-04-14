@@ -43,6 +43,28 @@ const SkillCard = ({
     return t(`skills.levels.${level.toLowerCase()}`);
   };
 
+  // 验证技能等级是否为有效的ProficiencyLevel值
+  const isValidLevel = (level?: string): level is ProficiencyLevel => {
+    if (!level) return false;
+    return ['Expert', 'Advanced', 'Proficient', 'Intermediate', 'Beginner'].includes(level);
+  };
+  
+  // 获取安全的样式，如果level无效则使用默认值
+  const getColorStyles = (level?: string) => {
+    if (isValidLevel(level)) {
+      return proficiencyColors[level];
+    }
+    return {
+      bg: "bg-gray-100",
+      text: "text-gray-800",
+      darkBg: "dark:bg-gray-900/30",
+      darkText: "dark:text-gray-400",
+      progressColor: "bg-blue-500 dark:bg-blue-500"
+    };
+  };
+
+  const colorStyles = getColorStyles(skill.level);
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -59,7 +81,7 @@ const SkillCard = ({
           <div className="flex items-center">
             <div className="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{skill.name}</div>
             {skill.level && (
-              <Badge className={`${proficiencyColors[skill.level].bg} ${proficiencyColors[skill.level].text} ${proficiencyColors[skill.level].darkBg} ${proficiencyColors[skill.level].darkText} border-0 ml-2 opacity-90 group-hover:opacity-100 transition-opacity`}>
+              <Badge className={`${colorStyles.bg} ${colorStyles.text} ${colorStyles.darkBg} ${colorStyles.darkText} border-0 ml-2 opacity-90 group-hover:opacity-100 transition-opacity`}>
                 {getLocalizedLevel(skill.level)}
               </Badge>
             )}
@@ -77,7 +99,7 @@ const SkillCard = ({
       <Progress 
         value={skill.percentage} 
         className="h-2 bg-slate-200/50 dark:bg-slate-700/30 backdrop-blur-sm group-hover:shadow-md transition-shadow duration-300"
-        indicatorClassName={skill.level ? proficiencyColors[skill.level].progressColor : "bg-blue-500"}
+        indicatorClassName={skill.level ? colorStyles.progressColor : "bg-blue-500"}
         animated={true}
         inView={inView}
       />
@@ -156,28 +178,62 @@ const Skills = () => {
 
   // 根据图标名称映射成组件
   const getIconByName = (iconName: string) => {
-    switch(iconName) {
-      case 'Code':
-        return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
-      case 'BrainCircuit':
-        return <BrainCircuit size={24} className="text-purple-600 dark:text-purple-400" />;
-      case 'Zap':
-        return <Zap size={24} className="text-amber-600 dark:text-amber-400" />;
-      default:
-        return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
+    if (!iconName) {
+      console.warn('图标名称为空');
+      return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
+    }
+    
+    try {
+      switch(iconName) {
+        case 'Code':
+          return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
+        case 'BrainCircuit':
+          return <BrainCircuit size={24} className="text-purple-600 dark:text-purple-400" />;
+        case 'Zap':
+          return <Zap size={24} className="text-amber-600 dark:text-amber-400" />;
+        default:
+          console.warn(`未知的图标名称: ${iconName}`);
+          return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
+      }
+    } catch (error) {
+      console.error(`处理图标时出错: ${error}`);
+      return <Code size={24} className="text-blue-600 dark:text-blue-400" />;
     }
   };
   
   // 更新技能类别，添加多语言支持
   useEffect(() => {
-    if (resumeData?.skills?.categories) {
-      const mappedCategories = resumeData.skills.categories.map(category => ({
-        ...category,
-        icon: getIconByName(category.icon),
-        name: category.name // 直接使用数据中定义的名称
-      }));
-      
-      setSkillCategories(mappedCategories);
+    try {
+      if (resumeData?.skills?.categories) {
+        console.log('成功获取技能类别数据:', resumeData.skills.categories.length);
+        
+        const mappedCategories = resumeData.skills.categories.map(category => {
+          try {
+            return {
+              ...category,
+              icon: getIconByName(category.icon || ''),
+              name: category.name || t('skills.category.unknown') // 使用默认值
+            };
+          } catch (err) {
+            console.error(`处理技能类别时出错: ${err}`, category);
+            // 返回一个安全的默认类别，确保UI不会崩溃
+            return {
+              id: category.id || 0,
+              name: category.name || t('skills.category.unknown'),
+              icon: <Code size={24} className="text-blue-600 dark:text-blue-400" />,
+              skills: [] // 空技能列表
+            };
+          }
+        });
+        
+        setSkillCategories(mappedCategories);
+      } else {
+        console.warn('技能类别数据不可用');
+        setSkillCategories([]); // 设置为空数组，避免错误
+      }
+    } catch (error) {
+      console.error('处理技能数据时出错:', error);
+      setSkillCategories([]); // 设置为空数组，避免错误
     }
   }, [t, language, resumeData]);
 

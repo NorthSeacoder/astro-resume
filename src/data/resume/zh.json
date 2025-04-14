@@ -13,8 +13,7 @@
       "拥有8年前端开发经验与4年团队管理经验，专注于中后台系统架构设计与工程化建设，主导10余个大型中后台系统的开发与重构。",
       "带领3-5人前端团队，负责技术方案选型、代码质量管控与团队技术培养，提升团队人均开发效率40%。",
       "推动前端技术栈升级与标准化，擅长构建高复用性组件库与工具链，确保项目交付的高效性与可维护性。"
-    ],
-    "summary": "职业概况"
+    ]
   },
   "skills": {
     "categories": [
@@ -26,35 +25,35 @@
           { 
             "name": "JavaScript/TypeScript", 
             "level": "Expert",
-            "description": "精通JavaScript (ES6+)、CSS3和HTML5，熟悉TypeScript以提升代码质量和可维护性",
+            "description": "使用JavaScript (ES6+)、CSS3和HTML5开发多年，使用TypeScript提升代码质量和可维护性",
             "percentage": 95,
             "keywords": ["ES6+", "TypeScript", "HTML5", "CSS3"]
           },
           { 
             "name": "React & Vue", 
             "level": "Expert",
-            "description": "熟练掌握React（包括Hooks）、Vue.js（2.x和3.x），并能运用Ant Design实现高效界面设计",
+            "description": "长期使用React（包括Hooks）、Vue.js（2.x和3.x），并运用Ant Design实现高效界面设计",
             "percentage": 90,
             "keywords": ["React", "Vue", "Hooks", "Ant Design"]
           },
           { 
             "name": "构建工具", 
             "level": "Advanced",
-            "description": "精通Webpack、Vite、Rollup、esbuild和Tsup，具备丰富的模块化和打包优化经验",
+            "description": "深度使用Webpack、Vite、Rollup、esbuild和Tsup，积累了丰富的模块化和打包优化经验",
             "percentage": 85,
             "keywords": ["Webpack", "Vite", "Rollup", "esbuild", "Tsup"]
           },
           { 
             "name": "工程化生态", 
             "level": "Expert",
-            "description": "熟悉UMI、Dumi和Father构建工具链，精通ESLint规范代码质量，熟练使用Vitest进行单元测试",
+            "description": "常用UMI、Dumi和Father构建工具链，使用ESLint规范代码质量，使用Vitest进行单元测试",
             "percentage": 90,
             "keywords": ["UMI", "Dumi", "Father", "ESLint", "Vitest"]
           },
           { 
             "name": "数据可视化", 
             "level": "Advanced",
-            "description": "熟悉ECharts和Pixi.js进行复杂数据可视化",
+            "description": "有ECharts和Pixi.js进行复杂数据可视化的项目经验",
             "percentage": 85,
             "keywords": ["ECharts", "Pixi.js", "数据可视化"]
           }
@@ -68,35 +67,35 @@
           { 
             "name": "性能与网络", 
             "level": "Advanced",
-            "description": "深入理解HTTP/2、浏览器渲染机制、V8引擎优化及网络安全，擅长应用多种性能优化技术",
+            "description": "了解HTTP/2、浏览器渲染机制、V8引擎优化及网络安全，能应用多种性能优化技术",
             "percentage": 85,
             "keywords": ["HTTP/2", "浏览器渲染", "V8引擎", "网络安全"]
           },
           { 
             "name": "服务端渲染", 
             "level": "Advanced",
-            "description": "熟悉Next.js服务端渲染和静态站点生成",
+            "description": "有Next.js服务端渲染和静态站点生成的项目经验",
             "percentage": 80,
             "keywords": ["Next.js", "SSR", "静态站点生成"]
           },
           { 
             "name": "UI样式管理", 
             "level": "Expert",
-            "description": "掌握Tailwind CSS实现高效样式管理",
+            "description": "在多个项目中使用Tailwind CSS实现高效样式管理",
             "percentage": 90,
             "keywords": ["Tailwind CSS", "响应式设计"]
           },
           { 
             "name": "大型项目管理", 
             "level": "Advanced",
-            "description": "精通Monorepo模式支持大型项目开发",
+            "description": "有使用Monorepo模式支持大型项目开发的成功经验",
             "percentage": 85,
             "keywords": ["Monorepo", "pnpm", "turborepo"]
           },
           { 
             "name": "扩展与插件开发", 
             "level": "Proficient",
-            "description": "具备VSCode插件、Figma扩展和浏览器扩展的开发能力",
+            "description": "具备VSCode插件、Figma扩展和浏览器扩展的开发经验",
             "percentage": 75,
             "keywords": ["VSCode插件", "Figma扩展", "浏览器扩展"]
           }
@@ -540,61 +539,94 @@
   "portfolioProjects": [
     {
       "id": 1,
-      "title": "OA系统及衍生产品线",
-      "description": "基于React和Vue技术栈的高性能办公自动化系统，支持多语言、工位图配置、实时消息推送等功能。",
+      "title": "我不知道的周刊",
+      "description": "AI驱动的前端技术周刊，精选并深度解读Web前端及周边生态的优质内容，涵盖实用工具、开源项目、前沿资讯与最佳实践。采用AI技术智能分析与筛选内容，让开发者持续获取高质量的前端资讯，提升专业素养和技术视野。",
       "image": "/placeholder.svg",
-      "technologies": ["React", "Vue", "WebSocket", "Ant Design", "Webpack", "Vite"],
-      "techIds": ["react", "vue", "websocket", "antd", "webpack", "vite"],
-      "liveLink": "https://example.com/oa-system",
-      "repoLink": "https://github.com/yourusername/oa-system",
+      "technologies": ["Astro", "React", "OpenAI", "Tailwind CSS", "Vercel"],
+      "techIds": ["astro", "react", "openai", "tailwind", "vercel"],
+      "liveLink": "https://weekly.mengpeng.tech",
+      "repoLink": "https://github.com/NorthSeacoder/weekly",
       "featured": true,
-      "evolution": ["React类组件", "React Hooks", "Vue2/3"]
+      "evolution": ["内容手动整理", "AI辅助筛选", "全流程AI驱动"],
+      "related": [4]
     },
     {
       "id": 2,
-      "title": "Slimfit组件库",
-      "description": "公司标准React组件库，基于Ant Design进行二次封装和自研，提供40余个高质量UI组件。",
+      "title": "@nsea/xmind-handler",
+      "description": "基于Node.js的工具库，用于高效处理XMind文件。支持根据标记过滤主题、将内容转换为JSON、Markdown或精简XMind文件等多种格式。实现了命令行接口简化用户操作，支持多种输出格式，大幅提升思维导图内容处理和转换的效率。",
       "image": "/placeholder.svg",
-      "technologies": ["React", "TypeScript", "father", "dumi", "Vitest"],
-      "techIds": ["react", "typescript", "father", "dumi", "vitest"],
-      "liveLink": "https://example.com/slimfit",
-      "repoLink": "https://github.com/yourusername/slimfit",
+      "technologies": ["Node.js", "TypeScript", "CLI", "XMind SDK"],
+      "techIds": ["nodejs", "typescript", "cli", "xmind"],
+      "liveLink": "https://www.npmjs.com/package/@nsea/xmind-handler",
+      "repoLink": "https://github.com/NorthSeacoder/xmind-handler",
       "featured": true,
-      "evolution": ["基础组件", "业务组件", "设计系统"]
+      "evolution": ["基础解析功能", "多格式转换", "命令行工具"],
+      "related": [4]
     },
     {
       "id": 3,
-      "title": "前端开发工具链",
-      "description": "内部CLI工具、VSCode插件、Figma扩展等提升开发效率的工具集。",
+      "title": "@codetransformer/find-chinese",
+      "description": "高效查询目标文件夹及其依赖文件中所有中文字符的CodeTransformer插件。实现了对复杂项目结构的全面扫描，提供精准的字符定位和统计功能，显著提升了代码审查和国际化工作效率，节省超过30%的时间。广泛应用于多语言支持和国际化项目中。",
       "image": "/placeholder.svg",
-      "technologies": ["TypeScript", "Node.js", "VSCode API", "Figma API", "Babel"],
-      "techIds": ["typescript", "nodejs", "vscode", "figma", "babel"],
-      "liveLink": "https://example.com/dev-tools",
-      "repoLink": "https://github.com/yourusername/dev-tools",
-      "evolution": ["CLI工具", "编辑器插件", "设计工具集成"]
+      "technologies": ["TypeScript", "AST", "Babel", "VSCode API"],
+      "techIds": ["typescript", "ast", "babel", "vscode"],
+      "liveLink": "https://www.npmjs.com/package/@codetransformer/find-chinese",
+      "repoLink": "https://github.com/NorthSeacoder/find-chinese",
+      "featured": true,
+      "evolution": ["基础扫描", "依赖追踪", "统计分析"],
+      "related": [4,6,7]
     },
     {
       "id": 4,
-      "title": "WP系列图形化配置",
-      "description": "基于React和Pixi.js的高性能图形化配置系统，支持车位图、仓位图等复杂场景的可视化编辑。",
+      "title": "Franky (VSCode)",
+      "description": "高效开发者工具VSCode扩展，支持动态模板生成，提供20多个业务模板，简化代码编写流程。支持Tailwindcss类名转换，自动生成文件头注释，无需额外配置，提高日常开发效率。特别适合React、Vue等前端项目快速开发。",
       "image": "/placeholder.svg",
-      "technologies": ["React", "UMI", "Pixi.js", "Tailwind CSS"],
-      "techIds": ["react", "umi", "pixijs", "tailwind"],
-      "liveLink": "https://example.com/wp-system",
-      "repoLink": "https://github.com/yourusername/wp-system",
+      "technologies": ["TypeScript", "VSCode API", "Template Engine", "Tailwind CSS"],
+      "techIds": ["typescript", "vscode", "template", "tailwind"],
+      "liveLink": "https://marketplace.visualstudio.com/items?itemName=NorthSeacoder.franky",
+      "repoLink": "https://github.com/NorthSeacoder/franky",
       "featured": true,
-      "evolution": ["简单图形", "复杂交互", "性能优化"]
+      "evolution": ["基础代码片段", "模板系统", "智能化辅助"],
+      "related": [7]
     },
     {
       "id": 5,
-      "title": "资金财务风控系统",
-      "description": "基于Vue的企业级金融管理系统，满足高安全性和高可靠性要求。",
+      "title": "WebBar (VSCode)",
+      "description": "轻量级便捷工具VSCode扩展，在状态栏中添加可自定义按钮，方便一键访问常用网页，提升开发便捷性。完全可配置的按钮系统让开发者能快速访问文档、管理系统、测试环境等常用资源，减少工作流中的上下文切换成本。",
       "image": "/placeholder.svg",
-      "technologies": ["Vue", "Base-UI", "AST", "安全防护"],
-      "techIds": ["vue", "base-ui", "ast", "security"],
-      "liveLink": "https://example.com/finance-system",
-      "repoLink": "https://github.com/yourusername/finance-system",
-      "evolution": ["基础功能", "安全加固", "组件迁移"]
+      "technologies": ["TypeScript", "VSCode API", "WebView"],
+      "techIds": ["typescript", "vscode", "webview"],
+      "liveLink": "https://marketplace.visualstudio.com/items?itemName=NorthSeacoder.webbar",
+      "repoLink": "https://github.com/NorthSeacoder/web-bar",
+      "featured": false,
+      "evolution": ["固定链接", "自定义配置", "上下文感知"],
+      "related": [4]
+    },
+    {
+      "id": 6,
+      "title": "CodeTransformer (VSCode)",
+      "description": "强大的代码转换VSCode插件，提供官方babel-plugin及自定义plugin支持，优化代码重构流程，代码重构效率提升50%。支持搜索目标文件或文件夹依赖，递归构建依赖图谱，结合tsconfig path拼接路径，确保迁移无遗漏。在大型项目重构中表现尤为突出，是团队技术升级的得力助手。",
+      "image": "/placeholder.svg",
+      "technologies": ["TypeScript", "Babel", "AST", "依赖分析"],
+      "techIds": ["typescript", "babel", "ast", "dependency-analysis"],
+      "liveLink": "https://marketplace.visualstudio.com/items?itemName=NorthSeacoder.codetransformer",
+      "repoLink": "https://github.com/NorthSeacoder/code-transformer",
+      "featured": true,
+      "evolution": ["基础转换", "依赖追踪", "智能重构"],
+      "related": [3, 7]
+    },
+    {
+      "id": 7,
+      "title": "@nsea/depseeker",
+      "description": "专业的Node.js依赖分析工具，用于快速扫描和分析项目依赖关系。能够递归构建依赖图谱，支持复杂依赖解析，识别循环依赖和潜在问题。支持ES模块和CommonJS模块，结合tsconfig路径映射提供准确的依赖图分析，是大型项目重构和代码优化的理想工具。",
+      "image": "/placeholder.svg",
+      "technologies": ["Node.js", "TypeScript", "依赖分析", "AST"],
+      "techIds": ["nodejs", "typescript", "dependency-analysis", "ast"],
+      "liveLink": "https://www.npmjs.com/package/@nsea/depseeker",
+      "repoLink": "https://github.com/NorthSeacoder/depseeker",
+      "featured": true,
+      "evolution": ["简单依赖解析", "循环依赖检测", "复杂项目支持"],
+      "related": [2, 6]
     }
   ]
 } 

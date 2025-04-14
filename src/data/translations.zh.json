@@ -29,7 +29,7 @@
     "about": {
       "title": "关于我",
       "subtitle": "个人简介",
-      "summary": "概述",
+      "summary": "职业概况",
       "bio": "经验丰富且充满激情的专业人士，在相关领域拥有扎实的背景。致力于提供高质量的成果并不断提升技能。",
       "keyPoints": {
         "first": "关于你自己的第一个要点",
@@ -56,11 +56,11 @@
     "skills": {
       "title": "技能与专长",
       "levels": {
-        "expert": "专家",
-        "advanced": "高级",
-        "proficient": "熟练",
-        "intermediate": "中级",
-        "beginner": "初级"
+        "expert": "深入理解",
+        "advanced": "较为熟悉",
+        "proficient": "实践经验",
+        "intermediate": "基本掌握",
+        "beginner": "入门学习"
       },
       "map": {
         "title": "技能关系图谱",

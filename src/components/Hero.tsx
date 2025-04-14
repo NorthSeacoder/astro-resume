@@ -65,23 +65,23 @@ const Hero = () => {
     {
       id: 'years',
       icon: <Award size={20} />,
-      value: t('about.stats.years'),
+      value: resumeData.about.stats.yearsExperience,
       label: t('about.stats.yearsExperience'),
-      description: t('about.stats.yearsDescription')
+      description: resumeData.about.stats.yearsDescription
     },
     {
       id: 'projects',
       icon: <Layers size={20} />,
-      value: t('about.stats.projects'),
+      value: resumeData.about.stats.projectsCompleted,
       label: t('about.stats.projectsCompleted'),
-      description: t('about.stats.projectsDescription')
+      description: resumeData.about.stats.projectsDescription
     },
     {
       id: 'clients',
       icon: <Users size={20} />,
-      value: t('about.stats.clients'),
+      value: resumeData.about.stats.happyClients,
       label: t('about.stats.happyClients'),
-      description: t('about.stats.clientsDescription')
+      description: resumeData.about.stats.clientsDescription
     }
   ];
   
@@ -160,7 +160,7 @@ const Hero = () => {
                 className="relative pl-10 pr-4 py-4 rounded-lg border border-blue-100 dark:border-blue-800/40 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 dark:from-blue-900/10 dark:to-indigo-900/10 hover:shadow-md transition-all duration-300"
               >
                 <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-l-lg"></div>
-                <div className="absolute left-4 top-4 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-blue-100 dark:border-blue-800/40">
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-blue-100 dark:border-blue-800/40">
                   <CheckCircle2 className="text-blue-600 dark:text-blue-400" size={20} />
                 </div>
                 <p className="text-slate-700 dark:text-slate-300 ml-6">{point}</p>
