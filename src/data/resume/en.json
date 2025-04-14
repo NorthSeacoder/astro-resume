@@ -11,7 +11,7 @@
     "categories": [
       {
         "id": 1,
-        "name": "Frontend Development Skills",
+        "name": "Frontend Fundamentals",
         "icon": "Code",
         "skills": [
           { 
@@ -22,12 +22,40 @@
             "keywords": ["ES6+", "TypeScript", "HTML5", "CSS3"]
           },
           { 
-            "name": "React & Vue", 
+            "name": "React Ecosystem", 
             "level": "Expert",
-            "description": "Skilled in React (including Hooks), Vue.js (2.x and 3.x), and implementing efficient interfaces with Ant Design",
+            "description": "Mastery of React and its ecosystem, including Hooks, Redux, React Router, and more for building high-performance applications",
             "percentage": 90,
-            "keywords": ["React", "Vue", "Hooks", "Ant Design"]
+            "keywords": ["React", "Hooks", "Redux", "React Router"]
           },
+          { 
+            "name": "Vue Ecosystem", 
+            "level": "Expert",
+            "description": "Deep experience with Vue.js (2.x and 3.x) and related technologies including Vuex, Vue Router, and Composition API",
+            "percentage": 88,
+            "keywords": ["Vue", "Vuex", "Vue Router", "Composition API"]
+          },
+          { 
+            "name": "Performance & Networking", 
+            "level": "Advanced",
+            "description": "Deep understanding of HTTP/2, browser rendering mechanisms, V8 engine optimization, and network security; skilled in applying various performance optimization techniques",
+            "percentage": 85,
+            "keywords": ["HTTP/2", "Browser Rendering", "V8 Engine", "Network Security"]
+          },
+          { 
+            "name": "UI Style Management", 
+            "level": "Expert",
+            "description": "Mastery of Tailwind CSS for efficient style management",
+            "percentage": 90,
+            "keywords": ["Tailwind CSS", "Responsive Design"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Engineering Systems",
+        "icon": "Zap",
+        "skills": [
           { 
             "name": "Build Tools", 
             "level": "Advanced",
@@ -43,25 +71,39 @@
             "keywords": ["UMI", "Dumi", "Father", "ESLint", "Vitest"]
           },
           { 
+            "name": "Large Project Management", 
+            "level": "Advanced",
+            "description": "Expert in Monorepo patterns for large project development",
+            "percentage": 85,
+            "keywords": ["Monorepo", "pnpm", "turborepo"]
+          },
+          { 
+            "name": "CI/CD Automation", 
+            "level": "Advanced",
+            "description": "Designed and implemented CI/CD pipelines for frontend projects, including automated testing, building, deployment, and release processes, using GitHub Actions and Jenkins for full-process automation",
+            "percentage": 85,
+            "keywords": ["GitHub Actions", "Jenkins", "Docker", "Automated Testing"]
+          },
+          { 
+            "name": "Micro-Frontend Architecture", 
+            "level": "Advanced",
+            "description": "Used micro-frontend frameworks like qiankun/micro-app to implement splitting and integration of large applications, solving multi-team collaboration and technology stack mixing issues",
+            "percentage": 80,
+            "keywords": ["Micro-Frontend", "qiankun", "Module Federation", "Application Integration"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Advanced Technology Practice",
+        "icon": "BrainCircuit",
+        "skills": [
+          { 
             "name": "Data Visualization", 
             "level": "Advanced",
             "description": "Experienced with ECharts and Pixi.js for complex data visualization",
             "percentage": 85,
             "keywords": ["ECharts", "Pixi.js", "Data Visualization"]
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Modern Development Technologies",
-        "icon": "BrainCircuit",
-        "skills": [
-          { 
-            "name": "Performance & Networking", 
-            "level": "Advanced",
-            "description": "Deep understanding of HTTP/2, browser rendering mechanisms, V8 engine optimization, and network security; skilled in applying various performance optimization techniques",
-            "percentage": 85,
-            "keywords": ["HTTP/2", "Browser Rendering", "V8 Engine", "Network Security"]
           },
           { 
             "name": "Server-side Rendering", 
@@ -71,18 +113,18 @@
             "keywords": ["Next.js", "SSR", "Static Site Generation"]
           },
           { 
-            "name": "UI Style Management", 
-            "level": "Expert",
-            "description": "Mastery of Tailwind CSS for efficient style management",
-            "percentage": 90,
-            "keywords": ["Tailwind CSS", "Responsive Design"]
+            "name": "Cross-platform Development", 
+            "level": "Proficient",
+            "description": "Using React Native and Electron to develop cross-platform applications, bridging web, mobile, and desktop development workflows",
+            "percentage": 75,
+            "keywords": ["React Native", "Electron", "Cross-platform", "Tauri"]
           },
           { 
-            "name": "Large Project Management", 
-            "level": "Advanced",
-            "description": "Expert in Monorepo patterns for large project development",
-            "percentage": 85,
-            "keywords": ["Monorepo", "pnpm", "turborepo"]
+            "name": "Web 3D and WebGL", 
+            "level": "Proficient",
+            "description": "Implemented 3D visualization and interactive effects using Three.js in projects, understanding basic principles and application scenarios of WebGL",
+            "percentage": 70,
+            "keywords": ["Three.js", "WebGL", "3D Visualization", "Babylon.js"]
           },
           { 
             "name": "Extension & Plugin Development", 
@@ -90,6 +132,13 @@
             "description": "Capable of developing VSCode plugins, Figma extensions, and browser extensions",
             "percentage": 75,
             "keywords": ["VSCode Plugins", "Figma Extensions", "Browser Extensions"]
+          },
+          { 
+            "name": "Progressive Web Apps (PWA)", 
+            "level": "Proficient",
+            "description": "Implemented offline caching, push notifications, and other PWA features to enhance web application usability and user experience",
+            "percentage": 75,
+            "keywords": ["Service Worker", "Cache Strategies", "Push Notifications", "Installation Experience"]
           }
         ]
       }

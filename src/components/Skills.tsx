@@ -207,6 +207,7 @@ const Skills = () => {
       if (resumeData?.skills?.categories) {
         console.log('成功获取技能类别数据:', resumeData.skills.categories.length);
         
+        // 直接使用JSON中定义的分类，只需添加图标组件
         const mappedCategories = resumeData.skills.categories.map(category => {
           try {
             return {

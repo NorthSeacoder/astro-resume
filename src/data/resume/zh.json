@@ -19,7 +19,7 @@
     "categories": [
       {
         "id": 1,
-        "name": "前端开发技能",
+        "name": "前端基础技术",
         "icon": "Code",
         "skills": [
           { 
@@ -30,12 +30,40 @@
             "keywords": ["ES6+", "TypeScript", "HTML5", "CSS3"]
           },
           { 
-            "name": "React & Vue", 
+            "name": "React生态", 
             "level": "Expert",
-            "description": "长期使用React（包括Hooks）、Vue.js（2.x和3.x），并运用Ant Design实现高效界面设计",
+            "description": "精通React及其周边生态，包括Hooks、Redux、React Router等，能构建高性能React应用",
             "percentage": 90,
-            "keywords": ["React", "Vue", "Hooks", "Ant Design"]
+            "keywords": ["React", "Hooks", "Redux", "React Router"]
           },
+          { 
+            "name": "Vue生态", 
+            "level": "Expert",
+            "description": "深度使用Vue.js（2.x和3.x）及相关技术栈，包括Vuex、Vue Router、Composition API等",
+            "percentage": 88,
+            "keywords": ["Vue", "Vuex", "Vue Router", "Composition API"]
+          },
+          { 
+            "name": "性能与网络", 
+            "level": "Advanced",
+            "description": "了解HTTP/2、浏览器渲染机制、V8引擎优化及网络安全，能应用多种性能优化技术",
+            "percentage": 85,
+            "keywords": ["HTTP/2", "浏览器渲染", "V8引擎", "网络安全"]
+          },
+          { 
+            "name": "UI样式管理", 
+            "level": "Expert",
+            "description": "在多个项目中使用Tailwind CSS实现高效样式管理",
+            "percentage": 90,
+            "keywords": ["Tailwind CSS", "响应式设计"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "工程化体系",
+        "icon": "Zap",
+        "skills": [
           { 
             "name": "构建工具", 
             "level": "Advanced",
@@ -51,25 +79,39 @@
             "keywords": ["UMI", "Dumi", "Father", "ESLint", "Vitest"]
           },
           { 
+            "name": "大型项目管理", 
+            "level": "Advanced",
+            "description": "有使用Monorepo模式支持大型项目开发的成功经验",
+            "percentage": 85,
+            "keywords": ["Monorepo", "pnpm", "turborepo"]
+          },
+          { 
+            "name": "CI/CD自动化流程", 
+            "level": "Advanced",
+            "description": "设计并实施前端项目CI/CD流程，包括自动化测试、构建、部署与发布，结合GitHub Actions和Jenkins实现全流程自动化",
+            "percentage": 85,
+            "keywords": ["GitHub Actions", "Jenkins", "Docker", "自动化测试"]
+          },
+          { 
+            "name": "微前端架构", 
+            "level": "Advanced",
+            "description": "使用qiankun/micro-app等微前端框架实现大型应用的拆分与集成，解决多团队协作与技术栈混合问题",
+            "percentage": 80,
+            "keywords": ["微前端", "qiankun", "Module Federation", "应用集成"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "前沿技术实践",
+        "icon": "BrainCircuit",
+        "skills": [
+          { 
             "name": "数据可视化", 
             "level": "Advanced",
             "description": "有ECharts和Pixi.js进行复杂数据可视化的项目经验",
             "percentage": 85,
             "keywords": ["ECharts", "Pixi.js", "数据可视化"]
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "现代开发技术",
-        "icon": "BrainCircuit",
-        "skills": [
-          { 
-            "name": "性能与网络", 
-            "level": "Advanced",
-            "description": "了解HTTP/2、浏览器渲染机制、V8引擎优化及网络安全，能应用多种性能优化技术",
-            "percentage": 85,
-            "keywords": ["HTTP/2", "浏览器渲染", "V8引擎", "网络安全"]
           },
           { 
             "name": "服务端渲染", 
@@ -79,18 +121,18 @@
             "keywords": ["Next.js", "SSR", "静态站点生成"]
           },
           { 
-            "name": "UI样式管理", 
-            "level": "Expert",
-            "description": "在多个项目中使用Tailwind CSS实现高效样式管理",
-            "percentage": 90,
-            "keywords": ["Tailwind CSS", "响应式设计"]
+            "name": "跨端开发技术", 
+            "level": "Proficient",
+            "description": "使用React Native和Electron开发跨平台应用，打通Web、移动端与桌面端开发流程",
+            "percentage": 75,
+            "keywords": ["React Native", "Electron", "跨平台", "Tauri"]
           },
           { 
-            "name": "大型项目管理", 
-            "level": "Advanced",
-            "description": "有使用Monorepo模式支持大型项目开发的成功经验",
-            "percentage": 85,
-            "keywords": ["Monorepo", "pnpm", "turborepo"]
+            "name": "Web 3D与WebGL", 
+            "level": "Proficient",
+            "description": "在项目中使用Three.js实现3D可视化与交互效果，了解WebGL基本原理与应用场景",
+            "percentage": 70,
+            "keywords": ["Three.js", "WebGL", "3D可视化", "Babylon.js"]
           },
           { 
             "name": "扩展与插件开发", 
@@ -98,6 +140,13 @@
             "description": "具备VSCode插件、Figma扩展和浏览器扩展的开发经验",
             "percentage": 75,
             "keywords": ["VSCode插件", "Figma扩展", "浏览器扩展"]
+          },
+          { 
+            "name": "渐进式Web应用(PWA)", 
+            "level": "Proficient",
+            "description": "实现离线缓存、推送通知等PWA特性，提升Web应用的可用性与用户体验",
+            "percentage": 75,
+            "keywords": ["Service Worker", "缓存策略", "推送通知", "安装体验"]
           }
         ]
       }
