@@ -1,9 +1,7 @@
-import { Briefcase, Calendar, ChevronUp, ChevronDown, Star } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import CompanySection from "./experience/CompanySection";
 
 // 简化数据结构，扁平化设计
 
@@ -42,217 +40,16 @@ interface Company {
   items: ExperienceItem[];
 }
 
-// 成就项组件 - 显示单个成就或STAR分析
-const AchievementItem = ({ item }: { item: Achievement }) => {
-  const [expanded, setExpanded] = useState(false);
-
-  // 检查是否为STAR格式
-  const isStarFormat = item.situation && item.task && item.action && item.result;
-  
-  return (
-    <div className="mt-2 pl-3 border-l border-slate-200 dark:border-slate-700 transition-colors duration-300">
-      <div 
-        className="flex items-center justify-between cursor-pointer"
-        onClick={() => isStarFormat && setExpanded(prev => !prev)}
-      >
-        <div className="flex items-center gap-2">
-          <span className="w-4 h-4 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
-            <Star size={10} />
-          </span>
-          <h5 className="text-sm font-medium text-slate-700 dark:text-slate-300">
-            {item.title}
-          </h5>
-        </div>
-        
-        {isStarFormat && (
-          <span className="text-slate-400 text-xs flex items-center">
-            {expanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
-          </span>
-        )}
-      </div>
-
-      {/* 如果有简单描述，直接显示 */}
-      {item.description && (
-        <p className="text-xs text-slate-600 dark:text-slate-400 ml-6 mt-1">{item.description}</p>
-      )}
-
-      {/* 如果是STAR格式且已展开，显示STAR分析 */}
-      <AnimatePresence>
-        {isStarFormat && expanded && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden ml-6 mt-2 space-y-2"
-          >
-            <div className="text-xs bg-blue-50/50 dark:bg-blue-900/20 text-slate-700 dark:text-slate-300 p-2 rounded-sm border-l-2 border-blue-300 dark:border-blue-700">
-              <span className="font-medium text-blue-600 dark:text-blue-400">情境：</span> {item.situation}
-            </div>
-            <div className="text-xs bg-amber-50/50 dark:bg-amber-900/20 text-slate-700 dark:text-slate-300 p-2 rounded-sm border-l-2 border-amber-300 dark:border-amber-700">
-              <span className="font-medium text-amber-600 dark:text-amber-400">任务：</span> {item.task}
-            </div>
-            <div className="text-xs bg-emerald-50/50 dark:bg-emerald-900/20 text-slate-700 dark:text-slate-300 p-2 rounded-sm border-l-2 border-emerald-300 dark:border-emerald-700">
-              <span className="font-medium text-emerald-600 dark:text-emerald-400">行动：</span> {item.action}
-            </div>
-            <div className="text-xs bg-purple-50/50 dark:bg-purple-900/20 text-slate-700 dark:text-slate-300 p-2 rounded-sm border-l-2 border-purple-300 dark:border-purple-700">
-              <span className="font-medium text-purple-600 dark:text-purple-400">结果：</span> {item.result}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-// 经验项目组件 - 显示单个项目
-const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
-  const [expanded, setExpanded] = useState(false);
-  
-  return (
-    <div className="pb-1">
-      <div className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200">
-        <div className="flex items-center justify-between cursor-pointer" onClick={() => setExpanded(prev => !prev)}>
-          <div className="flex items-center gap-2">
-            <h4 className="text-base font-medium text-slate-800 dark:text-slate-200">
-              {item.title}
-              {item.type && (
-                <span className="ml-2 text-xs text-slate-500 dark:text-slate-400">· {item.type}</span>
-              )}
-            </h4>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            {item.period && (
-              <div className="flex items-center text-xs text-slate-500 dark:text-slate-400">
-                <Calendar size={12} className="mr-1" />
-                <span>{item.period}</span>
-              </div>
-            )}
-            
-            {item.achievements.length > 0 && (
-              <span className="text-slate-400 transition-colors">
-                {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-              </span>
-            )}
-          </div>
-        </div>
-        
-        <div className="flex flex-wrap items-center gap-2 mt-2">
-          {item.position && (
-            <span className="text-xs font-medium px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
-              {item.position}
-            </span>
-          )}
-          
-          {/* 项目简介 */}
-          {item.summary && (
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 w-full">
-              {item.summary}
-            </p>
-          )}
-        </div>
-        
-        {/* 成就展开区域 */}
-        <AnimatePresence>
-          {expanded && item.achievements.length > 0 && (
-            <motion.div 
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden mt-3"
-            >
-              <div className="pl-0 space-y-2">
-                {item.achievements.map(achievement => (
-                  <AchievementItem key={achievement.id} item={achievement} />
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </div>
-  );
-};
-
-// 公司组件 - 显示单个公司的所有项目
-const CompanySection = ({ company }: { company: Company }) => {
-  const [expanded, setExpanded] = useState(false);
-  
-  return (
-    <div className="company-section pb-1 bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
-      <div 
-        className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4 cursor-pointer"
-        onClick={() => setExpanded(!expanded)}
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
-            <Briefcase size={18} className="text-blue-600 dark:text-blue-400" />
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{company.position}</h3>
-            <div className="flex flex-wrap items-center gap-1 mt-0.5">
-              <span className="text-blue-600 dark:text-blue-400 text-sm">{company.name}</span>
-              <span className="text-slate-400 text-xs">•</span>
-              <span className="text-slate-600 dark:text-slate-300 text-sm">{company.location}</span>
-            </div>
-          </div>
-        </div>
-        
-        <div className="flex items-center gap-2 mt-3 sm:mt-0">
-          <div className="text-sm text-slate-500 dark:text-slate-400 flex items-center">
-            <Calendar size={14} className="mr-1" />
-            <span>{company.period}</span>
-          </div>
-          <span className="text-slate-600 dark:text-slate-300">
-            {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-          </span>
-        </div>
-      </div>
-      
-      {company.description && (
-        <p className="text-sm text-slate-700 dark:text-slate-300 mb-4 px-4 pt-3">
-          {company.description}
-        </p>
-      )}
-      
-      <AnimatePresence>
-        {expanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="pl-4 px-4 pb-2">
-              <div className="space-y-6">
-                {company.items.map(item => (
-                  <ExperienceItemComponent key={item.id} item={item} />
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
 // 适配数据函数 - 将原始数据转换为新格式
 const adaptData = (originalData: any): Company[] => {
   return originalData.map((company: any) => {
     const items: ExperienceItem[] = [];
-    
     // 处理模块
     if (company.modules && company.modules.length > 0) {
       company.modules.forEach((module: any) => {
-        // 将模块添加为一个大项目
         if (module.children && module.children.length > 0) {
           module.children.forEach((project: any) => {
             const achievements: Achievement[] = [];
-            
             // 处理STAR分析
             if (project.stars && project.stars.length > 0) {
               project.stars.forEach((star: any) => {
@@ -266,11 +63,9 @@ const adaptData = (originalData: any): Company[] => {
                 });
               });
             }
-            
             // 添加子项目
             if (project.children && project.children.length > 0) {
               project.children.forEach((subproject: any) => {
-                // 子项目的STAR
                 const subAchievements: Achievement[] = [];
                 if (subproject.stars && subproject.stars.length > 0) {
                   subproject.stars.forEach((star: any) => {
@@ -284,7 +79,6 @@ const adaptData = (originalData: any): Company[] => {
                     });
                   });
                 }
-                
                 items.push({
                   id: subproject.id,
                   title: subproject.name || subproject.title || '',
@@ -314,7 +108,6 @@ const adaptData = (originalData: any): Company[] => {
       // 处理直接项目
       company.projects.forEach((project: any) => {
         const achievements: Achievement[] = [];
-        
         if (project.stars && project.stars.length > 0) {
           project.stars.forEach((star: any) => {
             achievements.push({
@@ -336,7 +129,6 @@ const adaptData = (originalData: any): Company[] => {
             result: project.star.result
           });
         }
-        
         items.push({
           id: project.id,
           title: project.name || '',
@@ -347,7 +139,6 @@ const adaptData = (originalData: any): Company[] => {
         });
       });
     }
-    
     return {
       id: company.id,
       name: company.company,
@@ -360,22 +151,27 @@ const adaptData = (originalData: any): Company[] => {
   });
 };
 
-// 主经验组件
 const Experience = () => {
   const { t, getResumeData } = useLanguage();
+  const [companies, setCompanies] = useState<Company[]>([]);
   const resumeData = getResumeData();
-  
-  // 适配数据为新格式
-  const companies = adaptData(resumeData.experiences);
-  
+  useEffect(() => {
+    if (resumeData.experiences && resumeData.experiences.length > 0) {
+      setCompanies(adaptData(resumeData.experiences));
+      console.log(adaptData(resumeData.experiences));
+    } else {
+      setCompanies([]);
+    }
+  }, [resumeData]);
   return (
-    <div className="content-spacing">
-      <div className="flex items-center mb-8">
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">{t('experience.title')}</h2>
+    <div>
+      <div className="flex items-center mb-10">
+        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+          {t('experience.title')}
+        </h2>
         <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
-      
-      <div className="space-y-8">
+      <div className="space-y-6">
         {companies.map(company => (
           <CompanySection key={company.id} company={company} />
         ))}
