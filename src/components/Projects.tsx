@@ -381,6 +381,8 @@ const Projects: React.FC = () => {
                     href={project.liveLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-umami-event="project-view"
+                    data-umami-event-project={project.title}
                   >
                     <ExternalLink size={14} />
                     <span>{t('projects.actions.view')}</span>
@@ -398,6 +400,8 @@ const Projects: React.FC = () => {
                     href={project.repoLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-umami-event="project-code"
+                    data-umami-event-project={project.title}
                   >
                     <Github size={14} />
                     <span>{t('projects.actions.code')}</span>

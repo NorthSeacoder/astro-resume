@@ -17,6 +17,14 @@ const Hero = () => {
   const handleDownload = () => {
     const pdfFile = `/resume/resume_${language}.pdf`;
     
+    // 跟踪下载事件
+    if (window.umami) {
+      window.umami.track('download-resume', {
+        language: language,
+        source: 'hero-section'
+      });
+    }
+    
     // 直接使用fetch获取并下载文件
     fetch(pdfFile)
       .then(response => {
@@ -137,6 +145,8 @@ const Hero = () => {
             <Button 
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white transition-all duration-300 hover:scale-[1.02] shadow-md btn-touch"
               onClick={handleDownload}
+              data-umami-event="download-resume"
+              data-umami-event-language={language}
             >
               <Download className="mr-2" size={16} />
               {t('common.download')}
