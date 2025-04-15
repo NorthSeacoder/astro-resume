@@ -71,7 +71,7 @@ const SkillCard = ({
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ 
         delay: delay * 0.1, 
-        duration: 0.5,
+        duration: 0.6,
         ease: [0.22, 1, 0.36, 1]
       }}
       className="mb-5 group"
@@ -87,7 +87,7 @@ const SkillCard = ({
             )}
           </div>
           {skill.description && (
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 max-w-md">{skill.description}</div>
+            <div className="text-xs text-slate-600 dark:text-slate-200 mt-1 max-w-md">{skill.description}</div>
           )}
         </div>
         {skill.percentage && (
@@ -108,7 +108,7 @@ const SkillCard = ({
       {skill.keywords && skill.keywords.length > 0 && (
         <div className="flex flex-wrap gap-1 mt-2">
           {skill.keywords.map((keyword, idx) => (
-            <span key={idx} className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-0.5 rounded-full">
+            <span key={idx} className="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200 px-2 py-0.5 rounded-full">
               {keyword}
             </span>
           ))}
@@ -268,7 +268,7 @@ const Skills = () => {
               }}
               className="h-full"
             >
-              <Card className="relative p-6 shadow-lg dark:bg-slate-800/80 dark:border-slate-700 transition-all duration-300 h-full bg-gradient-to-br from-white to-slate-50/80 dark:from-slate-800/90 dark:to-slate-900/90 backdrop-blur-sm border border-white/20 dark:border-slate-700/50 rounded-xl overflow-hidden hover:shadow-xl">
+              <Card className="relative p-6 shadow-lg dark:bg-slate-900/90 dark:border-slate-700 transition-all duration-300 h-full bg-gradient-to-br from-white to-slate-50/80 dark:from-slate-900/90 dark:to-slate-900/90 backdrop-blur-sm border border-white/20 dark:border-slate-700/50 rounded-xl overflow-hidden hover:shadow-xl">
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100/80 dark:bg-slate-700/30 mr-4 border border-slate-200/50 dark:border-slate-600/30 shadow-sm">
