@@ -110,7 +110,7 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <div className="pb-4">
+    <div className="pb-1">
       <div className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200">
         <div className="flex items-center justify-between cursor-pointer" onClick={() => setExpanded(prev => !prev)}>
           <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ const CompanySection = ({ company }: { company: Company }) => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <div className="company-section bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
+    <div className="company-section pb-1 bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
       <div 
         className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4 cursor-pointer"
         onClick={() => setExpanded(!expanded)}
@@ -226,7 +226,7 @@ const CompanySection = ({ company }: { company: Company }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="pl-4 px-4 pb-4">
+            <div className="pl-4 px-4 pb-2">
               <div className="space-y-6">
                 {company.items.map(item => (
                   <ExperienceItemComponent key={item.id} item={item} />

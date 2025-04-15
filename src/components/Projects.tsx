@@ -287,7 +287,7 @@ const Projects: React.FC = () => {
           : { opacity: 0, y: 20 }
         }
         className={cn(
-          "group h-full w-full overflow-hidden rounded-2xl transition-all",
+          "group h-full w-full overflow-hidden rounded-2xl transition-all mb-10",
           project.featured 
             ? "shadow-md shadow-blue-900/10 dark:shadow-blue-500/5" 
             : "shadow-md shadow-slate-200 dark:shadow-slate-700/20",
@@ -423,13 +423,15 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className="flex items-center mb-8">
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">{t('projects.title')}</h2>
-        <Separator className="flex-grow ml-6 bg-slate-200/70 dark:bg-slate-700/70" />
+    <div ref={containerRef} className="space-y-0">
+      <div className="flex items-center mb-10">
+        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+          {t('projects.title')}
+        </h2>
+        <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
-      
-      <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 项目卡片列表 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

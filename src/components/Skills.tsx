@@ -250,7 +250,7 @@ const Skills = () => {
         <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {skillCategories.map((category, categoryIndex) => {
           const categoryRef = useRef<HTMLDivElement>(null);
           const categoryInView = useInView(categoryRef, { once: false, amount: 0.2 });
@@ -277,7 +277,7 @@ const Skills = () => {
                     <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{category.name}</h3>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     {category.skills.map((skill, index) => (
                       <SkillCard 
                         key={skill.name} 
