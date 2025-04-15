@@ -184,7 +184,7 @@ const Index = () => {
             </div>
             
             {/* Umami Analytics */}
-            <Analytics websiteId={import.meta.env.VITE_UMAMI_WEBSITE_ID} />
+            <Analytics websiteId={import.meta.env.VITE_UMAMI} />
         </>
     );
 };

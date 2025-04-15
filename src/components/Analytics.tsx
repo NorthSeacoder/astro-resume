@@ -10,7 +10,6 @@ const Analytics = ({
   return (
     <>
       <script
-        async
         defer
         data-website-id={websiteId}
         src={scriptSrc}

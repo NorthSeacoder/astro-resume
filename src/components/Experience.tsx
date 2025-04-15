@@ -110,8 +110,8 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <div className="timeline-item">
-      <div className="flex flex-col">
+    <div className="pb-4">
+      <div className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200">
         <div className="flex items-center justify-between cursor-pointer" onClick={() => setExpanded(prev => !prev)}>
           <div className="flex items-center gap-2">
             <h4 className="text-base font-medium text-slate-800 dark:text-slate-200">
@@ -138,7 +138,7 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
           </div>
         </div>
         
-        <div className="flex flex-wrap items-center gap-2 mt-1">
+        <div className="flex flex-wrap items-center gap-2 mt-2">
           {item.position && (
             <span className="text-xs font-medium px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
               {item.position}
@@ -147,7 +147,7 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
           
           {/* 项目简介 */}
           {item.summary && (
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-0.5 w-full">
+            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 w-full">
               {item.summary}
             </p>
           )}
@@ -161,9 +161,9 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden mt-2"
+              className="overflow-hidden mt-3"
             >
-              <div className="pl-0 space-y-1">
+              <div className="pl-0 space-y-2">
                 {item.achievements.map(achievement => (
                   <AchievementItem key={achievement.id} item={achievement} />
                 ))}
@@ -181,11 +181,14 @@ const CompanySection = ({ company }: { company: Company }) => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <div className="company-section">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
+    <div className="company-section bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
+      <div 
+        className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4 cursor-pointer"
+        onClick={() => setExpanded(!expanded)}
+      >
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
-            <Briefcase size={16} className="text-blue-600 dark:text-blue-400" />
+          <div className="w-10 h-10 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
+            <Briefcase size={18} className="text-blue-600 dark:text-blue-400" />
           </div>
           <div>
             <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{company.position}</h3>
@@ -202,19 +205,14 @@ const CompanySection = ({ company }: { company: Company }) => {
             <Calendar size={14} className="mr-1" />
             <span>{company.period}</span>
           </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setExpanded(!expanded)}
-            className="px-2 py-1 h-auto text-slate-600 dark:text-slate-300"
-          >
+          <span className="text-slate-600 dark:text-slate-300">
             {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-          </Button>
+          </span>
         </div>
       </div>
       
       {company.description && (
-        <p className="text-sm text-slate-700 dark:text-slate-300 mb-4">
+        <p className="text-sm text-slate-700 dark:text-slate-300 mb-4 px-4 pt-3">
           {company.description}
         </p>
       )}
@@ -228,7 +226,7 @@ const CompanySection = ({ company }: { company: Company }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="timeline-container pl-4">
+            <div className="pl-4 px-4 pb-4">
               <div className="space-y-6">
                 {company.items.map(item => (
                   <ExperienceItemComponent key={item.id} item={item} />
@@ -377,50 +375,7 @@ const Experience = () => {
         <Separator className="flex-grow ml-6 dark:bg-slate-700" />
       </div>
       
-      <style>
-      {`
-        .timeline-container {
-          position: relative;
-        }
-        .timeline-container::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          width: 1px;
-          background: #e2e8f0;
-          z-index: 0;
-        }
-        .dark .timeline-container::before {
-          background: #334155;
-        }
-        
-        .timeline-item {
-          position: relative;
-          padding-left: 20px;
-          margin-bottom: 24px;
-        }
-        .timeline-item::before {
-          content: '';
-          position: absolute;
-          top: 6px;
-          left: -4px;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: #cbd5e1;
-          border: 1px solid #94a3b8;
-          z-index: 1;
-        }
-        .dark .timeline-item::before {
-          background: #475569;
-          border: 1px solid #64748b;
-        }
-      `}
-      </style>
-      
-      <div className="space-y-12">
+      <div className="space-y-8">
         {companies.map(company => (
           <CompanySection key={company.id} company={company} />
         ))}
