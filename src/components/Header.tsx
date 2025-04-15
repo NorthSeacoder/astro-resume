@@ -54,12 +54,11 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
 
     return (
         <header
-            className='fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 backdrop-blur-md'
-            style={{
-                backgroundColor: isScrolled ? 'var(--header-bg-scrolled, rgba(255,255,255,0.95))' : 'transparent',
-                boxShadow: isScrolled ? '0 4px 6px -1px rgba(0,0,0,0.1)' : 'none',
-                padding: isScrolled ? '0.5rem 0' : '1rem 0'
-            }}>
+            className={
+                `fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 backdrop-blur-md
+                ${isScrolled ? 'bg-white/95 dark:bg-slate-900/80 shadow-md py-2' : 'bg-transparent shadow-none py-4'}`
+            }
+        >
             <div className='container mx-auto px-4 flex justify-between items-center'>
                 <a
                     href='#'
