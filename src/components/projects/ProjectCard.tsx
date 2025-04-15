@@ -94,7 +94,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, TechEvolution
       <Card
         className={cn(
           "h-full flex flex-col rounded-2xl relative",
-          "bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-950",
+          "bg-gradient-to-br from-white to-slate-50 dark:from-slate-800/90 dark:to-slate-900/90",
           "backdrop-blur-sm transition-all duration-300",
           project.featured
             ? "ring-1 ring-blue-500/20 dark:ring-blue-500/30 border border-slate-100 dark:border-blue-800/30"
