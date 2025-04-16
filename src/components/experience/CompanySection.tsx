@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ChevronDown, ChevronUp } from "lucide-react";
 import ExperienceItemComponent from "./ExperienceItemComponent";
 
 interface Achievement {
@@ -57,6 +57,7 @@ const CompanySection = ({ company }: { company: Company }) => {
         </div>
         <div className="flex items-center gap-2 mt-2 sm:mt-0">
           <span className="text-xs text-slate-500 dark:text-slate-400">{company.period}</span>
+          <span className="ml-2 text-slate-400">{expanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}</span>
         </div>
       </div>
       {company.description && (

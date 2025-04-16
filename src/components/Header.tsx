@@ -1,10 +1,7 @@
 import {useState, useEffect} from 'react';
-import {Menu, X, Moon, Sun, Globe} from 'lucide-react';
+import {Menu, X, Moon, Sun} from 'lucide-react';
 import {Button} from '@/components/ui/button';
-import {Switch} from '@/components/ui/switch';
-import {useNavigate} from 'react-router-dom';
 import {useLanguage} from '@/lib/i18n';
-import {AnimatePresence, motion} from 'framer-motion';
 
 interface HeaderProps {
     activeSection: string;
