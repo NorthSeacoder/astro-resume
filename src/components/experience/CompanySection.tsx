@@ -41,12 +41,14 @@ interface CompanySectionProps {
 const CompanySection = ({ company }: CompanySectionProps) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="company-section pb-1 bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
+    <div 
+      className={`company-section bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300 ${company.items.length > 0 ? 'cursor-pointer' : ''}`}
+      onClick={() => {
+        if (company.items.length > 0) setExpanded(!expanded);
+      }}
+    >
       <div
-        className={`flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4${company.items.length > 0 ? ' cursor-pointer' : ''}`}
-        onClick={() => {
-          if (company.items.length > 0) setExpanded(!expanded);
-        }}
+        className={`flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4`}
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
@@ -69,8 +71,12 @@ const CompanySection = ({ company }: CompanySectionProps) => {
       {company.description && (
         <p className="text-sm text-slate-700 dark:text-slate-300 mb-2 px-4 pt-2">{company.description}</p>
       )}
-      <div className="p-4">
-        {expanded && company.items.map(item => (
+      <div 
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded ? 'max-h-[5000px] opacity-100 p-4 pb-5' : 'max-h-0 opacity-0 p-0'}`}
+        style={{ transitionDelay: expanded ? '0ms' : '0ms' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {company.items.map(item => (
           <ExperienceItemComponent key={item.id} item={item} />
         ))}
       </div>

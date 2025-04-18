@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import Clarity from '@microsoft/clarity';
 import App from './App.tsx'
 import './index.css'
 // 导入组件样式
@@ -8,6 +9,7 @@ import './styles/components.css'
 import { LanguageProvider } from './lib/i18n'
 import { injectPreloadTags } from './lib/preload'
 
+Clarity.init(import.meta.env.VITE_CLARITY);
 // 添加预加载关键资源功能
 const preloadCriticalAssets = () => {
   const assets = [

@@ -34,7 +34,8 @@ jobs:
             - name: Run build task
               run: pnpm run build
               env:
-                PUBLIC_UMAMI: ${{ vars.PUBLIC_UMAMI }}
+                VITE_UMAMI: ${{ vars.VITE_UMAMI }}
+                VITE_CLARITY: ${{ vars.VITE_CLARITY }}
             - name: Deploy to Server
               uses: easingthemes/ssh-deploy@main
               with:

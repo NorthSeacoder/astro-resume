@@ -23,6 +23,7 @@ interface ExperienceItem {
   type?: string;
   summary?: string;
   achievements: Achievement[];
+  category?: string;
 }
 
 const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
@@ -37,8 +38,13 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
           }}
         >
           <div className="flex items-center gap-2">
-            <h4 className="text-base font-medium text-slate-800 dark:text-slate-200 flex items-center gap-2">
+            <h4 className="text-base font-medium text-slate-800 dark:text-slate-200 flex items-center flex-wrap gap-2">
               {item.title}
+              {item.category && (
+                <span className="inline-block px-2 py-0.5 ml-1 rounded bg-indigo-50 dark:bg-indigo-900/30 text-xs text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 align-middle">
+                  {item.category}
+                </span>
+              )}
               {item.type && (
                 <span className="inline-block px-2 py-0.5 ml-1 rounded bg-blue-50 dark:bg-blue-900/30 text-xs text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-800 align-middle">
                   {item.type}
