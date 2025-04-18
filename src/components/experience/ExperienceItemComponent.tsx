@@ -30,12 +30,19 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
   return (
     <div className="pb-1">
       <div className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200">
-        <div className="flex items-center justify-between cursor-pointer" onClick={() => setExpanded(prev => !prev)}>
+        <div
+          className={`flex items-center justify-between${item.achievements.length > 0 ? ' cursor-pointer' : ''}`}
+          onClick={() => {
+            if (item.achievements.length > 0) setExpanded(prev => !prev);
+          }}
+        >
           <div className="flex items-center gap-2">
-            <h4 className="text-base font-medium text-slate-800 dark:text-slate-200">
+            <h4 className="text-base font-medium text-slate-800 dark:text-slate-200 flex items-center gap-2">
               {item.title}
               {item.type && (
-                <span className="ml-2 text-xs text-slate-500 dark:text-slate-400">· {item.type}</span>
+                <span className="inline-block px-2 py-0.5 ml-1 rounded bg-blue-50 dark:bg-blue-900/30 text-xs text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-800 align-middle">
+                  {item.type}
+                </span>
               )}
             </h4>
           </div>

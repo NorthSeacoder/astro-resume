@@ -24,9 +24,9 @@ interface ExperienceItem {
   achievements: Achievement[];
 }
 
-interface Company {
+interface ExperienceCompany {
   id: string | number;
-  name: string;
+  company: string;
   position: string;
   location: string;
   period: string;
@@ -34,13 +34,19 @@ interface Company {
   items: ExperienceItem[];
 }
 
-const CompanySection = ({ company }: { company: Company }) => {
+interface CompanySectionProps {
+  company: ExperienceCompany;
+}
+
+const CompanySection = ({ company }: CompanySectionProps) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <div className="company-section pb-1 bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300">
-      <div 
-        className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4 cursor-pointer"
-        onClick={() => setExpanded(!expanded)}
+      <div
+        className={`flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4${company.items.length > 0 ? ' cursor-pointer' : ''}`}
+        onClick={() => {
+          if (company.items.length > 0) setExpanded(!expanded);
+        }}
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
@@ -49,7 +55,7 @@ const CompanySection = ({ company }: { company: Company }) => {
           <div>
             <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{company.position}</h3>
             <div className="flex flex-wrap items-center gap-1 mt-0.5">
-              <span className="text-blue-600 dark:text-blue-400 text-sm">{company.name}</span>
+              <span className="text-blue-600 dark:text-blue-400 text-sm">{company.company}</span>
               <span className="text-slate-400 text-xs">•</span>
               <span className="text-slate-600 dark:text-slate-300 text-sm">{company.location}</span>
             </div>
