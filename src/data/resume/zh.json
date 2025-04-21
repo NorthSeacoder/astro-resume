@@ -219,7 +219,7 @@
                     "title": "企业微信应用",
                     "type": "OA系统及衍生产品线",
                     "category": "业务系统相关",
-                    "period": "",
+                    "period": "2024年5月 - 2024年12月",
                     "position": "架构师",
                     "summary": "主导设计支持 PC 端 与移动端的多端复用业务架构，通过 Monorepo 与跨端组件抽象，实现 70% 业务代码与 UI 组件双端一致并共享。推动统一规范、工具链和研发最佳实践，显著提升团队交付效率。",
                     "achievements": [
@@ -273,7 +273,7 @@
                     "title": "前端工程体系升级",
                     "type": "OA系统及衍生产品线",
                     "category": "业务系统相关",
-                    "period": "",
+                    "period": "2024 年 10 月 - 至今",
                     "position": "架构师",
                     "summary": "全面推进 OA/OMS/KMG 等大型单体架构向 Monorepo+微前端方向演进，分阶段解耦业务、分层技术债务清理、提升工程协作效率，实现业务线独立迭代与敏捷交付。",
                     "achievements": [
@@ -307,7 +307,7 @@
                     "id": "wp-1",
                     "title": "WP系列项目",
                     "category": "业务系统相关",
-                    "period": "2022年1月 - 至今",
+                    "period": "2023年6月 - 2024 年 3 月",
                     "position": "前端主程",
                     "summary": "基于React、UMI、Tailwind CSS开发的复杂图形显示与编辑功能，主导高性能渲染、复杂交互与组件复用。",
                     "achievements": [
@@ -366,9 +366,9 @@
                 {
                     "id": "inf-1",
                     "title": "Slimfit组件库",
-                    "type": "基础设施建设",
+                    "type": "",
                     "category": "基础设施相关",
-                    "period": "2023年4月 - 至今",
+                    "period": "2024年10月 - 至今",
                     "position": "架构师",
                     "summary": "面对公司内多个B端产品UI风格不统一、组件重复开发的痛点，设计并构建基于antd 5的企业级React组件库，融入公司设计规范，创新实现主题引擎、图标系统、字体规范和Tailwind集成方案，显著提升内部开发效率。",
                     "achievements": [
@@ -401,7 +401,7 @@
                 {
                     "id": "inf-2",
                     "title": "Base-UI组件库",
-                    "type": "基础设施建设",
+                    "type": "",
                     "category": "基础设施相关",
                     "period": "2019年1月 - 2021年5月",
                     "position": "核心开发",
@@ -789,5 +789,12 @@
             "evolution": ["简单依赖解析", "依赖图谱解析", "支持解析 alias"],
             "related": [2, 6]
         }
-    ]
+    ],
+    "personal": {
+        "name": "孟鹏",
+        "city": "北京",
+        "email": "mengpeng_bj@foxmail.com",
+        "mobile": "18505280124",
+        "wechat": "north-sea-coder"
+    }
 }

@@ -11,6 +11,7 @@ const Hero = () => {
   
   // 获取简历数据
   const resumeData = getResumeData();
+  const personal = resumeData.personal;
   const education = resumeData.education[0]; // 只获取第一个学历
   const keyPoints = resumeData.about.keyPoints; // 从JSON中获取关键点
   
@@ -111,25 +112,25 @@ const Hero = () => {
               <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
                 <Mail className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
               </div>
-              <a href="mailto:your.email@example.com" className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('about.contact.email')}</a>
+              <a href={`mailto:${personal.email}`} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{personal.email}</a>
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
                 <Phone className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
               </div>
-              <a href="tel:+1234567890" className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('about.contact.phone')}</a>
+              <a href={`tel:${personal.mobile}`} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{personal.mobile}</a>
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
                 <MapPin className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
               </div>
-              <span className="text-slate-700 dark:text-slate-300">{t('about.contact.location')}</span>
+              <span className="text-slate-700 dark:text-slate-300">{personal.city}</span>
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
                 <User className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
               </div>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('about.contact.linkedin')}</a>
+              <span className="text-slate-700 dark:text-slate-300">微信：{personal.wechat}</span>
             </div>
             
             {/* 弱化教育信息展示方式 */}

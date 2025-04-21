@@ -108,10 +108,19 @@ export interface PortfolioProject {
   related?: number[];
 }
 
+export interface Personal {
+  name: string;
+  city: string;
+  email: string;
+  mobile: string;
+  wechat: string;
+}
+
 export interface ResumeData {
   about: About;
   skills: Skills;
   experiences: Experience[];
   education: Education[];
   portfolioProjects?: PortfolioProject[];
+  personal: Personal;
 } 

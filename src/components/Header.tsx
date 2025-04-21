@@ -12,7 +12,9 @@ interface HeaderProps {
 const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const {language, setLanguage, t} = useLanguage();
+    const {language, setLanguage, t, getResumeData} = useLanguage();
+    const resumeData = getResumeData();
+    const personal = resumeData.personal;
 
     const navItems = [
         {id: 'about', label: t('nav.about')},
@@ -61,7 +63,7 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
                     href='#'
                     className='text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform'
                     aria-label='首页'>
-                    {t('common.yourName')}
+                    {personal.name}
                 </a>
 
                 {/* Mobile menu button */}
