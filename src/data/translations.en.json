@@ -16,41 +16,41 @@
       "downloadSuccess": "Resume downloaded successfully!",
       "fileNotFound": "Resume file not found. Please contact the administrator.",
       "downloadError": "An error occurred during download. Please try again.",
-      "profile": "Profile",
-      "yourName": "YOUR NAME",
+      "profile": "Profile Photo",
+      "yourName": "Your Name",
       "expand": "Expand",
       "collapse": "Collapse"
     },
     "seo": {
-      "title": "Portfolio | Frontend Developer",
-      "description": "Professional portfolio of a senior frontend developer specialized in React, TypeScript and modern web development",
+      "title": "Portfolio | Senior Frontend Engineer",
+      "description": "Professional portfolio of a senior frontend engineer specialized in React, TypeScript and modern web development",
       "keywords": "frontend development,React,TypeScript,web development,frontend engineer,portfolio"
     },
     "about": {
       "title": "About Me",
       "subtitle": "Personal Profile",
-      "summary": "Summary",
-      "bio": "Experienced and passionate professional with a strong background in relevant field. Dedicated to delivering high-quality results and continuously improving skills.",
+      "summary": "Professional Summary",
+      "bio": "Experienced and passionate professional frontend engineer with a solid technical background in modern web development. Dedicated to delivering high-quality engineering results and continuously improving technical capabilities and engineering practices.",
       "keyPoints": {
-        "first": "First key point about yourself",
-        "second": "Second key point about your experience",
-        "third": "Third key point about your skills or achievements"
+        "first": "Deep expertise in modern frontend architecture and engineering systems, leading multiple complex enterprise system development",
+        "second": "Excellent team leadership and technical drive, systematically implementing engineering standards",
+        "third": "Led frontend tech stack upgrades, micro-frontend architectural innovation and unified component library construction"
       },
       "contact": {
         "title": "Contact Me",
         "info": "Contact Information",
-        "email": "your.email@example.com",
-        "phone": "+1 (234) 567-890",
-        "location": "City, Country",
-        "linkedin": "linkedin.com/in/yourprofile"
+        "email": "mengpeng_bj@foxmail.com",
+        "phone": "18505280124",
+        "location": "Beijing",
+        "wechat": "north-sea-coder"
       },
       "stats": {
-        "yearsExperience": "Years Experience",
-        "projectsCompleted": "Projects Completed",
-        "happyClients": "Happy Clients",
-        "years": "5+",
+        "yearsExperience": "Frontend Development & Team Management",
+        "projectsCompleted": "Large Enterprise Systems",
+        "happyClients": "Colleague Satisfaction Rate",
+        "years": "8+",
         "projects": "20+",
-        "clients": "10+"
+        "clients": "100%"
       }
     },
     "skills": {
@@ -67,9 +67,9 @@
         "description": "Interactive visualization of relationships between my technical skills"
       },
       "categories": {
-        "frontend": "Frontend",
-        "backend": "Backend",
-        "database": "Database",
+        "frontend": "Frontend Fundamentals",
+        "engineering": "Engineering Systems",
+        "domain": "Domain Technologies",
         "devops": "DevOps",
         "mobile": "Mobile",
         "other": "Other"
@@ -100,7 +100,7 @@
       "featured": "Featured",
       "evolution": "Tech Evolution",
       "related": "Related Projects",
-      "description": "A comprehensive description of the project, explaining what it does, the problems it solves, and your role in its development."
+      "description": "A comprehensive description of the project, including its features, problems solved, and specific responsibilities in development."
     },
     "performance": {
       "title": "Performance Metrics",
@@ -123,18 +123,24 @@
       "form": {
         "name": "Your Name",
         "email": "Email Address",
-        "message": "Feel free to reach out for collaborations or just a friendly chat. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision."
+        "message": "Feel free to reach out for project collaborations or technical discussions. I'm always open to discussing new projects, creative ideas or opportunities to join your team."
       }
     },
     "footer": {
       "rights": "All rights reserved",
-      "designed": "Designed with React & TailwindCSS ❤️",
+      "designed": "Built with Astro + Preact + Tailwind CSS",
       "quickLinks": "Quick Links",
       "contactInfo": "Contact Info",
       "connectText": "Let's connect through these channels:",
       "about": "About Me",
-      "yourName": "YOUR NAME",
-      "backToTop": "Back to Top"
+      "yourName": "Meng Peng",
+      "backToTop": "Back to Top",
+      "connect": "Social Media",
+      "socialLinks": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      }
     },
     "hero": {
       "aboutMe": "About Me"

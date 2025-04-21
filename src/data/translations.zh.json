@@ -30,27 +30,27 @@
       "title": "关于我",
       "subtitle": "个人简介",
       "summary": "职业概况",
-      "bio": "经验丰富且充满激情的专业人士，在相关领域拥有扎实的背景。致力于提供高质量的成果并不断提升技能。",
+      "bio": "拥有丰富经验且充满激情的专业前端工程师，在现代Web开发领域拥有扎实的技术背景。致力于交付高质量的工程成果，持续提升技术能力与工程实践。",
       "keyPoints": {
-        "first": "关于你自己的第一个要点",
-        "second": "关于你经验的第二个要点",
-        "third": "关于你技能或成就的第三个要点"
+        "first": "深耕现代前端架构与工程化体系，主导多个复杂中后台系统研发",
+        "second": "具备卓越的团队领导力和技术推动力，系统落地工程规范",
+        "third": "主导前端技术栈升级、微前端架构创新和统一组件库建设"
       },
       "contact": {
         "title": "联系我",
         "info": "联系信息",
-        "email": "your.email@example.com",
-        "phone": "+1 (234) 567-890",
-        "location": "城市, 国家",
-        "linkedin": "linkedin.com/in/yourprofile"
+        "email": "mengpeng_bj@foxmail.com",
+        "phone": "18505280124",
+        "location": "北京",
+        "wechat": "north-sea-coder"
       },
       "stats": {
-        "yearsExperience": "年工作经验",
-        "projectsCompleted": "完成项目",
-        "happyClients": "满意客户",
-        "years": "5+",
+        "yearsExperience": "前端开发与团队管理经验",
+        "projectsCompleted": "大型中后台系统开发",
+        "happyClients": "同事好评率",
+        "years": "8+",
         "projects": "20+",
-        "clients": "10+"
+        "clients": "100%"
       }
     },
     "skills": {
@@ -67,10 +67,10 @@
         "description": "我的技术能力之间的关系交互可视化图"
       },
       "categories": {
-        "frontend": "前端",
-        "backend": "后端",
-        "database": "数据库",
-        "devops": "运维",
+        "frontend": "前端基础技术",
+        "engineering": "工程化体系",
+        "domain": "专业领域技术",
+        "devops": "DevOps",
         "mobile": "移动端",
         "other": "其他"
       }
@@ -101,7 +101,7 @@
       "featured": "精选项目",
       "evolution": "技术演进",
       "related": "相关项目",
-      "description": "项目的全面描述，解释其功能、解决的问题以及您在其开发中的角色。"
+      "description": "项目的全面描述，包括其功能特性、解决的问题以及在开发中的具体职责。"
     },
     "performance": {
       "title": "性能指标",
@@ -124,7 +124,7 @@
       "form": {
         "name": "您的姓名",
         "email": "电子邮箱",
-        "message": "欢迎联系我进行项目合作或者友好交流。我始终愿意讨论新项目、创意想法或有机会成为您愿景的一部分。"
+        "message": "欢迎联系我进行项目合作或技术交流。我始终愿意讨论新项目、创意想法或有机会成为您团队的一员。"
       }
     },
     "footer": {
@@ -134,13 +134,13 @@
       "contactInfo": "联系信息",
       "connectText": "欢迎通过以下方式与我联系：",
       "about": "关于我",
-      "yourName": "您的姓名",
+      "yourName": "孟鹏",
       "backToTop": "返回顶部",
       "connect": "社交媒体",
       "socialLinks": {
         "github": "GitHub",
-        "linkedin": "LinkedIn",
-        "twitter": "Twitter"
+        "linkedin": "领英",
+        "twitter": "推特"
       }
     },
     "hero": {

@@ -1,18 +1,18 @@
 {
   "about": {
-    "bio": "With 8 years of modern frontend development and 4 years of team management experience, I specialize in enterprise system architecture and engineering excellence. I have led and participated in the technology selection, architectural refactoring, and performance optimization of more than ten large-scale systems. I possess solid hands-on experience in frontend microservices, component libraries, and automation engineering tools, excel at cross-department collaboration and team growth management, and continuously improve project delivery quality and development efficiency through innovation.",
+    "bio": "With 8 years of modern frontend development and 4 years of team management experience, I focus on enterprise system architecture and engineering excellence. I have led and participated in the technology selection, architectural refactoring, and performance optimization of more than ten large-scale systems. I possess solid hands-on experience in frontend microservices, component libraries, and automation engineering tools, excel at cross-department collaboration and team growth management, and continuously improve project delivery quality and development efficiency through innovation.",
     "stats": {
-      "yearsExperience": 8,
-      "projectsCompleted": 20,
-      "happyClients": 15,
-      "yearsDescription": "Frontend development and team management experience",
-      "projectsDescription": "Large-scale enterprise system development",
-      "clientsDescription": "Cross-industry client collaboration"
+      "yearsExperience": "8+",
+      "projectsCompleted": "20+",
+      "happyClients": "100%",
+      "yearsDescription": "Frontend Development & Team Management Experience",
+      "projectsDescription": "Large Enterprise System Development",
+      "clientsDescription": "Colleague Satisfaction Rate"
     },
     "keyPoints": [
-      "Deeply engaged in modern frontend architecture and engineering systems, leading the R&D, architectural refactoring, and team management of multiple complex enterprise systems, achieving high-quality launches and agile delivery.",
-      "Outstanding team leadership and technical drive, systematically implementing engineering standards, toolchain automation, and knowledge accumulation, building efficient collaborative teams, and improving overall R&D experience and delivery efficiency.",
-      "Led frontend tech stack upgrades, micro-frontend/Monorepo architectural innovation, and unified component library construction, significantly enhancing the maintainability, scalability, and development efficiency of large applications."
+      "Deep expertise in modern frontend architecture and engineering systems, leading multiple complex enterprise system development, architectural refactoring, and team management, achieving high-quality launches and agile delivery.",
+      "Excellent team leadership and technical drive, systematically implementing engineering standards, toolchain automation, and knowledge accumulation, building efficient collaborative teams and improving overall R&D experience and delivery efficiency.",
+      "Led frontend tech stack upgrades, micro-frontend/Monorepo architectural innovation and unified component library construction, significantly enhancing large application maintainability, scalability, and development efficiency."
     ]
   },
   "skills": {
@@ -25,21 +25,21 @@
           {
             "name": "JavaScript/TypeScript",
             "level": "Expert",
-            "description": "8 years of hands-on JavaScript development, deeply mastering ES6+ features and mainstream design patterns, with a solid understanding of asynchronous programming and type systems. 4 years of TypeScript engineering practice, adept at leveraging type inference and advanced types in complex systems to optimize development experience and code robustness.",
+            "description": "8 years of hands-on JavaScript development experience, deep mastery of ES6+ features and mainstream design patterns, understanding of asynchronous programming and type systems. 4 years of TypeScript engineering practice, proficient in leveraging type inference and advanced types to optimize development experience and code robustness in complex systems.",
             "percentage": 95,
             "keywords": ["ES6+", "TypeScript", "HTML5", "CSS3"]
           },
           {
             "name": "React Ecosystem",
             "level": "Expert",
-            "description": "6 years of React project leadership, understanding the evolution from Class components to Hooks and underlying principles, with in-depth knowledge of virtual DOM and Fiber architecture. Skilled in high-performance optimization for large forms and dynamic lists, and driving best engineering practices.",
+            "description": "6 years of React project leadership experience, understanding the evolution from Class components to Hooks and underlying principles, deep knowledge of virtual DOM and Fiber architecture. Skilled in high-performance optimization for large forms and dynamic lists, comprehensively promoting engineering best practices.",
             "percentage": 95,
             "keywords": ["React", "Hooks", "Redux", "Performance Optimization"]
           },
           {
             "name": "Vue Ecosystem",
             "level": "Expert",
-            "description": "Rich experience in Vue 2/3 projects, skilled in localized product development, proficient in the reactive system and complex component refactoring with Composition API. Experienced in component library development and system maintenance.",
+            "description": "Rich experience in Vue 2/3 projects, skilled in localized product development, proficient in reactive system and complex component refactoring with Composition API. Experienced in component library development and system maintenance.",
             "percentage": 90,
             "keywords": ["Vue", "Vuex", "Vue Router", "Component Library"]
           },
@@ -53,7 +53,7 @@
           {
             "name": "UI Component Development",
             "level": "Expert",
-            "description": "Led the core design and development of multiple enterprise-level component libraries, including deep secondary development of antd and self-developed component solutions. Skilled in high-performance complex component abstraction and standardized component design systems, driving frontend R&D efficiency and reusability.",
+            "description": "Led core design and development of multiple enterprise-level component libraries, including deep secondary development of antd and self-developed component solutions. Skilled in high-performance complex component abstraction and standardized component design systems, driving frontend R&D efficiency and reusability improvement.",
             "percentage": 90,
             "keywords": ["Component Library", "antd", "Performance Components", "Design System"]
           }
@@ -67,7 +67,7 @@
           {
             "name": "Build & Optimization",
             "level": "Expert",
-            "description": "Led deep build performance optimization for several large projects, reducing typical business build time from 8 minutes to 3 minutes. Proficient in advanced Webpack optimization (persistent caching, concurrent builds, etc.), and actively introduced Vite to reshape development experience and collaboration speed.",
+            "description": "Led deep build performance optimization for several large projects, reducing typical business build time from 8 minutes to 3 minutes. Proficient in advanced Webpack optimization (persistent caching, concurrent builds, etc.), actively introducing Vite to reshape development experience and collaboration speed.",
             "percentage": 95,
             "keywords": ["Webpack", "Vite", "Rollup", "Build Optimization"]
           },
@@ -159,58 +159,58 @@
             {
               "id": "star-101",
               "title": "List Performance Optimization",
-              "situation": "The core module of the system had ultra-large lists, resulting in slow initial rendering and page switching, affecting user experience.",
+              "situation": "Core module contained ultra-large lists, resulting in slow initial rendering and page switching response, affecting user experience fluidity.",
               "task": "Optimize initial rendering performance and improve response speed in large data scenarios.",
-              "action": "Introduced virtual list and lazy loading strategies, used React Profiler to pinpoint bottlenecks, refactored complex form components, and adopted react-lazy-with-preload for route lazy loading, achieving end-to-end performance improvement.",
-              "result": "Average rendering time for large lists optimized to 800ms, page switching response improved by 40%, and overall user experience significantly enhanced."
+              "action": "Introduced virtual list and lazy loading strategies, used React Profiler for precise bottleneck identification, refactored complex form components, and adopted react-lazy-with-preload for route lazy loading, achieving end-to-end performance improvement.",
+              "result": "Large list average rendering time optimized to 800ms, page switching response improved by 40%, overall user experience significantly enhanced."
             },
             {
               "id": "star-102",
               "title": "Multi-language Support Solution",
-              "situation": "Rapid business expansion required adaptation to multiple languages and enhanced international market capability.",
-              "task": "Implement a flexible and scalable frontend internationalization solution to eliminate code switching and copy synchronization issues.",
+              "situation": "Rapid business expansion required multi-language adaptation to enhance international market capabilities.",
+              "task": "Implement flexible and scalable frontend internationalization solution to eliminate code switching and copy synchronization issues.",
               "action": "Integrated i18next and JSON dynamic language packs, built multi-language configuration and auto-loading mechanisms, improved multi-dimensional localization formats and real-time monitoring to ensure translation completeness and accuracy.",
-              "result": "System launched with 4 languages, translation errors reduced by 95%, supporting rapid international rollout and significantly enhancing product competitiveness."
+              "result": "System launched with 4 languages, translation errors reduced by 95% compared to original, supporting rapid international promotion and significantly enhancing product competitiveness."
             },
             {
               "id": "star-103",
               "title": "Workspace Map Configuration Process Optimization",
-              "situation": "Traditional workspace configuration was cumbersome and costly, with long iteration cycles for development and configuration.",
-              "task": "Empower business departments with automation and visualization tools to improve overall configuration efficiency.",
-              "action": "Developed a Figma plugin for automatic extraction, then built a visual workspace configuration platform, achieving closed-loop process and cost reduction.",
-              "result": "Total configuration time reduced from 4.5 person-days to 0.5 person-day, greatly lowering error rates and labor consumption."
+              "situation": "Traditional workspace configuration process was cumbersome with high collaboration costs and long development and configuration iteration cycles.",
+              "task": "Empower business departments through automation and visualization tools to improve overall configuration efficiency.",
+              "action": "Developed Figma plugin for automatic configuration extraction, followed by building a visual workspace configuration platform, achieving process closed-loop and cost reduction.",
+              "result": "Total configuration time reduced from 4.5 person-days to 0.5 person-days, greatly reducing error rates and labor consumption."
             },
             {
               "id": "star-104",
               "title": "WebSocket Real-time Function Optimization",
-              "situation": "Real-time communication suffered from high latency and disconnection issues, affecting key message delivery and business linkage.",
+              "situation": "Real-time communication faced high latency and disconnection issues, affecting critical message delivery and business linkage.",
               "task": "Improve WebSocket communication quality and business real-time assurance.",
               "action": "Designed exponential backoff auto-reconnect and MessagePack data compression strategies, optimized heartbeat detection and message flow, fully covering notification/collaboration core scenarios.",
-              "result": "Average message delay reduced by 40%, instant sync experience greatly improved, and user real-time perception issues dropped by 80%."
+              "result": "Average message delay reduced by 40%, instant sync experience achieved breakthrough, user real-time perception issues decreased by 80%."
             },
             {
               "id": "star-105",
               "title": "Frontend Security Enhancement",
-              "situation": "The OA system contains sensitive data, requiring higher frontend security standards.",
+              "situation": "OA system contained sensitive data, requiring higher frontend security standards.",
               "task": "Comprehensively strengthen frontend security protection and avoid mainstream vulnerability risks.",
-              "action": "Implemented CSP, escaping validation, CSRF Token, and sensitive data watermarking, and established a complete security audit process.",
-              "result": "Zero major vulnerability risks, security score greatly improved, and sensitive data security incidents significantly reduced."
+              "action": "Implemented CSP, escape validation, CSRF Token, and sensitive data watermarking, established complete security audit process.",
+              "result": "Zero major vulnerability risks, significantly improved security score, notable reduction in sensitive data security incidents."
             },
             {
               "id": "star-106",
               "title": "Build Optimization and Developer Experience Improvement",
-              "situation": "As engineering complexity increased, Webpack build and local hot update became slow, affecting R&D efficiency.",
-              "task": "Shorten build and local development startup time, and improve team coding experience.",
-              "action": "Deeply optimized Webpack multi-core, cache, and tree-shaking configuration, introduced Vite to accelerate local development, and improved code hot update process.",
-              "result": "Build time reduced by 35%, local startup efficiency improved by 90%."
+              "situation": "After engineering complexity increased, Webpack builds and local hot updates became slow, affecting development efficiency.",
+              "task": "Reduce build and local development startup time, improve team coding experience.",
+              "action": "Deep optimization of Webpack multi-core, cache, tree-shaking configuration, introduced Vite to accelerate local development environment, improved code hot update process.",
+              "result": "Compilation build time reduced by 35%, local startup efficiency improved by 90%."
             },
             {
               "id": "star-107",
               "title": "Performance Monitoring System Setup",
-              "situation": "Lack of real-time performance/exception monitoring made it difficult to proactively discover and address issues.",
+              "situation": "Lack of real-time performance/exception monitoring made it difficult to proactively discover and address potential issues.",
               "task": "Establish end-to-end performance and business availability automated monitoring and alerting system.",
-              "action": "Integrated Sentry, Web Vitals, and custom business tracking, connected to Grafana for visualization and alerts, driving proactive warning and optimization mechanisms.",
-              "result": "Performance data became traceable in real time, self-discovery rate of issues increased by 60%, and overall launch quality and stability continuously improved."
+              "action": "Integrated Sentry, Web Vitals, and custom business tracking, connected to Grafana visualization and alerts, promoting proactive warning and optimization mechanisms.",
+              "result": "Performance data became real-time traceable, issue self-discovery rate increased by 60%, overall launch quality and stability continuously enhanced."
             }
           ]
         },
@@ -219,25 +219,25 @@
           "title": "WeChat Work Application",
           "type": "OA System and Derivative Product Line",
           "category": "Business Systems",
-          "period": "",
+          "period": "May 2024 - Dec 2024",
           "position": "Architect",
-          "summary": "Led the design of a multi-terminal business architecture supporting both PC and mobile WeChat Work, achieving 70% code and UI component reuse across platforms through Monorepo and cross-terminal component abstraction. Promoted unified standards, toolchains, and best practices, significantly improving team delivery efficiency.",
+          "summary": "Led the design of multi-terminal business architecture supporting both PC and mobile, achieving 70% business code and UI component consistency and sharing across platforms through Monorepo and cross-terminal component abstraction. Promoted unified standards, toolchains, and development best practices, significantly improving team delivery efficiency.",
           "achievements": [
             {
               "id": "star-108",
               "title": "Cross-platform Technical Architecture Design",
-              "situation": "Needed to efficiently deliver both PC and mobile WeChat Work applications, reducing redundant and inconsistent development.",
-              "task": "Build a highly reusable, unified multi-terminal architecture and component library.",
-              "action": "Managed with pnpm Monorepo, accumulated common Hooks and responsive components, and enforced strict lint rules to ensure code consistency.",
-              "result": "Core cross-terminal reuse rate reached 70%, new feature development cycle shortened by 30%, and multi-terminal collaboration experience significantly improved."
+              "situation": "Needed to efficiently deliver both PC and mobile WeChat Work applications while reducing redundant and inconsistent development.",
+              "task": "Build highly reusable, unified multi-terminal architecture and component library.",
+              "action": "Managed through pnpm Monorepo, accumulated common Hooks and responsive components, coupled with strict lint rules to ensure code consistency.",
+              "result": "Cross-platform core reuse rate reached 70%, new feature development cycle shortened by 30%, multi-terminal collaboration experience significantly improved."
             },
             {
               "id": "star-109",
               "title": "Mobile Performance Optimization",
               "situation": "Mobile white screen and network latency affected business promotion and user experience.",
-              "task": "Break through weak network loading bottlenecks and greatly improve mobile first screen performance.",
-              "action": "Optimized data preloading, HTTP caching, resource splitting, and on-demand loading, integrated react-query and dynamic resource prioritization.",
-              "result": "P95 white screen time for core pages dropped by 50%, with industry-leading mobile access smoothness."
+              "task": "Break through weak network loading bottlenecks, significantly improve mobile first screen performance.",
+              "action": "Optimized data preloading, HTTP caching, resource splitting and on-demand loading, implemented react-query integration and dynamic resource prioritization strategy.",
+              "result": "Core pages P95 white screen duration reduced by 50%, achieving industry-leading mobile access smoothness."
             }
           ]
         },
@@ -248,23 +248,23 @@
           "category": "Business Systems",
           "period": "",
           "position": "Core Developer",
-          "summary": "Led the localized OA system development for the Indonesian department, achieving high-standard delivery through rapid component adaptation, complex network optimization, and cross-team resource integration.",
+          "summary": "Led the localized OA system development for Indonesian department, achieving high-standard delivery through rapid component adaptation, complex network environment optimization, and cross-team resource integration.",
           "achievements": [
             {
               "id": "star-110",
               "title": "Rapid Localization Development",
-              "situation": "Needed to quickly launch an OA system for the Indonesian market, similar in function to the domestic version but requiring localization.",
-              "task": "Quickly complete the Indonesian version using Vue based on domestic React experience.",
-              "action": "Used Vue 2, Webpack, Ant Design Vue (antdv); reused domestic design and architecture; focused on date/number formatting components for Indonesian users; wrapped antdv rich text editor with tiptap for business needs.",
-              "result": "Successfully launched the Indonesian OA system in 2 months, with rich text module development efficiency improved by 65% over native tiptap."
+              "situation": "Needed to quickly launch OA system for Indonesian market, with functionality similar to domestic version but requiring localization.",
+              "task": "Quickly complete Indonesian version development using Vue based on domestic React experience.",
+              "action": "Adopted Vue 2, Webpack, Ant Design Vue (antdv) tech stack; reused domestic version design and architecture; focused on developing date and number formatting components for Indonesian users; wrapped antdv rich text editor with tiptap for business needs.",
+              "result": "Successfully launched Indonesian OA system within 2 months, rich text module development efficiency improved by 65% compared to using native tiptap."
             },
             {
               "id": "star-111",
-              "title": "Indonesian Network Optimization",
-              "situation": "Weak network and browser fragmentation affected speed and compatibility.",
+              "title": "Indonesian Network Environment Optimization",
+              "situation": "Weak network conditions and browser fragmentation affected access speed and compatibility.",
               "task": "Systematically optimize weak network performance and mainstream compatibility.",
-              "action": "Used HTTP/2, CDN edge caching, WebP images, and async loading of key resources, compatible with mainstream local browsers.",
-              "result": "FMP reduced by 60%, achieving 99% compatibility in mainstream environments."
+              "action": "Employed HTTP/2, CDN edge caching, WebP images and async loading of key resources, ensuring compatibility with local mainstream browsers.",
+              "result": "FMP reduced by 60%, achieved 99% compatibility in mainstream environments."
             }
           ]
         },
@@ -273,33 +273,33 @@
           "title": "Frontend Engineering System Upgrade",
           "type": "OA System and Derivative Product Line",
           "category": "Business Systems",
-          "period": "",
+          "period": "Oct 2024 - Present",
           "position": "Architect",
-          "summary": "Promoted the evolution of large monolithic architectures (OA/OMS/KMG) to Monorepo + micro-frontend, decoupling business in phases, cleaning up technical debt, and improving engineering collaboration efficiency, enabling independent iteration and agile delivery for business lines.",
+          "summary": "Comprehensively promoted the evolution of OA/OMS/KMG and other large monolithic architectures towards Monorepo + micro-frontend direction, decoupling business in phases, cleaning up technical debt, and improving engineering collaboration efficiency, enabling independent iteration and agile delivery of business lines.",
           "achievements": [
             {
               "id": "star-112",
               "title": "Monorepo Architecture Refactoring",
-              "situation": "The system was a large monolith with multiple variants, high coupling, low iteration efficiency, and high maintenance cost; CI/CD was slow (8 min per build).",
-              "task": "Refactor system architecture to improve module independence and reusability, supporting rapid iteration for each product line.",
-              "action": "Designed a three-phase split: 1) Initialized Monorepo with pnpm+Turborepo, separated OMS code to packages/oms, extracted shared code to shared-core and shared-legacy-ui; 2) Created modern tech stack oms-next (React 18/AntD 5), integrated old oms via micro-frontend; 3) Gradually rewrote old features with slimfit component library.",
-              "result": "Average build time reduced by 50%, product lines can iterate and release independently, shared module changes auto-synced, maintenance cost reduced."
+              "situation": "System capability and evolution were slow: current OA was a large monolithic application with OMS/ECOMS/KMG variants, code coupling led to low iteration efficiency, high maintenance costs, and low CI/CD efficiency (8 minutes per build).",
+              "task": "Refactor system architecture to improve module independence and reusability, supporting rapid iteration of each product line.",
+              "action": "Carefully designed three-phase split plan: 1) Initialized Monorepo with pnpm+Turborepo, separated OMS code to packages/oms, extracted shared code to shared-core and shared-legacy-ui; 2) Created oms-next with modern tech stack (React 18/AntD 5), configured micro-frontend integration with old oms; 3) Gradually rewrote old features based on slimfit component library by module.",
+              "result": "Average project build time reduced by 50%, product lines can iterate and release independently, shared module changes automatically sync to dependent projects, reducing maintenance costs."
             },
             {
               "id": "star-113",
               "title": "Micro-frontend Progressive Migration",
-              "situation": "Legacy tech stack (React 16/AntD 4) needed upgrade to modern stack (React 18/AntD 5) without business interruption, requiring smooth transition.",
-              "task": "Design a progressive migration plan to ensure smooth transition.",
-              "action": "Adopted qiankun micro-frontend, configured oms-next as main app and old oms as sub-app; designed routing integration and gradual module/page replacement; built main-sub app communication for data consistency; designed full test cases for stability.",
-              "result": "Achieved progressive migration, system performance improved by 40%, frontend dev efficiency up 30%."
+              "situation": "Legacy tech stack (React 16/AntD 4) needed upgrade to modern stack (React 18/AntD 5), but couldn't interrupt business operations, requiring smooth transition.",
+              "task": "Design progressive migration plan to ensure smooth transition.",
+              "action": "Evaluated and adopted qiankun micro-frontend framework (compared with MF and internal solutions), configured oms-next as main app and old oms as sub-app; designed routing integration and gradual module/page replacement strategy; built main-sub app communication mechanism ensuring cross-app data consistency; designed comprehensive test cases to verify new-old system integration stability.",
+              "result": "Successfully achieved progressive migration, system performance improved by 40% after new architecture launch, frontend development efficiency increased by 30%."
             },
             {
               "id": "star-114",
               "title": "Technical Debt Cleanup",
-              "situation": "The system had accumulated much technical debt: multiple component library versions, mixed class/function components, duplicate permission functions, many conditionals, high maintenance cost, slow iteration.",
-              "task": "Systematically clean up technical debt, improve code quality and maintainability.",
-              "action": "Used structured methods to manage variant differences (env/config.ts instead of if/else); extracted complex logic to shared packages; unified to Slimfit component library; refactored permission system; wrote automated scripts for batch refactoring.",
-              "result": "Repo size reduced by 30%, component call consistency up 90%, permission logic errors down 85%, dev understanding/modification time down 70%."
+              "situation": "System had long history with accumulated technical debt: multiple component library versions coexisting, Class and functional components mixed, two versions of permission check functions, numerous conditional statements, leading to high maintenance costs and slow feature iteration.",
+              "task": "Systematically clean up technical debt to improve code quality and maintainability.",
+              "action": "Used structured methods to manage variant differences (based on .env and config.ts instead of if/else conditionals); extracted complex business logic to shared packages (shared-core/shared-legacy-ui); unified to Slimfit component library; upgraded permission check system to support data permission points and role judgment; wrote automated code conversion scripts for batch refactoring of legacy code.",
+              "result": "Code repository size reduced by 30%, component call consistency improved by 90%, permission logic errors reduced by 85%, development team's time for understanding and modifying permission-related code reduced by 70%."
             }
           ]
         },
@@ -307,25 +307,25 @@
           "id": "wp-1",
           "title": "WP Series Projects",
           "category": "Business Systems",
-          "period": "Jan 2022 - Present",
+          "period": "Jun 2023 - Mar 2024",
           "position": "Lead Frontend Developer",
-          "summary": "Developed complex graphic display and editing features based on React, UMI, Tailwind CSS, leading high-performance rendering, complex interaction, and component reuse.",
+          "summary": "Complex graphic display and editing functionality development based on React, UMI, Tailwind CSS, leading high-performance rendering, complex interaction, and component reuse.",
           "achievements": [
             {
               "id": "star-120",
               "title": "High-performance Graphic Rendering",
-              "situation": "Needed to develop complex parking lot and warehouse map configuration interfaces, requiring high-performance rendering and interaction.",
+              "situation": "Project needed to develop complex parking lot map and warehouse map configuration interfaces, requiring high-performance rendering and interaction.",
               "task": "Implement high-performance, configurable graphic display and editing features.",
-              "action": "Developed with React, UMI, Tailwind CSS; reused and extended Pixi.js rendering engine experience from OA, optimized large data rendering performance.",
-              "result": "Delivered parking lot and warehouse map config, supporting smooth display and interaction of 1000+ elements."
+              "action": "Developed with React, UMI, Tailwind CSS; reused and extended Pixi.js graphics rendering engine experience from OA project, optimized rendering performance for large data volumes.",
+              "result": "Successfully delivered parking lot and warehouse map configuration functionality, supporting smooth display and interaction of 1000+ graphic elements."
             },
             {
               "id": "star-121",
               "title": "Complex Interaction Optimization",
-              "situation": "Graphic editing needed to support box selection and drag of large-scale elements, with high performance requirements.",
-              "task": "Implement high-performance box selection and multi-element operations.",
-              "action": "Optimized box selection algorithm, used requestAnimationFrame to throttle redraws; batched and async processed large element operations to avoid UI blocking.",
-              "result": "Smooth box selection, supports 1000+ elements, user efficiency up 50%, Grafana shows P95 response within 200ms."
+              "situation": "Graphic editing interface needed to support box selection and dragging of large-scale elements with high performance requirements.",
+              "task": "Implement high-performance box selection and multi-element operation functionality.",
+              "action": "Optimized box selection algorithm, used requestAnimationFrame to throttle redraws; implemented batch processing and asynchronous handling of large-scale element operations to avoid UI thread blocking.",
+              "result": "Achieved smooth box selection experience, supporting simultaneous operation of 1000+ elements, user operation efficiency improved by 50%, Grafana monitoring shows P95 interaction response time stable within 200ms."
             }
           ]
         },
@@ -335,203 +335,115 @@
           "category": "Business Systems",
           "period": "Jun 2019 - Dec 2021",
           "position": "Frontend Lead",
-          "summary": "As frontend lead, designed financial-grade secure and compliant capital system architecture from scratch, led business component abstraction and automation migration tool development, quickly completed tech upgrades and ensured high-quality delivery.",
+          "summary": "As frontend lead, designed financial-grade secure and compliant capital system architecture from scratch, led business component abstraction and automation migration tool development, quickly completed technology upgrades and ensured high-quality delivery.",
           "achievements": [
             {
               "id": "star-130",
               "title": "Financial Application Security Development",
-              "situation": "Built capital, finance, and risk control systems from scratch to meet financial business needs.",
-              "task": "As frontend lead, led tech selection, architecture design, and core feature development.",
-              "action": "Chose Vue 2 and internal Base-UI as base stack; followed frontend security best practices (input validation, output encoding, HTTPS, etc.).",
-              "result": "System launched on schedule, passed internal security audit, met financial-grade security, no major incidents in first year."
+              "situation": "Building capital, finance, and risk control systems from scratch to meet financial business requirements.",
+              "task": "As frontend lead, lead system frontend technology selection, architecture design, and core functionality development.",
+              "action": "Selected Vue 2 and internal Base-UI component library as foundation technology stack; followed frontend security best practices (input validation, output encoding, HTTPS, etc.) for development.",
+              "result": "System successfully launched on schedule, passed internal security department audit, met financial-grade application security requirements, no major security incidents in first year after launch."
             },
             {
               "id": "star-131",
               "title": "Component Library Migration Tool",
-              "situation": "Tech stack upgrade required migrating old UI from Base-UI to new standard @yqg/antd.",
-              "task": "Efficiently and accurately complete UI component library migration.",
-              "action": "Analyzed API differences, developed AST-based code conversion tool to auto-replace old component usage with new API calls.",
-              "result": "Tool automated 80%+ of migration, overall cycle shortened by 50%, greatly reduced manual work."
+              "situation": "Company technology stack upgrade required migrating old system UI from Base-UI to new standard component library @yqg/antd.",
+              "task": "Efficiently and accurately complete UI component library migration work.",
+              "action": "Analyzed API differences between two component libraries, developed AST-based code conversion tool to automatically identify and replace old component usage with new component API calls.",
+              "result": "Tool automated over 80% of page migration workload, overall migration cycle shortened by 50%, greatly reduced repetitive manual operations."
             },
             {
               "id": "star-132",
               "title": "Business Component Encapsulation",
-              "situation": "System had many structurally similar CRUD pages, needing efficiency improvement.",
+              "situation": "System contained many structurally similar CRUD pages, development efficiency needed improvement.",
               "task": "Improve basic page development efficiency and performance.",
               "action": "Encapsulated page-level business components (search forms, data tables, modal forms), standardized development process.",
-              "result": "CRUD page efficiency up 50%, core report page load and interaction performance up 35%."
+              "result": "Basic CRUD page development efficiency improved by 50%, core report page loading and interaction performance improved by 35%."
             }
           ]
         },
         {
           "id": "inf-1",
           "title": "Slimfit Component Library",
-          "type": "Infrastructure",
+          "type": "",
           "category": "Infrastructure",
-          "period": "Apr 2023 - Present",
-          "position": "Architect",
-          "summary": "Addressed inconsistent UI styles and repeated component development across multiple B-end products by designing and building an enterprise-grade React component library based on antd 5, incorporating company design standards, innovative theme engine, icon system, font standards, and Tailwind integration, significantly improving internal development efficiency.",
-          "achievements": [
-            {
-              "id": "inf-1-1",
-              "title": "Unified Design Specification",
-              "situation": "B-end products were stuck on AntD 4, with outdated visuals and repeated style customization; design standards (palette, fonts, icons) were hard to implement systematically.",
-              "task": "Lead the construction of the new standard React component library Slimfit, unifying design standards.",
-              "action": "Designed an innovative theme engine to inject design standards into antd 5; defined all standard colors in src/theme/tokens.ts; fine-tuned components in src/theme/components.ts; used father 4 (Rollup) for packaging, dumi 2 for docs site.",
-              "result": "Slimfit became the standard for B-end products, unifying product visuals and enhancing brand consistency."
-            },
-            {
-              "id": "inf-1-2",
-              "title": "Self-built Icon System",
-              "situation": "Arco icons needed style changes (e.g. stroke width) and many internal icons; direct dependency on original library was insufficient.",
-              "task": "Build a unified enterprise icon system.",
-              "action": "Built icon system in slimfit: maintained SVGs in src/icons/svgs/; created BaseIcon with unified props and default styles; developed tool to convert SVGs to React components; unified visual attributes.",
-              "result": "Centralized icon management, unified style, easy addition/modification, simple and consistent usage, serving 40+ internal projects."
-            },
-            {
-              "id": "inf-1-3",
-              "title": "Multi-tech Stack Compatibility",
-              "situation": "Tailwind CSS projects needed to avoid style conflicts with antd customizations; all projects needed unified brand fonts.",
-              "task": "Design cross-tech stack design spec sharing mechanism.",
-              "action": "Developed font management solution: built fonts.css and hosted font files; created Tailwind Preset mapping slimfit tokens to Tailwind config; enabled one-line import of all design specs; implemented SlimfitProvider for one-click setup.",
-              "result": "Greatly simplified design spec integration for different stacks, reduced visual differences by 30%, onboarding time by 50%, and improved design satisfaction by 25%."
-            }
-          ]
-        },
-        {
-          "id": "inf-2",
-          "title": "Base-UI Component Library",
-          "type": "Infrastructure",
-          "category": "Infrastructure",
-          "period": "Jan 2019 - May 2021",
-          "position": "Core Developer",
-          "summary": "Participated in building the first-generation Vue 2 component library Base-UI, responsible for table row/column freeze, virtual list optimization for large data, and switching packaging from Webpack to Rollup for better bundle size and performance.",
-          "achievements": [
-            {
-              "id": "inf-2-1",
-              "title": "High-performance Component Development",
-              "situation": "Early Vue projects lacked high-quality, high-performance basic components.",
-              "task": "As core developer, participated in building the first-gen Vue 2 component library Base-UI.",
-              "action": "Developed table row/column freeze; used virtual list for Select/TreeSelect performance with large data.",
-              "result": "Packaged 50+ UI components, 60% reuse rate, Select supports 10k+ records, 200% performance boost."
-            },
-            {
-              "id": "inf-2-2",
-              "title": "Component Library Packaging Optimization",
-              "situation": "Webpack packaging led to large bundle size and slow loading.",
-              "task": "Optimize packaging to reduce size and improve loading performance.",
-              "action": "Switched from Webpack to Rollup, leveraged ES Module and tree-shaking, output multiple module formats.",
-              "result": "Bundle size reduced by 15%, better on-demand loading, first screen load speed up 30%."
-            }
-          ]
-        },
-        {
-          "id": "tool-1",
-          "title": "Development Scripts & Toolchain Construction",
-          "type": "Engineering Efficiency",
-          "category": "Engineering Efficiency",
-          "period": "Mar 2021 - Present",
-          "position": "Engineering Lead",
-          "summary": "Led the construction of full-process automation toolchains and standard template systems, greatly simplifying new project initialization, engineering upgrades, and onboarding, enabling efficient collaboration and stable delivery.",
-          "achievements": [
-            {
-              "id": "tool-1-1",
-              "title": "Project Template Standardization",
-              "situation": "Project initialization was cumbersome, local dev startup slow, Webpack config complex.",
-              "task": "Improve frontend engineering efficiency and developer experience.",
-              "action": "Developed standardized project templates (React/Vue/Node); optimized Webpack config; introduced Vite/esbuild; created init scripts for config, Git Hooks, and dependencies.",
-              "result": "New project init time reduced from 30min to 5min; local dev server startup down 70%; toolchain satisfaction up 50%."
-            },
-            {
-              "id": "tool-1-2",
-              "title": "New Employee Onboarding Optimization",
-              "situation": "New hires took long to get familiar with tech stack and dev process; env setup was cumbersome and error-prone.",
-              "task": "Optimize onboarding and simplify environment setup.",
-              "action": "Systematically organized docs, wrote onboarding guides, developed Homebrew-based setup.sh for one-click install and config (Node.js, Docker, Git, etc.).",
-              "result": "Time to independent dev down from 2 weeks to 3 days; env setup from half a day to 15min; setup issues down 75%."
-            },
-            {
-              "id": "tool-1-3",
-              "title": "Automated Code Migration Tools",
-              "situation": "Tech stack upgrades (React 16→18, Antd 4→5) required massive manual API/component changes.",
-              "task": "Build automation tools to simplify upgrades and reduce errors.",
-              "action": "Developed Node.js scripts using AST to auto-replace outdated APIs; built dependency graph tools; wrote conversion rules for antd, react-router, etc.; designed batch/rollback mechanisms.",
-              "result": "React 18 upgrade code adjustment workload down 70%, 1000+ code points automated, API misuse detection up to 95%."
-            }
-          ]
+          "period": "",
+          "position": "",
+          "summary": "",
+          "achievements": []
         },
         {
           "id": "tool-2",
           "title": "Figma Extension Development",
-          "type": "Engineering Efficiency",
+          "type": "",
           "category": "Engineering Efficiency",
           "period": "Jun 2022 - Present",
           "position": "Tooling Lead",
-          "summary": "Developed Figma plugins to extract design elements and convert to Pixi.js scene config JSON or React/Vue code, greatly improving dev efficiency and design fidelity.",
+          "summary": "Developed Figma plugins to enable one-click extraction of design elements and conversion to Pixi.js scene configuration JSON or React/Vue component code, significantly improving development efficiency and design fidelity.",
           "achievements": [
             {
               "id": "tool-2-1",
               "title": "Design-to-Code Tool",
-              "situation": "Manual conversion of design drafts to code/config was inefficient and error-prone.",
-              "task": "Automate design-to-code/config conversion.",
-              "action": "Developed Figma plugin for one-click extraction and conversion to Pixi.js config or basic React/Vue code.",
-              "result": "Dev efficiency for Pixi.js config up 100%, design fidelity up 40%."
+              "situation": "Design drafts required manual conversion to code or configuration by frontend engineers, resulting in low efficiency and high error rates.",
+              "task": "Automate the design-to-code/configuration conversion process.",
+              "action": "Developed Figma plugin for one-click extraction and conversion of design elements (such as layers and styles) to Pixi.js scene configuration JSON or basic React/Vue component code.",
+              "result": "Development efficiency for specific scenarios (like Pixi.js configuration generation) improved by 100%, design fidelity improved by 40%."
             }
           ]
         },
         {
           "id": "tool-3",
           "title": "VSCode Extension Development",
-          "type": "Engineering Efficiency",
+          "type": "",
           "category": "Engineering Efficiency",
           "period": "Aug 2020 - Present",
           "position": "Tooling Lead",
-          "summary": "Independently developed a full suite of VSCode extensions and toolchains, covering template generation, batch refactoring, and dependency analysis, improving team collaboration and large system maintenance efficiency.",
+          "summary": "Independently developed full suite of VSCode extensions and toolchains, covering template generation, batch refactoring, and dependency analysis, improving team collaboration and large system maintenance efficiency.",
           "achievements": [
             {
               "id": "tool-3-2",
               "title": "Franky",
-              "situation": "Many repetitive operations and template code needs in daily development.",
-              "task": "Develop VSCode plugin to improve efficiency and convenience.",
-              "action": "Developed Franky plugin with 3 core features: 1) fileheader auto-generation; 2) one-click Tailwind CSS class name generation from Figma styles; 3) dynamic template system supporting local/remote templates, WebView variable filling, and code generation. All features work out of the box.",
-              "result": "Daily coding efficiency up 45%, template code generation time down 90%, style fidelity up 60%."
+              "situation": "Daily development involved many repetitive operations and template code writing needs.",
+              "task": "Develop VSCode plugin to improve development efficiency and convenience.",
+              "action": "Developed Franky plugin with three core features: 1) fileheader automatic generation and update; 2) one-click generation of Tailwind CSS class names from Figma styles; 3) dynamic template system supporting local/remote template repositories, code generation after variable filling through WebView. All features work out of the box without additional configuration.",
+              "result": "Developer daily coding efficiency improved by average of 45%, template code generation time reduced by 90%, style restoration accuracy improved by 60%."
             },
             {
               "id": "tool-3-3",
               "title": "WebBar",
-              "situation": "Frequent context switching to different systems, docs, and tools during development.",
-              "task": "Simplify access to common resources and reduce context switching.",
-              "action": "Developed WebBar plugin to add customizable buttons to the status bar for one-click access to common web pages; supports custom config and grouping; built-in browser preview to avoid window switching.",
-              "result": "Context switching time down 35%, resource access efficiency up 70%, onboarding time for new colleagues down 50%."
+              "situation": "Development process required frequent switching between different systems, documentation lookup and internal tool usage, leading to frequent context switching.",
+              "task": "Simplify access to common resources, reduce context switching in workflow.",
+              "action": "Developed WebBar VSCode plugin, adding customizable buttons to editor status bar for one-click access to common web pages; supported custom configuration and group management of links; implemented simple browser preview functionality within plugin to avoid window switching.",
+              "result": "Developer workflow context switching time reduced by 35%, common resource access efficiency improved by 70%, time for new colleagues to familiarize with internal systems shortened by 50%."
             },
             {
               "id": "tool-3-4",
               "title": "CodeTransformer",
-              "situation": "Large-scale refactoring required massive repetitive code conversion, time-consuming and error-prone.",
-              "task": "Build VSCode code transformation tool to improve refactoring efficiency and accuracy.",
-              "action": "Developed CodeTransformer plugin, integrated Babel for fast refactoring, supports Chinese search, dependency graph analysis, visual UI, official/custom babel plugins, and tsconfig path mapping.",
-              "result": "Refactoring efficiency up 400%, specific tasks (e.g. component API upgrade) accuracy up to 95%, large project dependency analysis time down from hours to minutes."
+              "situation": "During code refactoring and upgrades, large amount of repetitive code conversion work needed to be done manually, time-consuming and error-prone.",
+              "task": "Build code transformation tool within VSCode to improve code refactoring efficiency and accuracy.",
+              "action": "Developed CodeTransformer plugin, integrating Babel for rapid code refactoring, supporting Chinese search, dependency graph analysis and other advanced features; provided visual operation interface, supporting official and custom babel plugins; implemented dependency graph visualization and analysis, ensuring no code migration omissions by combining with tsconfig path mapping.",
+              "result": "Code refactoring efficiency improved by 400%, specific conversion tasks (like component library API upgrade) accuracy reached 95%, large project dependency analysis time reduced from hours to minutes level, became key tool for team technology upgrades."
             },
             {
               "id": "tool-3-5",
               "title": "Automated Code Migration Tool",
-              "situation": "Large-scale tech stack upgrades or codebase refactoring required huge manual migration, error-prone.",
-              "task": "Develop automation tools to assist migration.",
-              "action": "Built static analysis and auto-conversion tools with Babel/jscodeshift; wrote codemod scripts for specific scenarios; integrated into CodeTransformer for visual operation.",
-              "result": "Migration efficiency up 400%, migration bugs down 90% in multiple projects."
+              "situation": "Facing large-scale tech stack upgrades or codebase refactoring, manual migration workload was huge and error-prone.",
+              "task": "Develop automation tools to assist code migration.",
+              "action": "Developed code static analysis and automatic conversion tools based on Babel and jscodeshift; wrote codemod scripts for specific migration scenarios; integrated into CodeTransformer plugin for visual operation.",
+              "result": "Migration efficiency improved by average of 400% in multiple code migration projects, number of bugs introduced by migration reduced by 90%."
             }
           ]
         }
       ]
     },
-
     {
       "id": 3,
       "company": "Fang.com",
       "position": "Lead Developer / Frontend Developer",
       "location": "Beijing",
       "period": "Nov 2017 - Mar 2019",
-      "description": "Responsible for full-process frontend and data visualization product development for multiple business systems, leading technical architecture, performance improvement, and standardization, driving automation and engineering collaboration efficiency upgrades.",
+      "description": "Responsible for full-process frontend and data visualization product development across multiple business systems, leading technical architecture, performance improvement, and standardization, driving product R&D automation and engineering collaboration efficiency upgrades.",
       "items": [
         {
           "id": "fang-1",
@@ -539,14 +451,14 @@
           "period": "Nov 2017 - Mar 2019",
           "position": "Lead Developer",
           "category": "Business Systems",
-          "summary": "Independently responsible for project build, integrating Webpack and Babel, optimizing build process, and improving development efficiency by 20%. Developed web controllers using Express, designed and implemented stable and efficient API services. Built frontend pages with Vue and Vue-router, achieving dynamic routing and smooth interactions, enhancing user experience.",
+          "summary": "Independently responsible for project construction, integrating Webpack bundling and Babel compilation, optimizing build process, improving development efficiency by 20%. Developed Web layer Controllers using Express framework, designed and implemented stable and efficient API services. Built frontend pages with Vue and Vue-router, achieving dynamic routing and smooth interactions, enhancing user experience.",
           "achievements": [
             {
               "id": "fang-1-1",
               "title": "Build Process Optimization",
               "situation": "Initial project build scripts were cumbersome, affecting development efficiency.",
               "task": "Streamline build process and achieve automation.",
-              "action": "Optimized build scripts by integrating Webpack and Babel, improving development experience.",
+              "action": "Optimized build scripts through Webpack+Babel integration, improving development experience.",
               "result": "Efficiency improved by 20%, with enhanced build quality and stability."
             },
             {
@@ -554,7 +466,7 @@
               "title": "Efficient API Service Design",
               "situation": "Business APIs needed to support high concurrency and stability requirements.",
               "task": "Develop high-performance and stable API services.",
-              "action": "Built web controllers using Express, optimized API structure and performance.",
+              "action": "Built Web Controllers using Express framework, optimized API structure and performance.",
               "result": "API services performed excellently, supporting high concurrent traffic with ease."
             }
           ]
@@ -565,7 +477,7 @@
           "period": "Nov 2017 - Mar 2019",
           "position": "Frontend Developer",
           "category": "Business Systems",
-          "summary": "Led the development of land/location search pages and data visualization features, implemented localStorage persistence and highly reusable condition components, integrated AMap and ECharts for interactive and visualized data upgrades.",
+          "summary": "Led the development of land/location search pages and data visualization features, implemented localStorage persistence and highly reusable condition components, integrated AMap and ECharts for interactive and data visualization upgrades.",
           "achievements": [
             {
               "id": "fang-2-1",
@@ -577,11 +489,11 @@
             },
             {
               "id": "fang-2-2",
-              "title": "Component Standardization & Efficiency",
-              "situation": "Long development cycles and low component reuse affected collaborative development.",
+              "title": "Component Standardization & Development Efficiency",
+              "situation": "Page development cycles were long, low component reuse affected collaborative development.",
               "task": "Standardize interactions and component implementation to accelerate development progress.",
               "action": "Encapsulated condition area components and interaction protocols based on Element-UI.",
-              "result": "Development cycle shortened by 30%, with improved component reuse and standardization."
+              "result": "Development cycle shortened by 30%, with improved component reuse and standardization capabilities."
             }
           ]
         },
@@ -591,7 +503,7 @@
           "period": "Nov 2017 - Mar 2019",
           "position": "Frontend Developer",
           "category": "Business Systems",
-          "summary": "Led the development of economic, population, and potential customer big data pages and backend APIs. Initially implemented interaction logic with jQuery to ensure stable page functionality. Integrated Jihai Map and ECharts for data visualization, meeting multi-dimensional business analysis needs. Later introduced Vue for general condition components and PPT download modules, and used Express for Excel upload/download, optimizing data processing efficiency.",
+          "summary": "Led the development of economic, population, and potential customer big data pages and backend APIs. Initially implemented interaction logic with jQuery to ensure stable page functionality. Integrated Jihai Map and ECharts for data visualization, meeting multi-dimensional business analysis needs. Later introduced Vue for general condition components and PPT download modules, and used Express for Excel file upload/download, optimizing data processing efficiency.",
           "achievements": [
             {
               "id": "fang-3-1",
@@ -599,15 +511,15 @@
               "situation": "Needed to display economic, population, and other multi-dimensional big data.",
               "task": "Achieve efficient data visualization display.",
               "action": "Integrated Jihai Map and ECharts, developed multi-dimensional data visualization pages.",
-              "result": "Met business multi-dimensional analysis needs, enhancing data insight."
+              "result": "Met business multi-dimensional analysis needs, enhancing data insight capabilities."
             },
             {
               "id": "fang-3-2",
               "title": "General Components & Automation Enhancement",
               "situation": "Page extensibility and data processing efficiency needed improvement.",
               "task": "Enhance page reusability and data processing automation.",
-              "action": "Introduced Vue, developed general condition components and PPT download modules, used Express for Excel upload/download.",
-              "result": "Improved page reusability and significantly enhanced data processing efficiency."
+              "action": "Introduced Vue framework, developed general condition components and PPT download module, implemented Excel upload/download with Express.",
+              "result": "Enhanced page reusability and significantly improved data processing efficiency."
             }
           ]
         }
@@ -634,7 +546,7 @@
               "title": "ERM System Secondary Development",
               "situation": "Clients required deep customization for ERM business scenarios.",
               "task": "Customize business processes and high-performance data batch processing.",
-              "action": "Coordinated multi-module backend development with Java+Spring, improved frontend interactions with jQuery, and optimized database and storage.",
+              "action": "Coordinated multi-module backend development with Java+Spring, improved frontend interactions with jQuery, optimized database and storage.",
               "result": "Project delivered ahead of schedule, significantly optimized response for millions of records, received excellent client feedback and continued cooperation."
             }
           ]
@@ -655,15 +567,15 @@
           "period": "Feb 2016 - May 2016",
           "position": "Regional Supervisor",
           "category": "",
-          "summary": "Developed a Java+JSP-based store inventory management system, automating warehouse and store data synchronization, improving inventory check accuracy and automation.",
+          "summary": "Developed Java+JSP-based store inventory management system, automating warehouse and store data synchronization, improving inventory check accuracy and automation capabilities.",
           "achievements": [
             {
               "id": "hl-1-1",
               "title": "Inventory Process Optimization",
-              "situation": "Manual inventory calculations were error-prone, and monthly checks were inaccurate.",
+              "situation": "Manual inventory calculations were error-prone, monthly checks were inaccurate.",
               "task": "Automate inventory processes to reduce errors.",
-              "action": "Designed barcode scanner data collection and automatic data sync modules.",
-              "result": "Error rate reduced by 75%, discrepancy rate down to 0.8%, improved headquarters data-driven decision capability."
+              "action": "Designed barcode scanner automatic data collection and data synchronization modules.",
+              "result": "Error rate reduced by 75%, discrepancy rate decreased to 0.8%, improved headquarters data-driven decision-making capability."
             }
           ]
         },
@@ -673,15 +585,15 @@
           "period": "Sep 2014 - Feb 2016",
           "position": "Store Manager",
           "category": "",
-          "summary": "Optimized new store opening process, developed a Java+JSP-based TODO-LIST system using the Eisenhower Matrix to display tasks by urgency/importance, replacing manual management and improving efficiency, ensuring all tasks were completed within two months before opening.",
+          "summary": "Optimized new store opening process, developed Java+JSP-based TODO-LIST system using Eisenhower Matrix to display tasks by urgency/importance, replacing previous management based on personal experience and notes, improving work efficiency, ensuring all tasks completed within two months before store opening.",
           "achievements": [
             {
               "id": "hl-2-1",
               "title": "New Store TODO-LIST System Development",
-              "situation": "New store openings required coordination and tracking of many tasks, manual management was inefficient and prone to omissions.",
-              "task": "Develop a simple and efficient task management system to ensure orderly preparation for new store openings.",
-              "action": "Developed a web-based task tracking system using Java+JSP, employing the Eisenhower Matrix to display tasks; implemented automatic scheduling, reminders, and statistics; designed a red-yellow-green warning mechanism for task status and urgency.",
-              "result": "Task completion rate during preparation increased from 82% to 98%, average preparation cycle shortened by 3 days, coordination time reduced by 60%, successfully applied in 35 new stores nationwide, and received group recognition."
+              "situation": "New store openings required coordination and tracking of numerous preparation tasks, manual management was inefficient and prone to missing critical items.",
+              "task": "Develop simple and efficient task management system to ensure orderly preparation for new store openings.",
+              "action": "Developed Web-based task tracking system using Java+JSP, employing Eisenhower Matrix (urgent & important/important not urgent/urgent not important/neither urgent nor important) to display tasks; implemented automatic task scheduling, reminders, and statistics; designed red-yellow-green warning mechanism for intuitive display of task status and urgency.",
+              "result": "Task completion rate during preparation period increased from 82% to 98%, average preparation cycle shortened by 3 days, coordination communication time reduced by 60%, system successfully applied in 35 new store openings nationwide, received group recognition."
             }
           ]
         }
@@ -695,20 +607,14 @@
       "field": "Agricultural Resources and Environment",
       "institution": "Jilin University",
       "location": "Jilin",
-      "period": "Sep 2010 - Jul 2014",
-      "description": "Systematically studied professional knowledge related to agricultural resources and environment, while self-learning programming technologies that laid the foundation for later transition to frontend development.",
-      "achievements": [
-        "Graduated with honors",
-        "Self-taught frontend development technologies during university",
-        "Participated in student scientific innovation projects"
-      ]
+      "period": "Sep 2010 - Jul 2014"
     }
   ],
   "portfolioProjects": [
     {
       "id": 1,
       "title": "What I Don't Know Weekly",
-      "description": "AI-driven frontend technology weekly, curating and deeply interpreting high-quality content from the Web frontend and surrounding ecosystem. Covers practical tools, open-source projects, cutting-edge news, and best practices. Utilizes AI for intelligent analysis and content filtering, enabling developers to continuously access high-quality frontend information and enhance professional skills and technical vision.",
+      "description": "AI-driven frontend technology weekly newsletter, curating and deeply interpreting high-quality content from the Web frontend and surrounding ecosystem. Covers practical tools, open-source projects, cutting-edge news, and best practices. Utilizes AI technology for intelligent analysis and content filtering, enabling developers to continuously access high-quality frontend information, enhancing professional skills and technical vision.",
       "image": "https://img.mengpeng.tech/i/2025/04/19/68035b3218ba2.webp",
       "technologies": ["Astro", "React", "OpenAI", "Tailwind CSS", "Vercel", "MCP", "Node.js"],
       "techIds": ["astro", "react", "openai", "tailwind", "vercel", "mcp", "nodejs"],
@@ -734,7 +640,7 @@
     {
       "id": 3,
       "title": "@codetransformer/find-chinese",
-      "description": "Efficient and precise multi-level dependency scanning and Chinese character locator tool, empowering complex frontend projects for internationalization transformation and character review, improving multilingual project development and quality control.",
+      "description": "Efficient and precise multi-level dependency scanning and Chinese character locator tool, empowering complex frontend projects for internationalization transformation and character review, improving multilingual project development and quality control capabilities.",
       "image": "/placeholder.svg",
       "technologies": ["TypeScript", "AST", "Babel", "VSCode API"],
       "techIds": ["typescript", "ast", "babel", "vscode"],
@@ -754,13 +660,13 @@
       "liveLink": "https://marketplace.visualstudio.com/items?itemName=NorthSeacoder.franky",
       "repoLink": "https://github.com/NorthSeacoder/franky",
       "featured": true,
-      "evolution": ["fileheader", "Tailwind Conversion", "Template System", "Dynamic Template"],
+      "evolution": ["fileheader", "Tailwind Conversion", "Template System", "Dynamic Templates"],
       "related": [7]
     },
     {
       "id": 5,
       "title": "WebBar (VSCode)",
-      "description": "Lightweight VSCode status bar custom button extension, one-click integration of frequently used websites, internal systems, and workflow resources, improving development convenience and context switching efficiency.",
+      "description": "Lightweight VSCode status bar custom button plugin, one-click integration of frequently used websites, internal systems, and workflow resources, improving development convenience and context switching efficiency.",
       "image": "https://img.mengpeng.tech/i/2025/04/19/68035dec4bed3.webp",
       "technologies": ["TypeScript", "VSCode API", "WebView"],
       "techIds": ["typescript", "vscode", "webview"],
@@ -773,7 +679,7 @@
     {
       "id": 6,
       "title": "CodeTransformer (VSCode)",
-      "description": "Professional code migration and refactoring VSCode extension, integrating multi-level AST analysis, dependency visualization, and batch repair solutions, significantly improving the efficiency and reliability of large project tech upgrades, batch migration, and structural governance.",
+      "description": "Professional code migration and refactoring VSCode plugin, integrating multi-level AST analysis, dependency visualization, and batch repair solutions, significantly improving the efficiency and reliability of large project technology upgrades, batch migration, and structural governance.",
       "image": "https://img.mengpeng.tech/i/2025/04/19/68035e78c6dd6.webp",
       "technologies": ["TypeScript", "Babel", "AST", "Dependency Analysis"],
       "techIds": ["typescript", "babel", "ast", "dependency-analysis"],
@@ -793,8 +699,15 @@
       "liveLink": "https://www.npmjs.com/package/@nsea/depseeker",
       "repoLink": "https://github.com/NorthSeacoder/depseeker",
       "featured": true,
-      "evolution": ["Simple Dependency Resolution", "Dependency Graph Parsing", "Alias Parsing Support"],
+      "evolution": ["Simple Dependency Resolution", "Dependency Graph Parsing", "Alias Resolution Support"],
       "related": [2, 6]
     }
-  ]
-} 
+  ],
+  "personal": {
+    "name": "Meng Peng",
+    "city": "Beijing",
+    "email": "mengpeng_bj@foxmail.com",
+    "mobile": "18505280124",
+    "wechat": "north-sea-coder"
+  }
+}
