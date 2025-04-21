@@ -83,7 +83,7 @@ export interface Education {
 export interface About {
   bio: string;
   stats: {
-    yearsExperience: number;
+    yearsExperience: number|string;
     projectsCompleted: number;
     happyClients: number;
     yearsDescription?: string;
