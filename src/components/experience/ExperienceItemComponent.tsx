@@ -28,14 +28,19 @@ interface ExperienceItem {
 
 const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
   const [expanded, setExpanded] = useState(false);
+  const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (item.achievements.length > 0) setExpanded(prev => !prev);
+  };
   return (
     <div className="pb-1">
-      <div className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200">
+      <div
+        className="flex flex-col p-3 bg-slate-50 dark:bg-slate-800/50 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors duration-200"
+        onClick={handleToggle}
+        style={{ cursor: item.achievements.length > 0 ? 'pointer' : 'default' }}
+      >
         <div
-          className={`flex items-center justify-between${item.achievements.length > 0 ? ' cursor-pointer' : ''}`}
-          onClick={() => {
-            if (item.achievements.length > 0) setExpanded(prev => !prev);
-          }}
+          className={`flex items-center justify-between`}
         >
           <div className="flex items-center gap-2">
             <h4 className="text-base font-medium text-slate-800 dark:text-slate-200 flex items-center flex-wrap gap-2">
@@ -86,6 +91,7 @@ const ExperienceItemComponent = ({ item }: { item: ExperienceItem }) => {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden mt-3"
+              onClick={e => e.stopPropagation()}
             >
               <div className="pl-0 space-y-2">
                 {item.achievements.map(achievement => (
