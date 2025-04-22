@@ -99,7 +99,7 @@ const Hero = () => {
       <div className="lg:col-span-4 flex flex-col items-center lg:items-start">
         <div className="w-40 h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full overflow-hidden mb-6 border-4 border-white dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
           <img 
-            src="https://avatars.githubusercontent.com/u/30330837?v=4" 
+            src="https://img.mengpeng.tech/i/2025/04/22/68079c4214f8c.webp" 
             alt={t('common.profile')} 
             className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
           />

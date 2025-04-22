@@ -129,7 +129,7 @@
     },
     "footer": {
       "rights": "版权所有",
-      "designed": "使用 Astro + Preact + Tailwind CSS + Loveable + cursor 构建",
+      "designed": "使用 Astro + Preact + Tailwind CSS + Lovable + cursor 构建",
       "quickLinks": "快速导航",
       "contactInfo": "联系信息",
       "connectText": "欢迎通过以下方式与我联系：",

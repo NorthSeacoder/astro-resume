@@ -14,7 +14,7 @@ Clarity.init(import.meta.env.VITE_CLARITY);
 const preloadCriticalAssets = () => {
   const assets = [
     // 预加载关键图像和字体
-    { href: '/images/hero-bg.webp', as: 'image', type: 'image/webp' },
+    // { href: '/images/hero-bg.webp', as: 'image', type: 'image/webp' },
     // { href: '/fonts/main-font.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
   ];
   
@@ -42,7 +42,7 @@ const add3DStyles = () => {
 
 // Inject preload tags when the application starts
 injectPreloadTags()
-preloadCriticalAssets()
+// preloadCriticalAssets()
 // add3DStyles()
 
 // 找到根元素或创建一个，然后再操作classList

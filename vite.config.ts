@@ -19,7 +19,7 @@ function createPreloadPlugin(): Plugin {
                         attrs: {
                             rel: 'preload',
                             as: 'image',
-                            href: '/assets/images/placeholder.webp',
+                            href: 'https://img.mengpeng.tech/i/2025/04/22/68079c4214f8c.webp',
                             type: 'image/webp'
                         },
                         injectTo: 'head'
