@@ -89,7 +89,7 @@ const Footer = () => {
             </h3>
             <div className="flex md:justify-end space-x-4">
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/northseacoder" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
@@ -97,7 +97,7 @@ const Footer = () => {
               >
                 <Github className="group-hover:scale-110 transition-transform duration-300" size={20} />
               </a>
-              <a 
+              {/* <a 
                 href="https://linkedin.com/in/yourusername" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,8 +105,8 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="group-hover:scale-110 transition-transform duration-300" size={20} />
-              </a>
-              <a 
+              </a> */}
+              {/* <a 
                 href="https://twitter.com/yourusername" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +114,7 @@ const Footer = () => {
                 aria-label="Twitter"
               >
                 <Twitter className="group-hover:scale-110 transition-transform duration-300" size={20} />
-              </a>
+              </a> */}
             </div>
             <div className="flex md:justify-end mt-6">
               <Button 

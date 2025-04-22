@@ -7,7 +7,7 @@
       "happyClients": "100%",
       "yearsDescription": "Frontend Development & Team Management Experience",
       "projectsDescription": "Large Enterprise System Development",
-      "clientsDescription": "Colleague Satisfaction Rate"
+      "clientsDescription": "Cross-department Collaboration"
     },
     "keyPoints": [
       "Deep expertise in modern frontend architecture and engineering systems, leading multiple complex enterprise system development, architectural refactoring, and team management, achieving high-quality launches and agile delivery.",
@@ -368,10 +368,97 @@
           "title": "Slimfit Component Library",
           "type": "",
           "category": "Infrastructure",
-          "period": "",
-          "position": "",
-          "summary": "",
-          "achievements": []
+          "period": "Oct 2024 - Present",
+          "position": "Architect",
+          "summary": "Designed and built a corporate standard React component library based on antd 5 to address UI inconsistency and component duplication across multiple B-end products, incorporating company design specifications and innovatively implementing theme engine, icon system, font standards, and Tailwind integration solutions, significantly improving internal development efficiency.",
+          "achievements": [
+            {
+              "id": "inf-1-1",
+              "title": "Unified Design Specification",
+              "situation": "Company B-end products were still using AntD 4 era UI with outdated visual styles; teams repeatedly performed style customizations with low efficiency and high error rates; specific design specifications (color palette, fonts, icon system) were difficult to systematically implement.",
+              "task": "Lead the development of the company's new generation standard React component library Slimfit to unify design specifications.",
+              "action": "Designed innovative theme engine to inject design specifications into antd 5; defined antdTokenOverrides and customTokens in src/theme/tokens.ts to inject all design standard colors; defined componentOverrides in src/theme/components.ts for fine component adjustments; used father 4 (Rollup) for component packaging and dumi 2 for documentation site building.",
+              "result": "Slimfit became the standard component library for the company's B-end product line, effectively unifying product visual styles and enhancing brand consistency."
+            },
+            {
+              "id": "inf-1-2",
+              "title": "Custom Icon System",
+              "situation": "Company needed to modify Arco icons (such as line thickness) and add numerous internal-specific icons, which couldn't be met by directly depending on the original library.",
+              "task": "Build a unified enterprise-level icon system.",
+              "action": "Built an internal icon system in slimfit: maintained SVG source files in src/icons/svgs/ directory; created BaseIcon component providing unified props and default styles (fill, stroke, width, etc.); developed automation tools to convert SVGs to React components; unified visual attributes like line thickness and alignment.",
+              "result": "Centralized icon asset management with unified styles, easy addition and modification, simple and consistent developer usage, providing a unified icon solution for 40+ internal projects."
+            },
+            {
+              "id": "inf-1-3",
+              "title": "Multi-tech Stack Compatibility",
+              "situation": "Projects using Tailwind CSS within the company might have conflicts with antd custom styles; needed to ensure all projects uniformly applied the specified brand fonts.",
+              "task": "Design a cross-tech stack design specification sharing mechanism.",
+              "action": "Developed font management solution: created standalone fonts.css and hosted font files; built innovative Tailwind Preset: created tailwind.preset.js to map slimfit tokens to Tailwind configuration (colors, border radius, spacing, etc.), supporting one-line code import of all design specifications; implemented one-click configuration SlimfitProvider component.",
+              "result": "Greatly simplified the process for different tech stack projects to adopt design specifications, reduced overall visual differences in B-end products by 30%, shortened new project onboarding time by 50%, and increased design satisfaction by 25%."
+            }
+          ]
+        },
+        {
+          "id": "inf-2",
+          "title": "Base-UI Component Library",
+          "type": "",
+          "category": "Infrastructure",
+          "period": "Jan 2019 - May 2021",
+          "position": "Core Developer",
+          "summary": "Participated in building the company's first-generation Vue 2 component library Base-UI, responsible for developing table row/column freezing functionality, using virtual lists to optimize performance with large data volumes, and switching the packaging tool from Webpack to Rollup to optimize component library size and loading performance.",
+          "achievements": [
+            {
+              "id": "inf-2-1",
+              "title": "High-performance Component Development",
+              "situation": "Early Vue projects lacked high-quality, high-performance chart, selector, and other basic components.",
+              "task": "As a core developer, participate in building the company's first-generation Vue 2 component library Base-UI.",
+              "action": "Responsible for developing table row/column freezing functionality; used virtual list technology to optimize performance of Select, TreeSelect, and other components when handling large data volumes.",
+              "result": "Successfully encapsulated over 50 UI components, component reuse rate in company internal projects reached 60%, Select and similar components support smooth rendering of over 10,000 data items, performance improved by 200%."
+            },
+            {
+              "id": "inf-2-2",
+              "title": "Component Library Package Optimization",
+              "situation": "Component library used Webpack for packaging, resulting in large size and slow loading.",
+              "task": "Optimize component library packaging method to reduce size and improve loading performance.",
+              "action": "Switched packaging tool from Webpack to Rollup, leveraging its good support for ES Modules and better tree-shaking effect; configured output in multiple module formats (ESM, CJS).",
+              "result": "Overall component library package size reduced by 15%, on-demand loading effect improved, projects using the library saw average first screen loading speed improvements of 30%."
+            }
+          ]
+        },
+        {
+          "id": "tool-1",
+          "title": "Development Scripts & Toolchain Construction",
+          "type": "",
+          "category": "Engineering Efficiency",
+          "period": "Mar 2021 - Present",
+          "position": "Engineering Lead",
+          "summary": "Led the construction of full-process automation toolchain and standard template systems, greatly simplifying new project initialization, engineering upgrades, and environment configuration for new team members, achieving efficient collaboration and stable delivery.",
+          "achievements": [
+            {
+              "id": "tool-1-1",
+              "title": "Project Template Standardization",
+              "situation": "Project initialization configuration was cumbersome, local development environment startup was slow, and Webpack build configuration was complex.",
+              "task": "Improve frontend engineering efficiency and developer experience.",
+              "action": "Developed standardized project templates (React/Vue/Node); deeply optimized Webpack build configurations (caching, DllPlugin, etc.); introduced and promoted Vite and esbuild next-generation build tools; created project initialization scripts for automatic setup of basic configurations, Git Hooks, and dependency installation.",
+              "result": "New project initialization time reduced from 30 minutes to 5 minutes; local development server startup time decreased by average of 70%; developer satisfaction with engineering toolchain improved by 50%."
+            },
+            {
+              "id": "tool-1-2",
+              "title": "New Employee Onboarding Optimization",
+              "situation": "After joining project teams, new employees took a long time to familiarize with project tech stacks and development processes; development environment configuration was complicated and error-prone.",
+              "task": "Optimize new employee onboarding and familiarization experience, simplify environment configuration.",
+              "action": "Systematically organized technical documentation for each project team, supplementing missing content; wrote new employee onboarding guide covering environment configuration, development processes, and common issues; developed Homebrew-based one-click environment configuration script (setup.sh) to automatically install required software packages (Node.js, Docker, Git, etc.) and complete basic configurations like Git config, SSH key generation, npm registry settings, etc.",
+              "result": "Average time for new employees to independently take on development tasks reduced from 2 weeks to 3 days; environment configuration time decreased from half a day to 15 minutes, significantly reducing frustration in initial onboarding period; environment configuration-related issues reduced by 75%."
+            },
+            {
+              "id": "tool-1-3",
+              "title": "Automated Code Migration Tools",
+              "situation": "During project tech stack upgrades (e.g., React 16 to 18, Antd 4 to 5), manual adjustment of APIs and component usage required enormous effort.",
+              "task": "Build automation tools to simplify upgrade process and reduce error rates.",
+              "action": "Developed series of Node.js scripts using AST technology to automatically identify and replace outdated APIs; built project dependency graph analysis tools to identify potential impact scope; wrote specific conversion rules for common libraries like antd and react-router; designed batch execution and rollback mechanisms to ensure controllable conversion process.",
+              "result": "Code adjustment workload for React 18 upgrade projects reduced by 70%, with automation completing work that would have required manually replacing about 1000 code points; detection rate of incorrect API usage increased to 95%, avoiding numerous potential runtime errors."
+            }
+          ]
         },
         {
           "id": "tool-2",
@@ -641,7 +728,7 @@
       "id": 3,
       "title": "@codetransformer/find-chinese",
       "description": "Efficient and precise multi-level dependency scanning and Chinese character locator tool, empowering complex frontend projects for internationalization transformation and character review, improving multilingual project development and quality control capabilities.",
-      "image": "/placeholder.svg",
+      "image": "https://img.mengpeng.tech/i/2025/04/19/68035e78c6dd6.webp",
       "technologies": ["TypeScript", "AST", "Babel", "VSCode API"],
       "techIds": ["typescript", "ast", "babel", "vscode"],
       "liveLink": "https://www.npmjs.com/package/@codetransformer/find-chinese",

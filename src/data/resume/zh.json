@@ -7,7 +7,7 @@
             "happyClients": "100%",
             "yearsDescription": "前端开发与团队管理经验",
             "projectsDescription": "大型中后台系统开发",
-            "clientsDescription": "跨行业客户合作"
+            "clientsDescription": "跨部门合作"
         },
         "keyPoints": [
             "深耕现代前端架构与工程化体系，主导多个复杂中后台系统研发、架构重构与团队管理，实现高质量上线与敏捷交付。",
@@ -720,7 +720,6 @@
             "techIds": ["nodejs", "typescript", "cli", "xmind"],
             "liveLink": "https://www.npmjs.com/package/@nsea/xmind-handler",
             "repoLink": "https://github.com/NorthSeacoder/xmind-handler",
-            "featured": true,
             "evolution": ["节点过滤", "多格式转换", "命令行工具"],
             "related": [4]
         },
@@ -728,12 +727,11 @@
             "id": 3,
             "title": "@codetransformer/find-chinese",
             "description": "高效精准的多层依赖扫描和中文字符定位工具，赋能复杂前端项目的国际化改造和字符审核，提升多语种项目的开发与质量把控能力。",
-            "image": "/placeholder.svg",
+            "image": "https://img.mengpeng.tech/i/2025/04/19/68035e78c6dd6.webp",
             "technologies": ["TypeScript", "AST", "Babel", "VSCode API"],
             "techIds": ["typescript", "ast", "babel", "vscode"],
             "liveLink": "https://www.npmjs.com/package/@codetransformer/find-chinese",
             "repoLink": "https://github.com/NorthSeacoder/codetransformer",
-            "featured": true,
             "evolution": ["基础扫描", "依赖追踪", "统计分析"],
             "related": [4, 6, 7]
         },
@@ -772,7 +770,6 @@
             "techIds": ["typescript", "babel", "ast", "dependency-analysis"],
             "liveLink": "https://marketplace.visualstudio.com/items?itemName=NorthSeacoder.codetransformer",
             "repoLink": "https://github.com/NorthSeacoder/codetransformer",
-            "featured": true,
             "evolution": ["中文查找", "依赖图谱查找", "支持自定义扩展"],
             "related": [3, 7]
         },
@@ -785,7 +782,6 @@
             "techIds": ["nodejs", "typescript", "dependency-analysis", "ast"],
             "liveLink": "https://www.npmjs.com/package/@nsea/depseeker",
             "repoLink": "https://github.com/NorthSeacoder/depseeker",
-            "featured": true,
             "evolution": ["简单依赖解析", "依赖图谱解析", "支持解析 alias"],
             "related": [2, 6]
         }

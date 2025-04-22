@@ -128,7 +128,7 @@
     },
     "footer": {
       "rights": "All rights reserved",
-      "designed": "Built with Astro + Preact + Tailwind CSS",
+      "designed": "Built with Astro + Preact + Tailwind CSS + Loveable + cursor",
       "quickLinks": "Quick Links",
       "contactInfo": "Contact Info",
       "connectText": "Let's connect through these channels:",
