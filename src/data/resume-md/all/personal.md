@@ -18,16 +18,16 @@ wx:north-sea-coder
 
 ## 专业技能
 ### 前端基础技术
-- 精通 JavaScript (ES6+)、TypeScript、HTML5、CSS3，8年实战开发经验，深入理解异步编程、类型系统与主流设计模式。
+- 掌握 JavaScript (ES6+)、TypeScript、HTML5、CSS3，8年实战开发经验，深入理解异步编程、类型系统与主流设计模式。
 - 熟练掌握 React（包括 Hooks）、Vue.js（2.x 和 3.x），能运用 Ant Design 实现高效界面设计。
 - 熟悉 ECharts、Pixi.js 进行复杂数据可视化，具备组件库开发与系统维护经验。
 
 ### 工程化体系
-- 精通 Webpack、Vite、Rollup、esbuild、Tsup，具备丰富的模块化和打包优化经验，熟练使用 Babel 进行代码转换。
+- 掌握 Webpack、Vite、Rollup、esbuild、Tsup，具备丰富的模块化和打包优化经验，熟练使用 Babel 进行代码转换。
 - 熟悉 UMI、Dumi、Father 构建工具链，精通 ESLint 规范代码质量，熟练使用 Vitest 进行单元测试，掌握 Git 版本控制和 Linux 环境操作。
 - 深入理解 HTTP/2、浏览器渲染机制、V8 引擎优化及网络安全，擅长多种性能优化技术提升用户体验。
 
 ### 现代开发与专业领域
-- 熟悉 Next.js 服务端渲染和静态站点生成，掌握 Tailwind CSS 实现高效样式管理，精通 Monorepo 模式支持大型项目开发。
+- 熟悉 Next.js 服务端渲染和静态站点生成，掌握 Tailwind CSS 实现高效样式管理，掌握 Monorepo 模式支持大型项目开发。
 - 具备 VSCode 插件、Figma 扩展和浏览器扩展的开发能力，能够定制化工具提高开发效率。
 - 主导企业微信多端架构、国际化体系、前端监控、自动化工具链等专项能力建设。
