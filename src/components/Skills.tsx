@@ -55,11 +55,8 @@ const SkillCard = ({
       return proficiencyColors[level];
     }
     return {
-      bg: "bg-gray-100",
-      text: "text-gray-800",
-      darkBg: "dark:bg-gray-900/30",
-      darkText: "dark:text-gray-400",
-      progressColor: "bg-blue-500 dark:bg-blue-500"
+      bg: "badge-secondary",
+      progressColor: "bg-primary"
     };
   };
 
@@ -74,41 +71,45 @@ const SkillCard = ({
         duration: 0.6,
         ease: [0.22, 1, 0.36, 1]
       }}
-      className="mb-5 group"
+      className="group"
     >
-      <div className="mb-2 flex justify-between items-center">
-        <div className="flex flex-col flex-grow">
-          <div className="flex items-center">
-            <div className="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{skill.name}</div>
+      <div className="mb-3 flex justify-between items-start">
+        <div className="flex-grow">
+          <div className="flex items-center gap-2 mb-1">
+            <h4 className="text-base font-medium text-heading group-hover:text-primary transition-colors">
+              {skill.name}
+            </h4>
             {skill.level && (
-              <Badge className={`${colorStyles.bg} ${colorStyles.text} ${colorStyles.darkBg} ${colorStyles.darkText} border-0 ml-2 opacity-90 group-hover:opacity-100 transition-opacity`}>
+              <span className={`${colorStyles.bg} transition-opacity group-hover:opacity-100`}>
                 {getLocalizedLevel(skill.level)}
-              </Badge>
+              </span>
             )}
           </div>
           {skill.description && (
-            <div className="text-xs text-slate-600 dark:text-slate-200 mt-1 max-w-md">{skill.description}</div>
+            <p className="text-caption max-w-md">{skill.description}</p>
           )}
         </div>
         {skill.percentage && (
-          <div className="text-sm font-medium text-slate-700 dark:text-slate-300 ml-2 w-10 text-right">
+          <div className="text-sm font-medium text-muted-foreground ml-4 w-12 text-right">
             {skill.percentage}%
           </div>
         )}
       </div>
-      <Progress 
-        value={skill.percentage} 
-        className="h-2 bg-slate-200/50 dark:bg-slate-700/30 backdrop-blur-sm group-hover:shadow-md transition-shadow duration-300"
-        indicatorClassName={skill.level ? colorStyles.progressColor : "bg-blue-500"}
-        animated={true}
-        inView={inView}
-      />
+      
+      <div className="skill-progress-container">
+        <motion.div 
+          className={`skill-progress-bar ${skill.level ? colorStyles.progressColor : "bg-primary"}`}
+          initial={{ width: 0 }}
+          animate={inView ? { width: `${skill.percentage}%` } : { width: 0 }}
+          transition={{ duration: 1.2, delay: delay * 0.1, ease: "easeOut" }}
+        />
+      </div>
       
       {/* Keywords display */}
       {skill.keywords && skill.keywords.length > 0 && (
-        <div className="flex flex-wrap gap-1 mt-2">
+        <div className="skill-cloud mt-3">
           {skill.keywords.map((keyword, idx) => (
-            <span key={idx} className="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200 px-2 py-0.5 rounded-full">
+            <span key={idx} className="skill-tag">
               {keyword}
             </span>
           ))}
@@ -120,41 +121,11 @@ const SkillCard = ({
 
 // Color mapping for proficiency levels
 const proficiencyColors: Record<ProficiencyLevel, { bg: string, text: string, darkBg: string, darkText: string, progressColor: string }> = {
-  "Expert": { 
-    bg: "bg-emerald-100", 
-    text: "text-emerald-800",
-    darkBg: "dark:bg-emerald-900/30",
-    darkText: "dark:text-emerald-400",
-    progressColor: "bg-emerald-500 dark:bg-emerald-500"
-  },
-  "Advanced": { 
-    bg: "bg-blue-100", 
-    text: "text-blue-800",
-    darkBg: "dark:bg-blue-900/30",
-    darkText: "dark:text-blue-400",
-    progressColor: "bg-blue-500 dark:bg-blue-500"
-  },
-  "Proficient": { 
-    bg: "bg-violet-100", 
-    text: "text-violet-800",
-    darkBg: "dark:bg-violet-900/30",
-    darkText: "dark:text-violet-400",
-    progressColor: "bg-violet-500 dark:bg-violet-500"
-  },
-  "Intermediate": { 
-    bg: "bg-amber-100", 
-    text: "text-amber-800",
-    darkBg: "dark:bg-amber-900/30",
-    darkText: "dark:text-amber-400",
-    progressColor: "bg-amber-500 dark:bg-amber-500"
-  },
-  "Beginner": { 
-    bg: "bg-gray-100", 
-    text: "text-gray-800",
-    darkBg: "dark:bg-gray-900/30",
-    darkText: "dark:text-gray-400",
-    progressColor: "bg-gray-500 dark:bg-gray-500"
-  }
+  "Expert": { bg: "badge-accent", progressColor: "bg-green-500" },
+  "Advanced": { bg: "badge-primary", progressColor: "bg-primary" },
+  "Proficient": { bg: "badge-secondary", progressColor: "bg-blue-500" },
+  "Intermediate": { bg: "badge-secondary", progressColor: "bg-yellow-500" },
+  "Beginner": { bg: "badge-secondary", progressColor: "bg-gray-500" }
 };
 
 // 代码装饰组件
@@ -242,15 +213,15 @@ const Skills = () => {
   const inView = useInView(containerRef, { once: false, amount: 0.2 });
 
   return (
-    <div ref={containerRef}>
-      <div className="flex items-center mb-10">
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+    <div ref={containerRef} className="resume-section">
+      <div className="resume-header">
+        <h2 className="resume-title">
           {t('skills.title')}
         </h2>
-        <Separator className="flex-grow ml-6 dark:bg-slate-700" />
+        <div className="resume-divider"></div>
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillCategories.map((category, categoryIndex) => {
           const categoryRef = useRef<HTMLDivElement>(null);
           const categoryInView = useInView(categoryRef, { once: false, amount: 0.2 });
@@ -268,16 +239,16 @@ const Skills = () => {
               }}
               className="h-full"
             >
-              <Card className="relative p-6 shadow-lg dark:bg-slate-900/90 dark:border-slate-700 transition-all duration-300 h-full bg-gradient-to-br from-white to-slate-50/80 dark:from-slate-900/90 dark:to-slate-900/90 backdrop-blur-sm border border-white/20 dark:border-slate-700/50 rounded-xl overflow-hidden hover:shadow-xl">
+              <div className="card-elevated h-full p-6">
                 <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100/80 dark:bg-slate-700/30 mr-4 border border-slate-200/50 dark:border-slate-600/30 shadow-sm">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="contact-icon">
                       {category.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-800 dark:text-white">{category.name}</h3>
+                    <h3 className="text-xl font-semibold text-heading">{category.name}</h3>
                   </div>
                   
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     {category.skills.map((skill, index) => (
                       <SkillCard 
                         key={skill.name} 
@@ -288,14 +259,7 @@ const Skills = () => {
                     ))}
                   </div>
                 </div>
-                
-                {/* Decorative code pattern */}
-                <CodeDecoration />
-                
-                {/* Decorative elements */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-400/5 dark:bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-violet-400/5 dark:bg-violet-500/10 rounded-full blur-2xl pointer-events-none"></div>
-              </Card>
+              </div>
             </motion.div>
           );
         })}

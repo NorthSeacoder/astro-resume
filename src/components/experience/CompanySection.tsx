@@ -41,25 +41,59 @@ interface CompanySectionProps {
 const CompanySection = ({ company }: CompanySectionProps) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div 
-      className={`company-section bg-white dark:bg-slate-800/30 rounded-lg shadow-sm hover:shadow transition-all duration-300 ${company.items.length > 0 ? 'cursor-pointer' : ''}`}
-      onClick={() => {
-        if (company.items.length > 0) setExpanded(!expanded);
-      }}
-    >
-      <div
-        className={`flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4 px-4 pt-4`}
+    <div className={`experience-item ${company.items.length > 0 ? 'cursor-pointer' : ''}`}>
+      <div 
+        className="card-modern p-6 hover:shadow-md transition-all duration-300"
+        onClick={() => {
+          if (company.items.length > 0) setExpanded(!expanded);
+        }}
       >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-blue-100/80 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 flex-shrink-0">
-            <Briefcase size={18} className="text-blue-600 dark:text-blue-400" />
+        <div className="experience-header">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="contact-icon">
+              <Briefcase size={20} />
+            </div>
+            <div className="flex-grow">
+              <h3 className="experience-title">{company.position}</h3>
+              <div className="experience-company">{company.company}</div>
+              <div className="flex items-center gap-2 text-caption">
+                <span>{company.location}</span>
+                <span>•</span>
+                <span>{company.period}</span>
+              </div>
+            </div>
+            {company.items.length > 0 && (
+              <div className="text-muted-foreground">
+                {expanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+              </div>
+            )}
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{company.position}</h3>
-            <div className="flex flex-wrap items-center gap-1 mt-0.5">
-              <span className="text-blue-600 dark:text-blue-400 text-sm">{company.company}</span>
-              <span className="text-slate-400 text-xs">•</span>
-              <span className="text-slate-600 dark:text-slate-300 text-sm">{company.location}</span>
+          
+          {company.description && (
+            <p className="text-body">{company.description}</p>
+          )}
+        </div>
+        
+        {/* 展开的内容 */}
+        <div 
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            expanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="space-y-4 pt-4 border-t border-border">
+            {company.items.map(item => (
+              <ExperienceItemComponent key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CompanySection;
+
             </div>
           </div>
         </div>

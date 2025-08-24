@@ -48,14 +48,15 @@ const Projects: React.FC = () => {
     }
   }, [language, t, resumeData]);
   return (
-    <div ref={containerRef} className="space-y-0">
-      <div className="flex items-center mb-10">
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+    <div ref={containerRef} className="resume-section">
+      <div className="resume-header">
+        <h2 className="resume-title">
           {t('projects.title')}
         </h2>
-        <Separator className="flex-grow ml-6 dark:bg-slate-700" />
+        <div className="resume-divider"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+      
+      <div className="projects-grid">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}

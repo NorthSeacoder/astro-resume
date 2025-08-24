@@ -95,69 +95,120 @@ const Hero = () => {
   ];
   
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-      <div className="lg:col-span-4 flex flex-col items-center lg:items-start">
-        <div className="w-40 h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full overflow-hidden mb-6 border-4 border-white dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+    <div className="resume-hero">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        {/* 头像和基本信息 */}
+        <div className="flex flex-col items-center lg:items-start">
+          <div className="avatar-professional mb-6">
           <img 
             src="https://img.mengpeng.tech/i/2025/04/22/68079c4214f8c.webp" 
             alt={t('common.profile')} 
-            className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
+              className="w-full h-full object-cover"
           />
         </div>
-        
-        <Card className="w-full p-6 shadow-md dark:bg-slate-800/80 dark:border-slate-700 hover:shadow-lg transition-all duration-300 enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90">
-          <h2 className="text-xl font-semibold mb-4 text-slate-800 dark:text-white">{t('about.contact.info')}</h2>
-          <div className="space-y-3">
-            <div className="flex items-center group">
-              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
-                <Mail className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
+          
+          {/* 联系信息卡片 */}
+          <div className="card-modern w-full p-6">
+            <h3 className="text-lg font-semibold mb-4 text-heading">{t('about.contact.info')}</h3>
+            <div className="space-y-1">
+              <div className="contact-item">
+                <div className="contact-icon">
+                  <Mail size={18} />
+                </div>
+                <a href={`mailto:${personal.email}`} className="text-body hover:text-primary transition-colors">
+                  {personal.email}
+                </a>
               </div>
-              <a href={`mailto:${personal.email}`} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{personal.email}</a>
-            </div>
-            <div className="flex items-center group">
-              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
-                <Phone className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
+              <div className="contact-item">
+                <div className="contact-icon">
+                  <Phone size={18} />
+                </div>
+                <a href={`tel:${personal.mobile}`} className="text-body hover:text-primary transition-colors">
+                  {personal.mobile}
+                </a>
               </div>
-              <a href={`tel:${personal.mobile}`} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{personal.mobile}</a>
-            </div>
-            <div className="flex items-center group">
-              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
-                <MapPin className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
+              <div className="contact-item">
+                <div className="contact-icon">
+                  <MapPin size={18} />
+                </div>
+                <span className="text-body">{personal.city}</span>
               </div>
-              <span className="text-slate-700 dark:text-slate-300">{personal.city}</span>
-            </div>
-            <div className="flex items-center group">
-              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
-                <MessagesSquare className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
+              <div className="contact-item">
+                <div className="contact-icon">
+                  <MessagesSquare size={18} />
+                </div>
+                <span className="text-body">{personal.wechat}</span>
               </div>
-              <span className="text-slate-700 dark:text-slate-300">{personal.wechat}</span>
             </div>
             
-            {/* 弱化教育信息展示方式 */}
-            <div className="flex items-center group">
-              <div className="w-9 h-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40">
-                <GraduationCap className="text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" size={18} />
-              </div>
-              <span className="text-slate-700 dark:text-slate-300">{education.degree}, {education.institution}</span>
+            <div className="mt-6">
+              <button 
+                className="download-btn w-full"
+                onClick={handleDownload}
+              >
+                <Download className="mr-2" size={16} />
+                {t('common.download')}
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        {/* 主要内容区域 */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* 个人简介 */}
+          <div className="card-modern p-8">
+            <div className="resume-header">
+              <h1 className="resume-hero-title">{personal.name}</h1>
+              <div className="resume-divider"></div>
+            </div>
+            <h2 className="resume-hero-subtitle mb-6">{t('about.summary')}</h2>
+            
+            <div className="space-y-6">
+              {keyPoints.map((point, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors duration-200"
+                >
+                  <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle2 size={14} />
+                  </div>
+                  <p className="text-body">{point}</p>
+                </div>
+              ))}
             </div>
           </div>
           
-          <div className="mt-6">
-            <Button 
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white transition-all duration-300 hover:scale-[1.02] shadow-md btn-touch"
-              onClick={handleDownload}
-            >
-              <Download className="mr-2" size={16} />
-              {t('common.download')}
-            </Button>
+          {/* 统计数据和教育信息 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* 教育信息 */}
+            <div className="stats-card">
+              <div className="contact-icon mb-3">
+                <GraduationCap size={20} />
+              </div>
+              <h4 className="font-medium text-heading mb-1">{t('education.title')}</h4>
+              <p className="text-primary text-sm font-medium">{education.institution}</p>
+              <p className="text-caption">{education.degree}</p>
+            </div>
+            
+            {/* 统计数据 */}
+            {statsCards.map(card => (
+              <div key={card.id} className="stats-card">
+                <div className="contact-icon mb-3">
+                  {card.icon}
+                </div>
+                <div className="stats-number">{card.value}</div>
+                <div className="stats-label">{card.label}</div>
+              </div>
+            ))}
           </div>
-        </Card>
+        </div>
       </div>
-      
-      <div className="lg:col-span-8">
-        <div className="bg-white dark:bg-slate-800/80 rounded-xl shadow-md p-6 mb-6 dark:border dark:border-slate-700 transition-all duration-300 hover:shadow-lg enhanced-card bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900/90">
-          <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-white flex items-center">
-            <Briefcase className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
+    </div>
+  );
+};
+
+export default Hero;
+
             {t('about.summary')}
           </h3>
           

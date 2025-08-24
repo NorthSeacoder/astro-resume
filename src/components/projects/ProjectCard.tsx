@@ -75,13 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, TechEvolution
         ? { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: animationDelay } }
         : { opacity: 0, y: 20 }
       }
-      className={cn(
-        "group h-full w-full overflow-hidden rounded-2xl transition-all mb-10",
-        project.featured
-          ? "shadow-md shadow-blue-900/10 dark:shadow-blue-500/5"
-          : "shadow-md shadow-slate-200 dark:shadow-slate-700/20",
-        "relative"
-      )}
+      className="group h-full w-full relative"
       style={{
         transform: shouldApplyEffects
           ? `perspective(1000px) rotateX(${rotateX.get()}deg) rotateY(${rotateY.get()}deg) scale3d(1.01, 1.01, 1.01)`
@@ -91,103 +85,78 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, TechEvolution
       onMouseMove={isMobile ? undefined : handleMouseMove}
       onMouseLeave={isMobile ? undefined : handleMouseLeave}
     >
-      <Card
-        className={cn(
-          "h-full flex flex-col rounded-2xl relative",
-          "bg-gradient-to-br from-white to-slate-50 dark:from-slate-800/90 dark:to-slate-900/90",
-          "backdrop-blur-sm transition-all duration-300",
-          project.featured
-            ? "ring-1 ring-blue-500/20 dark:ring-blue-500/30 border border-slate-100 dark:border-blue-800/30"
-            : "border border-slate-100 dark:border-slate-700/50",
-          "hover:shadow-lg dark:hover:shadow-slate-700/30"
-        )}
-      >
+      <div className={`project-item h-full flex flex-col ${project.featured ? 'ring-2 ring-primary/20' : ''}`}>
         {project.featured && (
-          <div className="absolute top-3 right-3 z-20">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-medium px-2 py-0.5 rounded-md shadow-sm whitespace-nowrap">
+          <div className="absolute top-4 right-4 z-20">
+            <span className="professional-badge">
               {t('projects.featured')}
-            </div>
+            </span>
           </div>
         )}
-        <div className="h-48 overflow-hidden relative border-b border-slate-100 dark:border-slate-700/60">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-indigo-200/30 dark:from-blue-950/30 dark:to-indigo-950/30 z-0"></div>
-          <picture>
-            <img
-              src={project.image}
-              alt={project.title}
-              width="600"
-              height="192"
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-            />
-          </picture>
+        
+        <div className="h-48 overflow-hidden relative rounded-t-xl border-b border-border">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="project-image"
+            loading="lazy"
+          />
         </div>
-        <div className="flex-grow p-5 flex flex-col">
-          <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        
+        <div className="flex-grow p-6 flex flex-col">
+          <h3 className="project-title group-hover:text-primary transition-colors">
             {project.title}
           </h3>
-          <p className="text-slate-600 dark:text-slate-100 text-sm flex-grow">
+          <p className="project-description flex-grow">
             {project.description}
           </p>
-          <div className="mt-4 flex flex-wrap gap-1">
-            <span className="text-xs text-slate-500 dark:text-slate-400 mr-1">
-              {t('projects.technologies')}:
-            </span>
-            {project.technologies.map((tech, index) => (
-              <Badge key={index} variant="outline" className="text-slate-700 dark:text-slate-100 border-slate-200 dark:border-slate-700/80 bg-slate-50/50 dark:bg-slate-700/80 hover:bg-slate-100 dark:hover:bg-slate-700">
-                {tech}
-              </Badge>
-            ))}
+          
+          <div className="mt-4">
+            <div className="project-tech">
+              {project.technologies.map((tech, index) => (
+                <span key={index} className="skill-tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
+          
           {project.evolution && project.evolution.length > 0 && (
             <TechEvolution steps={project.evolution} />
           )}
+          
           <TechRelations relatedIds={project.related} allProjects={projects} />
-          <div className="flex gap-2 mt-4">
+          
+          <div className="flex gap-3 mt-6">
             {project.liveLink && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex-1 items-center justify-center gap-1 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
-                asChild
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                data-umami-event="project-view"
+                data-umami-event-project={project.title}
               >
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-umami-event="project-view"
-                  data-umami-event-project={project.title}
-                >
                   <ExternalLink size={14} />
                   <span>{t('projects.actions.view')}</span>
-                </a>
-              </Button>
+              </a>
             )}
             {project.repoLink && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex-1 items-center justify-center gap-1 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300"
-                asChild
+              <a
+                href={project.repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost flex-1 flex items-center justify-center gap-2"
+                data-umami-event="project-code"
+                data-umami-event-project={project.title}
               >
-                <a
-                  href={project.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-umami-event="project-code"
-                  data-umami-event-project={project.title}
-                >
                   <Github size={14} />
                   <span>{t('projects.actions.code')}</span>
-                </a>
-              </Button>
+              </a>
             )}
           </div>
         </div>
-        <CodeDecoration />
-        <div className="absolute -bottom-5 -right-5 w-20 h-20 bg-blue-400/10 rounded-full blur-xl opacity-70 pointer-events-none"></div>
-        <div className="absolute -top-5 -left-5 w-20 h-20 bg-indigo-400/10 rounded-full blur-xl opacity-70 pointer-events-none"></div>
-      </Card>
+      </div>
     </motion.div>
   );
 };

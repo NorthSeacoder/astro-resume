@@ -49,14 +49,15 @@ const Experience = () => {
     }
   }, [resumeData]);
   return (
-    <div>
-      <div className="flex items-center mb-10">
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+    <div className="resume-section">
+      <div className="resume-header">
+        <h2 className="resume-title">
           {t('experience.title')}
         </h2>
-        <Separator className="flex-grow ml-6 dark:bg-slate-700" />
+        <div className="resume-divider"></div>
       </div>
-      <div className="space-y-6">
+      
+      <div className="experience-timeline">
         {companies.map(company => (
           <CompanySection key={company.id} company={company} />
         ))}

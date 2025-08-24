@@ -148,32 +148,31 @@ const Index = () => {
         <>
             <SEO {...seoData} />
             
-            <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/60 dark:from-slate-900 dark:to-slate-800/90 transition-colors duration-500 w-full'>
-                <div className='fixed inset-0 bg-hero-pattern opacity-30 dark:opacity-10 pointer-events-none z-0'></div>
+            <div className='resume-layout'>
                 <Header
                     activeSection={activeSection}
                     theme={theme}
                     toggleTheme={toggleTheme}
                 />
 
-                <main className='container mx-auto px-4 py-6 sm:px-6 lg:px-8 relative z-10 pt-20'>
-                    <section id='about' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
+                <main className='resume-container pt-20'>
+                    <section id='about' className='resume-section scroll-mt-20'>
                         <Hero />
                     </section>
 
-                    <section id='experience' className='py-12 md:py-16 scroll-mt-20 min-h-[300px]'>
+                    <section id='experience' className='resume-section scroll-mt-20'>
                         <LazyComponentLoader>
                             <Experience />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='skills' className='py-12 md:py-16 scroll-mt-20 min-h-[200px]'>
+                    <section id='skills' className='resume-section scroll-mt-20'>
                         <LazyComponentLoader>
                             <Skills />
                         </LazyComponentLoader>
                     </section>
 
-                    <section id='projects' className='py-12 md:py-16 scroll-mt-20 min-h-[300px]'>
+                    <section id='projects' className='resume-section scroll-mt-20'>
                         <LazyComponentLoader>
                             <Projects />
                         </LazyComponentLoader>
