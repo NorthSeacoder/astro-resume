@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { useLanguage } from "@/lib/i18n";
-import { Button } from "@/components/ui/button";
-import { Github, Twitter, Linkedin, ArrowUp } from "lucide-react";
+import { Github, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const { t, getResumeData } = useLanguage();

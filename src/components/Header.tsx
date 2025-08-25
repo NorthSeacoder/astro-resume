@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import {Menu, X, Moon, Sun} from 'lucide-react';
-import {Button} from '@/components/ui/button';
 import {useLanguage} from '@/lib/i18n';
 
 interface HeaderProps {

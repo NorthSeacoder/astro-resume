@@ -1,18 +1,15 @@
 import {useState, useEffect, useRef, lazy, Suspense} from 'react';
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
+import About from '@/components/About';
 // 懒加载复杂组件
 const Experience = lazy(() => import('@/components/Experience'));
-// 移除Education组件导入
 const Skills = lazy(() => import('@/components/Skills'));
 const Projects = lazy(() => import('@/components/Projects'));
-// 移除 Contact 组件导入
 import Footer from '@/components/Footer';
 import {getInitialTheme, saveTheme} from '@/lib/theme-utils';
 import SEO from '@/components/SEO';
 import Analytics from '@/components/Analytics';
 import { useLanguage } from '@/lib/i18n';
-// Remove the h and VNode imports, as they cause type conflicts
 import React from 'react';
 
 // 组件懒加载包装器
@@ -157,7 +154,7 @@ const Index = () => {
 
                 <main className='resume-container pt-20'>
                     <section id='about' className='resume-section scroll-mt-20'>
-                        <Hero />
+                        <About />
                     </section>
 
                     <section id='experience' className='resume-section scroll-mt-20'>
