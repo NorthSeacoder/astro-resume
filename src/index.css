@@ -693,6 +693,31 @@
   @apply text-lg text-body max-w-2xl mx-auto;
 }
 
+/* 懒加载组件样式 - 优雅简约 */
+.lazy-loader {
+  @apply w-full flex justify-center items-center py-20;
+}
+
+.lazy-loader-pulse {
+  @apply flex gap-2;
+}
+
+.lazy-loader-dot {
+  @apply h-2 w-2 bg-primary rounded-full animate-pulse;
+} 
+
+.lazy-loader-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.lazy-loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lazy-loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
 /* 技能标签云 */
 .skill-cloud {
   @apply flex flex-wrap gap-2;
