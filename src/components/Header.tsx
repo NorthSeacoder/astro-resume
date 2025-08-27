@@ -19,7 +19,8 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
         {id: 'about', label: t('nav.about')},
         {id: 'experience', label: t('nav.experience')},
         {id: 'skills', label: t('nav.skills')},
-        {id: 'projects', label: t('nav.projects')}
+        {id: 'projects', label: t('nav.projects')},
+        {id: 'education', label: t('nav.education')}
     ];
 
     const languageLabels = {

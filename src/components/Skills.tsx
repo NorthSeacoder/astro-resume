@@ -120,7 +120,7 @@ const SkillCard = ({
 };
 
 // Color mapping for proficiency levels
-const proficiencyColors: Record<ProficiencyLevel, { bg: string, text: string, darkBg: string, darkText: string, progressColor: string }> = {
+const proficiencyColors: Record<ProficiencyLevel, { bg: string, progressColor: string }> = {
   "Expert": { bg: "badge-accent", progressColor: "bg-green-500" },
   "Advanced": { bg: "badge-primary", progressColor: "bg-primary" },
   "Proficient": { bg: "badge-secondary", progressColor: "bg-blue-500" },

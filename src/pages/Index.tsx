@@ -1,6 +1,8 @@
 import {useState, useEffect, useRef, lazy, Suspense} from 'react';
 import Header from '@/components/Header';
 import About from '@/components/About';
+import Hero from '@/components/Hero';
+import Education from '@/components/Education';
 // 懒加载复杂组件
 const Experience = lazy(() => import('@/components/Experience'));
 const Skills = lazy(() => import('@/components/Skills'));
@@ -153,6 +155,8 @@ const Index = () => {
                 />
 
                 <main className='resume-container pt-20'>
+                    <Hero />
+                    
                     <section id='about' className='resume-section scroll-mt-20'>
                         <About />
                     </section>
@@ -173,6 +177,10 @@ const Index = () => {
                         <LazyComponentLoader>
                             <Projects />
                         </LazyComponentLoader>
+                    </section>
+                    
+                    <section id='education' className='resume-section scroll-mt-20'>
+                        <Education />
                     </section>
                 </main>
 

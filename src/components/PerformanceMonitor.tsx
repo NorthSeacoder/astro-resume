@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n';
 import { Card } from '@/components/ui/card';
 import { Zap, Clock, Database, Cpu, X } from 'lucide-react';
-import { throttle } from 'lodash';
 
 // 性能指标接口定义
 interface PerformanceMetrics {
@@ -141,7 +140,7 @@ const usePerformanceMetrics = () => {
       
       // 计算内存使用情况 - 添加节流
       if (performance && (performance as any).memory) {
-        const updateMemory = throttle(() => {
+        const updateMemory = () => {
           const memoryInfo = (performance as any).memory;
           // 使用增量而不是总量来避免显示过大的数值
           const usedMemoryMB = (memoryInfo.usedJSHeapSize - memoryInfo.totalJSHeapSize/2) / (1024 * 1024);
@@ -149,7 +148,7 @@ const usePerformanceMetrics = () => {
             ...prev,
             memory: Math.max(0, usedMemoryMB)
           }));
-        }, 2000);
+        };
         updateMemory();
       }
       

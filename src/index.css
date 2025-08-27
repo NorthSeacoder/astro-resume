@@ -821,7 +821,7 @@
 /* 成功状态 */
 .success-message {
   @apply text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-950/20 p-4 rounded-lg;
-  @apply border border-green-200 dark:border-green-800;
+  @apply card-modern p-6 cursor-pointer;
 }
 
 /* 专业头像样式 */
@@ -915,13 +915,39 @@
   @apply hover:bg-secondary transition-all duration-200 focus-ring;
 }
 
-.language-toggle:hover {
+.project-item {
+  @apply card-elevated h-full flex flex-col overflow-hidden;
+  @apply hover:shadow-xl hover:-translate-y-2;
+  @apply transition-all duration-300 ease-out;
+}
+
+.project-item:hover .project-image {
   @apply scale-105;
+}
+
+.project-title {
+  @apply text-xl font-semibold text-heading mb-3;
+  @apply transition-colors duration-200;
+}
+
+.project-description {
+  @apply text-body leading-relaxed mb-4 flex-grow;
+}
+
+.project-tech {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.project-actions {
+  @apply flex gap-3 mt-auto;
 }
 
 /* 下载按钮特殊样式 */
 .download-btn {
-  @apply btn-primary relative overflow-hidden;
+  @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium;
+  @apply hover:bg-primary-dark active:scale-[0.98];
+  @apply transition-all duration-200 ease-out relative overflow-hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .download-btn::before {
@@ -934,6 +960,9 @@
   @apply translate-x-full;
 }
 
+.download-btn:hover {
+  box-shadow: var(--shadow-md);
+}
 /* 统计数据卡片 */
 .stats-card {
   @apply card-modern p-6 text-center;
@@ -1019,9 +1048,9 @@
 
 /* 专业徽章 */
 .professional-badge {
-  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full;
-  @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground;
-  @apply text-sm font-medium shadow-sm;
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full;
+  @apply bg-primary text-primary-foreground text-xs font-medium;
+  box-shadow: var(--shadow-sm);
 }
 
 /* 技能进度环 */
