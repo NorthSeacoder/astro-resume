@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Clarity from '@microsoft/clarity';
 import App from './App.tsx'
 import './index.css'
-// 导入组件样式
+// 导入组件样式 - 必须在 index.css 之后导入
 import './styles/components.css'
 import { LanguageProvider } from './lib/i18n'
 import { injectPreloadTags } from './lib/preload'

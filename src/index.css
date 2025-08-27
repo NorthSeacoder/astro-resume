@@ -384,7 +384,7 @@
 
   /* 项目卡片 */
   .project-card {
-    @apply card-modern p-6 group cursor-pointer;
+    @apply card-modern p-6 cursor-pointer;
     @apply hover:shadow-lg hover:-translate-y-1;
     @apply transition-all duration-300 ease-out;
   }
@@ -608,9 +608,6 @@
   }
 
   /* 移动端卡片间距调整 */
-  .card-modern {
-    @apply p-4;
-  }
 
   /* 移动端按钮调整 */
   .btn-primary,
@@ -766,9 +763,11 @@
   @apply grid-auto-fit;
 }
 
-.project-item {
-  @apply project-card;
-}
+  .project-item {
+    @apply card-elevated h-full flex flex-col overflow-hidden cursor-pointer;
+    @apply hover:shadow-xl hover:-translate-y-2;
+    @apply transition-all duration-300 ease-out;
+  }
 
 .project-title {
   @apply text-lg font-semibold text-heading mb-2;
@@ -915,15 +914,7 @@
   @apply hover:bg-secondary transition-all duration-200 focus-ring;
 }
 
-.project-item {
-  @apply card-elevated h-full flex flex-col overflow-hidden;
-  @apply hover:shadow-xl hover:-translate-y-2;
-  @apply transition-all duration-300 ease-out;
-}
 
-.project-item:hover .project-image {
-  @apply scale-105;
-}
 
 .project-title {
   @apply text-xl font-semibold text-heading mb-3;

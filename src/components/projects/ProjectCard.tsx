@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, TechEvolution
       className="h-full w-full relative"
     >
       <div className={cn(
-        "project-item",
+        "project-item group",
         project.featured && "ring-2 ring-primary/20"
       )}>
         {project.featured && (

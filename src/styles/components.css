@@ -7,7 +7,14 @@
 }
 
 .performance-card {
-  @apply card-modern p-4;
+  @apply bg-card border border-border rounded-xl p-4;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) ease;
+}
+
+.performance-card:hover {
+  box-shadow: var(--shadow-md);
+  @apply border-border/80;
 }
 
 .performance-gauge-container {
@@ -19,15 +26,16 @@
 }
 
 .performance-gauge-value {
-  @apply text-sm font-medium text-heading;
+  @apply text-sm font-medium text-foreground;
 }
 
 .performance-gauge-track {
-  @apply skill-progress-container;
+  @apply relative h-2 bg-secondary rounded-full overflow-hidden;
 }
 
 .performance-gauge-progress {
-  @apply skill-progress-bar;
+  @apply h-full bg-gradient-to-r from-primary to-primary-dark rounded-full;
+  @apply transition-all duration-1000 ease-out;
 }
 
 /* 加载指示器样式 - 专业简约 */
@@ -40,11 +48,12 @@
 }
 
 .loading-bar-container {
-  @apply skill-progress-container w-72 mb-3;
+  @apply relative h-2 bg-secondary rounded-full overflow-hidden w-72 mb-3;
 }
 
 .loading-bar {
-  @apply skill-progress-bar bg-primary;
+  @apply h-full bg-gradient-to-r from-primary to-primary-dark rounded-full bg-primary;
+  @apply transition-all duration-1000 ease-out;
 }
 
 .loading-percentage {
