@@ -382,6 +382,237 @@
     display: none;
   }
 
+  /* Apple风格 Experience 时间线 - 现代极简设计 */
+  .experience-timeline-modern {
+    @apply relative space-y-8 md:space-y-12;
+  }
+
+  .experience-company-block {
+    @apply relative flex gap-4 md:gap-8;
+  }
+
+  /* 时间线节点 - 左侧垂直线 */
+  .timeline-node {
+    @apply flex flex-col items-center gap-4 w-6 md:w-12 pt-2;
+  }
+
+  .timeline-dot {
+    @apply relative flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-lg;
+  }
+
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 9999px;
+    background: hsla(var(--primary) / 0.18);
+    filter: blur(10px);
+  }
+
+  .timeline-line {
+    @apply w-px flex-1;
+    background: linear-gradient(180deg, hsla(var(--primary) / 0.4), hsla(var(--primary) / 0.15), transparent);
+  }
+
+  .experience-company-block:last-child .timeline-line {
+    display: none;
+  }
+
+  /* 公司卡片 - 毛玻璃效果 */
+  .company-card-glass {
+    @apply flex-1 rounded-2xl p-6 md:p-8;
+    @apply bg-white/60 dark:bg-slate-800/40;
+    @apply backdrop-blur-xl backdrop-saturate-150;
+    @apply border border-white/30 dark:border-slate-700/30;
+    @apply shadow-xl shadow-black/5 dark:shadow-black/20;
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .company-card-glass:hover {
+    @apply shadow-2xl shadow-black/10 dark:shadow-black/30;
+    @apply border-white/50 dark:border-slate-600/50;
+    transform: translateY(-2px);
+  }
+
+  /* 公司头部 */
+  .company-header {
+    @apply mb-6 pb-6 border-b border-slate-200/60 dark:border-slate-700/50;
+  }
+
+  .company-info-main {
+    @apply space-y-3;
+  }
+
+  .company-name {
+    @apply text-2xl md:text-3xl font-bold;
+    @apply bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300;
+    @apply bg-clip-text text-transparent;
+    letter-spacing: -0.02em;
+  }
+
+  .company-meta {
+    @apply flex flex-wrap items-center gap-3 text-sm;
+  }
+
+  .position-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full;
+    @apply bg-primary/10 dark:bg-primary/20;
+    @apply text-primary dark:text-primary-light;
+    @apply font-medium;
+  }
+
+  .meta-separator {
+    @apply text-slate-300 dark:text-slate-600;
+  }
+
+  .meta-item {
+    @apply flex items-center gap-1.5 text-slate-600 dark:text-slate-400;
+  }
+
+  .company-description {
+    @apply mt-4 text-base leading-relaxed;
+    @apply text-slate-700 dark:text-slate-300;
+  }
+
+  /* 项目列表 */
+  .projects-list {
+    @apply space-y-6 md:space-y-8;
+  }
+
+  .project-item {
+    @apply relative pl-4 md:pl-6 pb-6 md:pb-8;
+    @apply transition-all duration-300;
+  }
+
+  .project-item::before {
+    content: '';
+    @apply absolute left-0 top-0 bottom-0 w-px;
+    @apply bg-gradient-to-b from-slate-300/40 via-slate-300/20 to-transparent;
+    @apply dark:from-slate-600/40 dark:via-slate-600/20;
+  }
+
+  .project-item:hover::before {
+    @apply from-primary/50 via-primary/30 to-transparent;
+  }
+
+  .project-item:last-child {
+    @apply pb-0;
+  }
+
+  /* 项目头部 */
+  .project-header {
+    @apply flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-3;
+  }
+
+  .project-title-wrapper {
+    @apply flex items-center gap-2 flex-wrap;
+  }
+
+  .project-icon {
+    @apply text-primary flex-shrink-0;
+  }
+
+  .project-title {
+    @apply text-lg md:text-xl font-semibold;
+    @apply text-slate-900 dark:text-slate-100;
+  }
+
+  .project-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium;
+    @apply transition-all duration-200;
+  }
+
+  .tag-category {
+    @apply bg-indigo-50 dark:bg-indigo-900/30;
+    @apply text-indigo-700 dark:text-indigo-300;
+    @apply border border-indigo-200/50 dark:border-indigo-700/50;
+  }
+
+  .tag-type {
+    @apply bg-blue-50 dark:bg-blue-900/30;
+    @apply text-blue-700 dark:text-blue-300;
+    @apply border border-blue-200/50 dark:border-blue-700/50;
+  }
+
+  .project-period {
+    @apply text-sm text-slate-500 dark:text-slate-400;
+    @apply flex-shrink-0;
+  }
+
+  /* 项目描述 */
+  .project-summary {
+    @apply text-sm leading-relaxed mb-4;
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  /* 技术栈 */
+  .tech-stack {
+    @apply flex flex-wrap gap-2 mb-4;
+  }
+
+  .tech-tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md;
+    @apply bg-slate-100/80 dark:bg-slate-700/50;
+    @apply text-slate-700 dark:text-slate-300;
+    @apply text-xs font-medium;
+    @apply border border-slate-200/50 dark:border-slate-600/50;
+    @apply transition-all duration-200;
+  }
+
+  .tech-tag:hover {
+    @apply bg-slate-200/80 dark:bg-slate-600/60;
+    @apply border-slate-300 dark:border-slate-500;
+    transform: translateY(-1px);
+  }
+
+  /* 成就列表 - Apple极简风格 */
+  .achievements-list {
+    @apply space-y-3;
+  }
+
+  .achievement-item {
+    @apply flex gap-3;
+    @apply transition-all duration-200;
+  }
+
+  .achievement-bullet {
+    @apply w-1.5 h-1.5 rounded-full mt-2;
+    @apply bg-gradient-to-br from-primary to-primary-dark;
+    @apply flex-shrink-0;
+  }
+
+  .achievement-content {
+    @apply flex-1 flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4;
+  }
+
+  .achievement-text {
+    @apply flex-1 space-y-1;
+  }
+
+  .achievement-title {
+    @apply block text-sm font-semibold;
+    @apply text-slate-800 dark:text-slate-200;
+  }
+
+  .achievement-desc {
+    @apply block text-sm leading-relaxed;
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  /* 指标徽章 */
+  .metrics-badges {
+    @apply flex flex-wrap gap-2 items-start flex-shrink-0;
+  }
+
+  .metric-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full;
+    @apply bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20;
+    @apply text-green-700 dark:text-green-300;
+    @apply text-xs font-semibold whitespace-nowrap;
+    @apply border border-green-200/50 dark:border-green-700/50;
+    @apply shadow-sm;
+  }
+
   /* 项目卡片 */
   .project-card {
     @apply card-modern p-6 cursor-pointer;
