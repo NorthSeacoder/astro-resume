@@ -54,7 +54,7 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
     return (
         <header className={`nav-professional ${isScrolled ? 'nav-scrolled' : ''}`}>
             <div className='nav-container'>
-                <a href='#' className='nav-brand focus-ring' aria-label='首页'>
+                <a href='#' className='nav-brand focus-ring' aria-label={t('aria.home')}>
                     {personal.name}
                 </a>
 
@@ -63,7 +63,7 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
                     {/* Theme toggle on mobile */}
                     <button
                         onClick={toggleTheme}
-                        aria-label='切换主题'
+                        aria-label={t('aria.toggleTheme')}
                         className='theme-toggle'>
                         {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                     </button>
@@ -71,14 +71,14 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
                     {/* Language toggle on mobile */}
                     <button
                         onClick={toggleLanguage}
-                        aria-label='切换语言'
+                        aria-label={t('aria.toggleLanguage')}
                         className='language-toggle'>
                         <span className='text-xs font-medium'>{languageLabels[language]}</span>
                     </button>
 
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label='切换菜单'
+                        aria-label={t('aria.toggleMenu')}
                         className='nav-mobile-toggle'>
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -120,7 +120,7 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
                     {/* Language Toggle Button */}
                     <button
                         onClick={toggleLanguage}
-                        aria-label='切换语言'
+                        aria-label={t('aria.toggleLanguage')}
                         className='language-toggle'>
                             <span className='text-xs font-medium'>{languageLabels[language]}</span>
                     </button>
@@ -128,7 +128,7 @@ const Header = ({activeSection, theme, toggleTheme}: HeaderProps) => {
                     {/* Theme Toggle */}
                     <button
                         onClick={toggleTheme}
-                        aria-label={theme === 'light' ? '切换到深色模式' : '切换到浅色模式'}
+                        aria-label={theme === 'light' ? t('aria.toggleThemeDark') : t('aria.toggleThemeLight')}
                         className='theme-toggle'>
                             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                     </button>

@@ -11,15 +11,18 @@
     "common": {
       "viewMore": "View More",
       "download": "Download",
+      "downloading": "Downloading...",
       "submit": "Submit",
       "connect": "Connect",
       "downloadSuccess": "Resume downloaded successfully!",
+      "downloadFailed": "Download failed",
       "fileNotFound": "Resume file not found. Please contact the administrator.",
       "downloadError": "An error occurred during download. Please try again.",
       "profile": "Profile Photo",
       "yourName": "Your Name",
       "expand": "Expand",
-      "collapse": "Collapse"
+      "collapse": "Collapse",
+      "coreStrengths": "Core Strengths"
     },
     "seo": {
       "title": "Portfolio | Senior Frontend Engineer",
@@ -143,7 +146,19 @@
       }
     },
     "hero": {
-      "aboutMe": "About Me"
+      "aboutMe": "About Me",
+      "position": "Senior Frontend Engineer"
+    },
+    "aria": {
+      "toggleTheme": "Toggle theme",
+      "toggleThemeDark": "Switch to dark mode",
+      "toggleThemeLight": "Switch to light mode",
+      "toggleLanguage": "Toggle language",
+      "toggleMenu": "Toggle menu",
+      "home": "Home",
+      "sendEmail": "Send email",
+      "makeCall": "Make a phone call",
+      "wechat": "WeChat"
     },
     "accessibility": {
       "skipContent": "Skip to content",

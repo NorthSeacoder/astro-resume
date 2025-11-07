@@ -91,7 +91,7 @@ const Footer = () => {
               <button 
                 className="social-link" 
                 onClick={scrollToTop}
-                aria-label="返回顶部"
+                aria-label={t('footer.backToTop')}
               >
                 <ArrowUp size={18} />
               </button>

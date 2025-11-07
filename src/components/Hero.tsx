@@ -8,7 +8,7 @@ import { useLanguage } from '@/lib/i18n';
 import { toast } from '@/hooks/use-toast';
 
 const Hero = () => {
-  const { t, getResumeData } = useLanguage();
+  const { t, getResumeData, language } = useLanguage();
   const [isDownloading, setIsDownloading] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const inView = useInView(heroRef, { once: true, amount: 0.3 });
@@ -18,30 +18,32 @@ const Hero = () => {
 
   const handleDownload = async () => {
     setIsDownloading(true);
+    const resumePath = language === 'en' ? '/resume/resume_en.pdf' : '/resume/resume_zh.pdf';
+    const fileName = language === 'en' ? `${personal.name}_Resume.pdf` : `${personal.name}_简历.pdf`;
+
     try {
-      const response = await fetch('/resume/resume_zh.pdf');
+      const response = await fetch(resumePath);
       if (!response.ok) {
-        throw new Error('文件未找到');
+        throw new Error(t('common.fileNotFound'));
       }
       
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${personal.name}_简历.pdf`;
+      a.download = fileName;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
       
       toast({
-        title: "下载成功",
-        description: t('common.downloadSuccess'),
+        title: t('common.downloadSuccess'),
       });
     } catch (error) {
-      console.error('下载失败:', error);
+      console.error('Download failed:', error);
       toast({
-        title: "下载失败",
+        title: t('common.downloadFailed'),
         description: t('common.downloadError'),
         variant: "destructive",
       });
@@ -86,7 +88,7 @@ const Hero = () => {
             {personal.name}
           </h1>
           <p className="resume-hero-subtitle">
-            高级前端开发工程师
+            {t('hero.position')}
           </p>
         </motion.div>
 
@@ -114,7 +116,7 @@ const Hero = () => {
             <div className="stats-label">{about.stats.yearsDescription}</div>
           </Card>
           <Card className="stats-card">
-            <div className="stats-number">{about.stats.projectsCompleted}+</div>
+            <div className="stats-number">{about.stats.projectsCompleted}</div>
             <div className="stats-label">{about.stats.projectsDescription}</div>
           </Card>
           <Card className="stats-card">
@@ -136,25 +138,30 @@ const Hero = () => {
             className="btn-primary group"
           >
             <Download size={18} className="mr-2 group-hover:animate-bounce" />
-            {isDownloading ? '下载中...' : t('common.download')}
+            {isDownloading ? t('common.downloading') : t('common.download')}
           </Button>
           
           <div className="flex items-center gap-3">
             <a
               href={`mailto:${personal.email}`}
               className="social-link"
-              aria-label="发送邮件"
+              aria-label={t('aria.sendEmail')}
             >
               <Mail size={18} />
             </a>
             <a
               href={`tel:${personal.mobile}`}
               className="social-link"
-              aria-label="拨打电话"
+              aria-label={t('aria.makeCall')}
             >
               <Phone size={18} />
             </a>
-            <div className="social-link" title={`微信: ${personal.wechat}`}>
+            <div
+              className="social-link"
+              title={`${t('aria.wechat')}: ${personal.wechat}`}
+              aria-label={`${t('aria.wechat')}: ${personal.wechat}`}
+              role="img"
+            >
               <MessageCircle size={18} />
             </div>
           </div>
