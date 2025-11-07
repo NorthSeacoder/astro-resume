@@ -76,7 +76,7 @@ const About = () => {
               
               {about.keyPoints && (
                 <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-heading">核心优势</h4>
+                  <h4 className="text-lg font-medium text-heading">{t('common.coreStrengths')}</h4>
                   <div className="space-y-3">
                     {about.keyPoints.map((point, index) => (
                       <motion.div

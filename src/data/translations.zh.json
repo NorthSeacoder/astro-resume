@@ -11,15 +11,18 @@
     "common": {
       "viewMore": "查看更多",
       "download": "下载",
+      "downloading": "下载中...",
       "submit": "提交",
       "connect": "联系",
       "downloadSuccess": "简历下载成功！",
+      "downloadFailed": "下载失败",
       "fileNotFound": "找不到简历文件，请联系管理员。",
       "downloadError": "下载过程中发生错误，请重试。",
       "profile": "个人照片",
       "yourName": "您的姓名",
       "expand": "展开",
-      "collapse": "收起"
+      "collapse": "收起",
+      "coreStrengths": "核心优势"
     },
     "seo": {
       "title": "个人简历 | 前端开发工程师",
@@ -144,7 +147,19 @@
       }
     },
     "hero": {
-      "aboutMe": "关于我"
+      "aboutMe": "关于我",
+      "position": "高级前端开发工程师"
+    },
+    "aria": {
+      "toggleTheme": "切换主题",
+      "toggleThemeDark": "切换到深色模式",
+      "toggleThemeLight": "切换到浅色模式",
+      "toggleLanguage": "切换语言",
+      "toggleMenu": "切换菜单",
+      "home": "首页",
+      "sendEmail": "发送邮件",
+      "makeCall": "拨打电话",
+      "wechat": "微信"
     },
     "accessibility": {
       "skipContent": "跳转到主要内容",
